@@ -29,7 +29,7 @@ This is a nuspec. It mostly adheres to https://docs.nuget.org/create/Nuspec-Refe
 		<!-- ============================== -->
 		<!-- == SOFTWARE SPECIFIC SECTION == -->
 		<!-- This section is about the software itself -->
-		<title>SQLiteStudio</title>
+		<title>SQLiteStudio (Portable)</title>
 		<authors>pawelsalawa</authors>
 		<!-- projectUrl is required for the community feed -->
 		<projectUrl>https://sqlitestudio.pl/</projectUrl>
@@ -37,15 +37,14 @@ This is a nuspec. It mostly adheres to https://docs.nuget.org/create/Nuspec-Refe
 		<copyright>Copyright (C) 2014 SalSoft</copyright>
 		<!-- If there is a license Url available, it is is required for the community feed -->
 		<licenseUrl>https://github.com/pawelsalawa/sqlitestudio/blob/914a612dcea79b72f4ce000d12ef60b1b840e9b9/SQLiteStudio3/coreSQLiteStudio/licenses/sqlitestudio_license.txt</licenseUrl>
-		<requireLicenseAcceptance>true</requireLicenseAcceptance>
+		<requireLicenseAcceptance>false</requireLicenseAcceptance>
 		<projectSourceUrl>https://github.com/pawelsalawa/sqlitestudio</projectSourceUrl>
 		<!--<docsUrl></docsUrl>-->
 		<!--<mailingListUrl></mailingListUrl>-->
 		<!--<bugTrackerUrl></bugTrackerUrl>-->
 		<tags>sqlitestudio sqlite studio portable database manager</tags>
 		<summary>Create, edit, browse SQLite databases.</summary>
-		<description>Description
-</description>
+		<description></description>
 		<!-- <releaseNotes></releaseNotes> -->
 		<!-- =============================== -->
 		<!-- Specifying dependencies and version ranges? https://docs.nuget.org/create/versioning#specifying-version-ranges-in-.nuspec-files -->
