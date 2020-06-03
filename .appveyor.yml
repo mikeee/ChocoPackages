@@ -23,6 +23,9 @@ environment:
   github_api_key:
     secure: YV4Ps1X/fqKYd7zt1RIdv9zhlInTzsS+DwIr6IzwV65OorhHL5LgrusP0MBykn6Q #https://ci.appveyor.com/tools/encrypt
 
+  github_username: mikeee
+  github_password:
+    secure: YV4Ps1X/fqKYd7zt1RIdv9zhlInTzsS+DwIr6IzwV65OorhHL5LgrusP0MBykn6Q
 
   # Mail credentials - for error notifications
   mail_user:
