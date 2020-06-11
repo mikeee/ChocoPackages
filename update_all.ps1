@@ -85,7 +85,7 @@ $Options = [ordered]@{
 
     Mail = if ($Env:mail_user) {
             @{
-                To         = $Env:mail_user
+                To         = $Env:mail_destination
                 Server     = $Env:mail_server
                 UserName   = $Env:mail_user
                 Password   = $Env:mail_pass
