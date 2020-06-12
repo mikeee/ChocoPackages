@@ -22,7 +22,7 @@ This is a nuspec. It mostly adheres to https://docs.nuget.org/create/Nuspec-Refe
 		<!-- version should MATCH as closely as possible with the underlying software -->
 		<!-- Is the version a prerelease of a version? https://docs.nuget.org/create/versioning#creating-prerelease-packages -->
 		<!-- Note that unstable versions like 0.0.1 can be considered a released version, but it's possible that one can release a 0.0.1-beta before you release a 0.0.1 version. If the version number is final, that is considered a released version and not a prerelease. -->
-		<version>0.0</version>
+		<version>1.16.2</version>
 		<packageSourceUrl>https://github.com/mikeee/ChocoPackages/tree/master/automatic/hcloud.portable</packageSourceUrl>
 		<!-- owners is a poor name for maintainers of the package. It sticks around by this name for compatibility reasons. It basically means you. -->
 		<owners>mikeee</owners>
@@ -44,7 +44,7 @@ This is a nuspec. It mostly adheres to https://docs.nuget.org/create/Nuspec-Refe
 		<!--<bugTrackerUrl></bugTrackerUrl>-->
 		<tags>hcloud cli hetzner cloud server manager command line interface</tags>
 		<summary>A command-line interface for Hetzner Cloud.</summary>
-		<description>`hcloud` is a command-line interface for interacting with Hetzner Cloud.
+		<description><![CDATA[`hcloud` is a command-line interface for interacting with Hetzner Cloud.
 
 ## Getting Started
 
@@ -66,7 +66,7 @@ hcloud server-type list
 See `hcloud help` for a list of commands.
 
 **NOTE**: This package is automatically updated. If it is out of date and there is no newer package submitted, please use the `Contact Maintainers` functionality to alert me.
-</description>
+]]></description>
 		<!-- <releaseNotes></releaseNotes> -->
 		<!-- =============================== -->
 		<!-- Specifying dependencies and version ranges? https://docs.nuget.org/create/versioning#specifying-version-ranges-in-.nuspec-files -->
