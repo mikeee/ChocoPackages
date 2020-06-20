@@ -3,7 +3,7 @@
 [![AppVeyor Badge](https://ci.appveyor.com/api/projects/status/github/mikeee/ChocoPackages?svg=true)](https://ci.appveyor.com/project/mikeee/ChocoPackages)
 [Update status](https://gist.github.com/mikeee/17b5a042cba1bd9da2bf21615aab4f0f)
 
-This repo houses all the packages I maintain on [Chocolatey](https://chocolatey.org). Automatic updates of packages are using [AppVeyor](https://www.appveyor.com/).
+This repo houses all the packages I maintain on [Chocolatey](https://chocolatey.org). Automatic package updates with [AppVeyor](https://www.appveyor.com/).
 
 ## Folder Structure
 
