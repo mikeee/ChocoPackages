@@ -1,4 +1,4 @@
-# ![icue Logo](https://cdn.jsdelivr.net/gh/mikeee/ChocoPackages/icons/icue.png "iCUE Logo") [icue](https://chocolatey.org/packages/icue)
+# ![icue Logo](https://cdn.jsdelivr.net/gh/mikeee/ChocoPackages/icons/icue.png "Corsair iCUE Logo") [icue](https://chocolatey.org/packages/icue)
 
 iCUE features  support for CORSAIR RGB keyboards, mice, headsets, and accessories.
 

@@ -29,7 +29,7 @@ This is a nuspec. It mostly adheres to https://docs.nuget.org/create/Nuspec-Refe
 		<!-- ============================== -->
 		<!-- == SOFTWARE SPECIFIC SECTION == -->
 		<!-- This section is about the software itself -->
-		<title>iCUE</title>
+		<title>Corsair iCUE</title>
 		<authors>Corsair Components Inc. (CORSAIR)</authors>
 		<!-- projectUrl is required for the community feed -->
 		<projectUrl>https://www.corsair.com/ww/en/icue</projectUrl>
