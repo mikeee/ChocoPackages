@@ -13,7 +13,7 @@ if (($Name.Length -gt 0) -and ($Name[0] -match '^random (.+)')) {
     Write-Host "TESTING GROUP $($n+1) of $group"
 
     $group_size = [int]($lsau.Count / $group) + 1
-    $Name = $lsau | select -First $group_size -Skip ($group_size * $n) | % { $_.Name }
+    $Name = $lsau | Select-Object -First $group_size -Skip ($group_size * $n) | ForEach-Object { $_.Name }
 
     Write-Host ($Name -join ' ')
     Write-Host ('-' * 80)
