@@ -22,7 +22,7 @@ This is a nuspec. It mostly adheres to https://docs.nuget.org/create/Nuspec-Refe
         <!-- version should MATCH as closely as possible with the underlying software -->
         <!-- Is the version a prerelease of a version? https://docs.nuget.org/create/versioning#creating-prerelease-packages -->
         <!-- Note that unstable versions like 0.0.1 can be considered a released version, but it's possible that one can release a 0.0.1-beta before you release a 0.0.1 version. If the version number is final, that is considered a released version and not a prerelease. -->
-        <version>0.0</version>
+        <version>1.1.1</version>
         <packageSourceUrl>https://github.com/mikeee/ChocoPackages/tree/master/automatic/op</packageSourceUrl>
         <!-- owners is a poor name for maintainers of the package. It sticks around by this name for compatibility reasons. It basically means you. -->
         <owners>mikeee</owners>
@@ -44,7 +44,12 @@ This is a nuspec. It mostly adheres to https://docs.nuget.org/create/Nuspec-Refe
         <!-- <bugTrackerUrl></bugTrackerUrl> -->
         <tags>1password cli op password manager</tags>
         <summary>The 1Password command-line tool</summary>
-        <description></description>
+        <description>1Password is available with just two characters: `op`.
+
+The 1Password command-line tool makes your 1Password account accessible entirely from the command line. A simple op signin will securely authenticate you with the 1Password service and give you access to a wide range of capabilities.
+
+**NOTE**: This package is automatically updated. If it is out of date and there is no newer package submitted, please use the `Contact Maintainers` functionality to alert me.
+</description>
         <releaseNotes>https://golang.org/doc/devel/release.html</releaseNotes>
         <!-- =============================== -->
         <!-- Specifying dependencies and version ranges? https://docs.nuget.org/create/versioning#specifying-version-ranges-in-.nuspec-files -->
