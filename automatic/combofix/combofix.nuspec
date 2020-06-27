@@ -22,7 +22,7 @@ This is a nuspec. It mostly adheres to https://docs.nuget.org/create/Nuspec-Refe
         <!-- version should MATCH as closely as possible with the underlying software -->
         <!-- Is the version a prerelease of a version? https://docs.nuget.org/create/versioning#creating-prerelease-packages -->
         <!-- Note that unstable versions like 0.0.1 can be considered a released version, but it's possible that one can release a 0.0.1-beta before you release a 0.0.1 version. If the version number is final, that is considered a released version and not a prerelease. -->
-        <version>0.0</version>
+        <version>19.11.04.01</version>
         <packageSourceUrl>https://github.com/mikeee/ChocoPackages/tree/master/automatic/combofix</packageSourceUrl>
         <!-- owners is a poor name for maintainers of the package. It sticks around by this name for compatibility reasons. It basically means you. -->
         <owners>mikeee</owners>
@@ -44,7 +44,20 @@ This is a nuspec. It mostly adheres to https://docs.nuget.org/create/Nuspec-Refe
         <!-- <bugTrackerUrl></bugTrackerUrl> -->
         <tags>combo fix bleepingcomputer scanner malware remover anti</tags>
         <summary>Combofix is a smart spyware and malware removal application known for its speed and effectiveness.</summary>
-        <description></description>
+        <description>**COMPATIBILITY NOTICE**: This package is not compatible with Windows 10 or Win8.1/Win2012Server R2.
+
+Scans your computer for known malware, and when found, attempts to clean these infections automatically.
+
+Combofix is a smart spyware and malware removal application known for its speed and effectiveness.
+
+ComboFix also displays a report that can be used by trained helpers to remove malware that is not automatically removed by the program.
+
+Due to the power of this tool it is strongly advised that you do not attempt to act upon any of the information displayed by ComboFix without supervision from someone who has been properly trained.
+
+If you do so, it may lead to problems with the normal functionality of your computer.
+
+**NOTE**: This package is automatically updated. If it is out of date and there is no newer package submitted, please use the `Contact Maintainers` functionality to alert me.
+</description>
         <!-- <releaseNotes></releaseNotes> -->
         <!-- =============================== -->
         <!-- Specifying dependencies and version ranges? https://docs.nuget.org/create/versioning#specifying-version-ranges-in-.nuspec-files -->
