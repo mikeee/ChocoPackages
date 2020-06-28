@@ -22,7 +22,7 @@ This is a nuspec. It mostly adheres to https://docs.nuget.org/create/Nuspec-Refe
         <!-- version should MATCH as closely as possible with the underlying software -->
         <!-- Is the version a prerelease of a version? https://docs.nuget.org/create/versioning#creating-prerelease-packages -->
         <!-- Note that unstable versions like 0.0.1 can be considered a released version, but it's possible that one can release a 0.0.1-beta before you release a 0.0.1 version. If the version number is final, that is considered a released version and not a prerelease. -->
-        <version>0.0</version>
+        <version>2020.5.0.10152</version>
         <packageSourceUrl>https://github.com/mikeee/ChocoPackages/tree/master/automatic/emsisoft-emergency-kit</packageSourceUrl>
         <!-- owners is a poor name for maintainers of the package. It sticks around by this name for compatibility reasons. It basically means you. -->
         <owners>mikeee</owners>
@@ -44,7 +44,29 @@ This is a nuspec. It mostly adheres to https://docs.nuget.org/create/Nuspec-Refe
         <!-- <bugTrackerUrl></bugTrackerUrl> -->
         <tags>emsisoft eek admin anti-spyware anti-malware malware-remover real-time-protection virus emergency kit scanner</tags>
         <summary>A scanner that can be used to scan and clean infected computers.</summary>
-        <description></description>
+        <description>The Emsisoft Emergency Kit contains a collection of programs that can be used without software installation to scan for malware and clean infected computers: Emsisoft Emergency Kit Scanner and Emsisoft Commandline Scanner.
+
+Emsisoft Emergency Kit Scanner
+
+The Emsisoft Emergency Kit Scanner includes the powerful Emsisoft Scanner complete with graphical user interface. Scan the infected PC for Viruses, Trojans, Spyware, Adware, Worms, Dialers, Keyloggers and other malicious programs.
+Emsisoft Commandline Scanner
+
+This scanner contains the same functionality as the Emergency Kit Scanner but without a graphical user interface. The commandline tool is made for professional users and is perfect for batch jobs.
+
+To run the Emsisoft Commandline Scanner, perform the following actions:
+
+- Open a command prompt window (Run: cmd.exe)
+- Switch to the drive of the USB Stick (e.g.: f:), then to the folder of the executable files (e.g.: cd run)
+- Run the scanner by typing: a2cmd.exe
+
+Next you will see a help page describing all available parameters.
+
+The following parameter is an example of scanning drive c:\ with Memory, Traces (Registry) scan enabled, and archive support active. Detected Malware is moved to quarantine.
+
+a2cmd.exe /f="c:\" /m /t /a /q="c:\quarantine\"
+
+**NOTE**: This package is automatically updated. If it is out of date and there is no newer package submitted, please use the `Contact Maintainers` functionality to alert me.
+</description>
         <!-- <releaseNotes></releaseNotes> -->
         <!-- =============================== -->
         <!-- Specifying dependencies and version ranges? https://docs.nuget.org/create/versioning#specifying-version-ranges-in-.nuspec-files -->
