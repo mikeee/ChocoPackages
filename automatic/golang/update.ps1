@@ -38,8 +38,8 @@ function global:au_GetLatest {
     $url64 = $page.links | Where-Object href -match $regexUrl64 | Select-Object -First 1 -expand href
 
     return @{
-        URL32        = $url32
-        URL64        = $url64
+        URL32        = "https://golang.org$url32"
+        URL64        = "https://golang.org$url64"
         Version      = $matches.version
     }
 }
