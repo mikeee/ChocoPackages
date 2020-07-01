@@ -9,6 +9,7 @@ This repo houses all the packages I maintain on [Chocolatey](https://chocolatey.
 
 * automatic - packages that are automatically maintained using CI.
 * icons - central image store for all the packages.
+* manual - packages that are not automatically maintained/updated.
 * _scripts - miscellaneous scripts for helping with (automatic) packaging.
 * setup - scripts for the packaging process.
 
