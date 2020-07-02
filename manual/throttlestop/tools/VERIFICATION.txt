@@ -1,0 +1,9 @@
+ThrottleStop
+
+Binaries downloaded from: https://www.techpowerup.com/download/techpowerup-throttlestop/
+
+This version has been downloaded and unpacked into the tools directory at /throttlestop/
+
+You can extract the files from the zip archive and compare the checksums.
+
+The maintainer of this package is `mikeee` on chocolatey.
