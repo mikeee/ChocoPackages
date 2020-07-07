@@ -9,7 +9,7 @@ $packageArgs = @{
     checksum       = 'eb5ac6d2ea89027f07c879f59122e0a722cb0ea46ac18af8185af6a222d4ee57'
     checksumType   = 'SHA256'
 
-    unzipLocation  = $toolsdir
+    unzipLocation  = $toolsDir
 }
 
 # Some of this was taken from https://github.com/brianmego/Chocolatey/pull/6
