@@ -11,7 +11,7 @@ function global:au_SearchReplace {
 function global:au_BeforeUpdate { }
 
 function global:au_GetLatest {
-    (clist hcloud.portable -e --by-id-only | select -Skip 1 | select -SkipLast 1) -match '^.+?\s+(?<version>.+?)\s+'
+    (clist hcloud.portable -e --by-id-only | Select-Object -Skip 1 | Select-Object -SkipLast 1) -match '(?<version>[\d.]+) \[Approved]'
     
     return @{
         Version = $matches.version
