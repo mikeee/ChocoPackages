@@ -1,0 +1,21 @@
+# Static script analysis
+name: PSScriptAnalyzer
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+jobs:
+  lint:
+    name: PSScriptAnalyzer
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: PSScriptAnalyzer
+        uses: devblackops/github-action-psscriptanalyzer@v2.2.0
+        with:
+          sendComment: true
+          repoToken: ${{ secrets.GITHUB_TOKEN }}
+          failOnErrors: true
+          failOnWarnings: true
+          failOnInfos: true
