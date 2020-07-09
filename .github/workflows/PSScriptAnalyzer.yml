@@ -17,5 +17,5 @@ jobs:
           sendComment: true
           repoToken: ${{ secrets.GITHUB_TOKEN }}
           failOnErrors: true
-          failOnWarnings: true
-          failOnInfos: true
+          failOnWarnings: false
+          failOnInfos: false
