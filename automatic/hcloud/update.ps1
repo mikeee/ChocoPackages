@@ -11,10 +11,14 @@ function global:au_SearchReplace {
 function global:au_BeforeUpdate { }
 
 function global:au_GetLatest {
-    (clist hcloud.portable -e --by-id-only | select -Skip 1 | select -SkipLast 1) -match '^.+?\s+(?<version>.+?)\s+'
-    
+    $packageName = $Latest.PackageName
+    $page = Invoke-WebRequest -Uri "https://chocolatey.org/packages/$packageName.portable/" -UseBasicParsing
+    $regexUrl = 'packages\/'+$packageName+'.portable\/(?<version>[\d.]+)\/ContactAdmins'
+
+    $page.links | Where-Object href -match $regexUrl | Select-Object -First 1 -expand href
+
     return @{
-        Version = $matches.version
+        Version      = $matches.version
     }
 }
 
