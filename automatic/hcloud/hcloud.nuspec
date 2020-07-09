@@ -29,7 +29,7 @@ This is a nuspec. It mostly adheres to https://docs.nuget.org/create/Nuspec-Refe
 		<!-- ============================== -->
 		<!-- == SOFTWARE SPECIFIC SECTION == -->
 		<!-- This section is about the software itself -->
-		<title>hcloud</title>
+		<title>hetznercloud cli (hcloud)</title>
 		<authors>Hetzner Cloud GmbH</authors>
 		<!-- projectUrl is required for the community feed -->
 		<projectUrl>https://github.com/hetznercloud/cli</projectUrl>
