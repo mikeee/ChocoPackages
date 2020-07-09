@@ -29,16 +29,17 @@ This is a nuspec. It mostly adheres to https://docs.nuget.org/create/Nuspec-Refe
 		<!-- ============================== -->
 		<!-- == SOFTWARE SPECIFIC SECTION == -->
 		<!-- This section is about the software itself -->
-		<title>hcloud (Portable)</title>
+		<title>hcloud</title>
 		<authors>Hetzner Cloud GmbH</authors>
 		<!-- projectUrl is required for the community feed -->
-		<projectUrl>https://github.com/hetznercloud/cli/</projectUrl>
+		<projectUrl>https://github.com/hetznercloud/cli</projectUrl>
 		<iconUrl>https://cdn.jsdelivr.net/gh/mikeee/ChocoPackages/icons/hcloud.png</iconUrl>
 		<copyright>Copyright (c) 2018 Hetzner Cloud GmbH</copyright>
 		<!-- If there is a license Url available, it is is required for the community feed -->
 		<licenseUrl>https://github.com/hetznercloud/cli/blob/master/LICENSE</licenseUrl>
 		<requireLicenseAcceptance>false</requireLicenseAcceptance>
 		<projectSourceUrl>https://github.com/hetznercloud/cli/</projectSourceUrl>
+		<releaseNotes>https://github.com/hetznercloud/cli/releases</releaseNotes>
 		<!--<docsUrl></docsUrl>-->
 		<!--<mailingListUrl></mailingListUrl>-->
 		<!--<bugTrackerUrl></bugTrackerUrl>-->
