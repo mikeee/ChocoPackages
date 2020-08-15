@@ -5,12 +5,12 @@ $toolsDir = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 $packageArgs = @{
     packageName    = $env:ChocolateyPackageName
     unzipLocation  = $toolsDir
-    url            = 'https://github.com//civo/cli/releases/download/v0.6.22/civo-0.6.22-windows-386.zip'
-    checksum       = '95fc4e37f0a063a20d4e64c6c6205856e79cb8cad45748bad9c1e501b7c887ba'
+    url            = 'https://github.com//civo/cli/releases/download/v0.6.23/civo-0.6.23-windows-386.zip'
+    checksum       = 'fbf6c94f0c08730e9de222109f3c9d58153ceab537a6b1b2181c7066dbd01e73'
     checksumType   = 'SHA256'
 
-    url64          = 'https://github.com//civo/cli/releases/download/v0.6.22/civo-0.6.22-windows-amd64.zip'
-    checksum64     = 'c9a153d64d452f8a4b659cd86b559afb05877b58512e9cd0569cd4acf99b9cbd'
+    url64          = 'https://github.com//civo/cli/releases/download/v0.6.23/civo-0.6.23-windows-amd64.zip'
+    checksum64     = '12524807669d9ce7e73c8f169322121baa12fee6e9b4cadaaacb61cfc9ec0df7'
     checksumType64 = 'SHA256'
 }
 
