@@ -6,17 +6,17 @@ $releases    = 'https://osdn.net/projects/crystaldiskmark/releases/'
 
 function global:au_SearchReplace {
     @{
-        ".\tools\chocolateyInstall.ps1" = @{
-            '(^\s*url\s*=\s*)(''.*'')'              = "`$1'$($Latest.URL)'"
-            "(?i)(^\s*checksum\s*=\s*)('.*')"       = "`$1'$($Latest.Checksum)'"
-            "(?i)(^\s*checksumType\s*=\s*)('.*')"   = "`$1'$($Latest.ChecksumType)'"
+        ".\legal\VERIFICATION.txt" = @{
+            "(?i)(listed on\s*)\<.*\>" = "`${1}<$releases>"
+            "(?i)(32-Bit.+)\<.*\>"     = "`${1}<$($Latest.URL32)>"
+            "(?i)(checksum type:).*"   = "`${1} $($Latest.ChecksumType32)"
+            "(?i)(checksum32:).*"      = "`${1} $($Latest.Checksum32)"
         }
     }
 }
 
 function global:au_BeforeUpdate {
-    $Latest.Checksum = Get-RemoteChecksum $Latest.Url
-    $Latest.ChecksumType = 'SHA256'
+    Get-RemoteFiles -Purge
 }
 
 function global:au_AfterUpdate {
@@ -36,8 +36,9 @@ function global:au_GetLatest {
     $revision   = $matches.revision
 
     return @{
-        URL        = "https://osdn.net/frs/redir.php?m=dotsrc&f=crystaldiskmark/$revision/CrystalDiskMark$versionDL.exe"
+        URL32        = "https://osdn.net/frs/redir.php?m=dotsrc&f=crystaldiskmark/$revision/CrystalDiskMark$versionDL.exe"
         Version    = $versionChoco
+        FileType   = 'exe'
     }
 }
 
