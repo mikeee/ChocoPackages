@@ -11,8 +11,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - name: PSScriptAnalyzer
-        uses: devblackops/github-action-psscriptanalyzer@v2.2.0
+      - name: PSScriptAnalyzer checks
+        uses: devblackops/github-action-psscriptanalyzer@master
         with:
           sendComment: true
           repoToken: ${{ secrets.GITHUB_TOKEN }}

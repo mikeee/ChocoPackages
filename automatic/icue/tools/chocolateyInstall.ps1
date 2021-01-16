@@ -3,8 +3,8 @@
 $packageArgs = @{
   packageName   = $env:ChocolateyPackageName
   fileType      = 'MSI'
-  url           = 'https://downloads.corsair.com/Files/CUE/iCUESetup_3.33.246_release.msi'
-  checksum      = 'a70d8bb8d2656543f6bb461418b47a915ddd5adc9f99f6750d3bd6e716c1e015'
+  url           = 'https://downloads.corsair.com/Files/CUE/iCUESetup_3.37.140_release.msi'
+  checksum      = 'b036d9ae5539337be98c96e9d5a267507446edbe4000022a20d41e6872c2406a'
   checksumType  = 'SHA256'
 
   softwareName  = 'icue*'
