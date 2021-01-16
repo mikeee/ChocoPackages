@@ -30,15 +30,11 @@ function global:au_AfterUpdate {
 
 function global:au_GetLatest {
     $page = Invoke-WebRequest -Uri $releases -UseBasicParsing
-    $regexUrl32 = 'civo-(?<version>[\d\.]+)-windows-386.zip'
     $regexUrl64 = 'civo-(?<version>[\d\.]+)-windows-amd64.zip'
-
-    $url32 = $page.links | Where-Object href -match $regexUrl32 | Select-Object -First 1 -expand href
 
     $url64 = $page.links | Where-Object href -match $regexUrl64 | Select-Object -First 1 -expand href
 
     return @{
-        URL32        = "https://github.com/$url32"
         URL64        = "https://github.com/$url64"
         Version      = $matches.version
     }
