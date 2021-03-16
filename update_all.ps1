@@ -91,7 +91,7 @@ $Options = [ordered]@{
                 Password   = $Env:mail_pass
                 Port       = $Env:mail_port
                 EnableSsl  = $Env:mail_enablessl -eq 'true'
-                Attachment = "$PSScriptRoot\update_info.xml"
+                Attachment = ""
                 UserMessage = "<p>Update status: https://gist.github.com/mikeee/17b5a042cba1bd9da2bf21615aab4f0f</p>"
                 SendAlways  = $false                        #Send notifications every time
              }
