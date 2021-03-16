@@ -100,7 +100,7 @@ build_script:
     ./update_all.ps1 -ForcedPackages $forced
     7z a au_temp.zip $Env:TEMP\chocolatey\au\*
 artifacts:
-- path: update_info.xml
+#- path: update_info.xml
 - path: Update-AUPackages.md
 - path: au_temp.zip
 
