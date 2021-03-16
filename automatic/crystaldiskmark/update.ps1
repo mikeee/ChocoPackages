@@ -31,8 +31,12 @@ function global:au_GetLatest {
 
     $versionDL = $matches.version
     $versionMajor = $matches.major -replace '_', '.'
-    $versionMinor = [int][char]$matches.minor
-    $versionChoco = $versionMajor + "." + $versionMinor
+    if ($matches.minor) {
+        $versionMinor = [int][char]$matches.minor
+        $versionChoco = $versionMajor + "." + $versionMinor
+    } else {
+        $versionChoco = $versionMajor
+    }
     $revision   = $matches.revision
 
     return @{
