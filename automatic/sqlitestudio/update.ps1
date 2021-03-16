@@ -3,7 +3,7 @@
 function global:au_SearchReplace {
     @{
         "$($Latest.PackageName).nuspec" = @{
-            "(\<dependency .+?`"$($Latest.PackageName).portable`" version=)`"([^`"]+)`"" = "`$1`"$($Latest.Version)`""
+            "(\<dependency .+?`"sqlite-studio.portable`" version=)`"([^`"]+)`"" = "`$1`"$($Latest.Version)`""
         }
     }
 }
