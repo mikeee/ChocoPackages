@@ -2,7 +2,7 @@
 
 . $PSScriptRoot\..\..\scripts\all.ps1
 
-$releases    = 'https://www.ossec.net/downloads/'
+$releases    = 'https://www.ossec.net/download-ossec/'
 
 function global:au_SearchReplace {
     @{
