@@ -36,12 +36,12 @@ This is a nuspec. It mostly adheres to https://docs.nuget.org/create/Nuspec-Refe
         <iconUrl>https://cdn.jsdelivr.net/gh/mikeee/ChocoPackages/icons/pidgin.png</iconUrl>
         <copyright>Copyright (C) 1998-2018 Mark Spencer and Contributors</copyright>
         <!-- If there is a license Url available, it is is required for the community feed -->
-        <licenseUrl>https://bitbucket.org/pidgin/main/src/default/COPYING</licenseUrl>
+        <licenseUrl>https://keep.imfreedom.org/pidgin/pidgin/file/tip/COPYING</licenseUrl>
         <requireLicenseAcceptance>false</requireLicenseAcceptance>
-        <projectSourceUrl>https://bitbucket.org/pidgin/main/src/default/</projectSourceUrl>
+        <projectSourceUrl>https://keep.imfreedom.org/pidgin/pidgin/</projectSourceUrl>
         <docsUrl>https://pidgin.im/help/</docsUrl>
         <mailingListUrl>https://lists.pidgin.im/listinfo</mailingListUrl>
-        <bugTrackerUrl>https://developer.pidgin.im/wiki/BugTracking</bugTrackerUrl>
+        <bugTrackerUrl>https://issues.imfreedom.org/issues/PIDGIN</bugTrackerUrl>
         <tags>pidgin im admin chat jabber icq messenger facebook bonjour aim xmpp irc</tags>
         <summary>Pidgin is a chat program which lets you log into accounts on multiple chat networks simultaneously.</summary>
         <description>Pidgin is a chat program which lets you log into accounts on multiple chat networks simultaneously. This means that you can be chatting with friends on XMPP and sitting in an IRC channel at the same time.
