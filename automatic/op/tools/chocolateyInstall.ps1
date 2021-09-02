@@ -5,12 +5,12 @@ $toolsDir = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 $packageArgs = @{
     packageName    = $env:ChocolateyPackageName
     unzipLocation  = $toolsDir
-    url            = 'https://cache.agilebits.com/dist/1P/op/pkg/v1.11.3/op_windows_386_v1.11.3.zip'
-    url64          = 'https://cache.agilebits.com/dist/1P/op/pkg/v1.11.3/op_windows_amd64_v1.11.3.zip'
+    url            = 'https://cache.agilebits.com/dist/1P/op/pkg/v1.11.4/op_windows_386_v1.11.4.zip'
+    url64          = 'https://cache.agilebits.com/dist/1P/op/pkg/v1.11.4/op_windows_amd64_v1.11.4.zip'
 
-    checksum       = '95c8d47ed772f607ad58c15890df528b811e9070f542e12c2ec62590b192ec8b'
+    checksum       = '167948b430d4b2a2aa446b701edb539007b7288837a5697d66f15da1e8378bf3'
     checksumType   = 'SHA256'
-    checksum64     = '007f4177cb531f548a9d62151eb7d507c51b368cfbb4d493ea7b6fe83c12d2de'
+    checksum64     = '13938d36e5529cf6fb0cd4978fbb528e0843f2d2981c0c6373ebbff73ae60173'
     checksumType64 = 'SHA256'
 }
 
