@@ -1,7 +1,5 @@
 # ![ThrottleStop Logo](https://cdn.jsdelivr.net/gh/mikeee/ChocoPackages/icons/throttlestop.png "ThrottleStop Portable Logo") [throttlestop](https://chocolatey.org/packages/throttlestop)
 
-This version (9.0) has a memory leak and will be fixed in the next release. Please upgrade as soon as possible.
-
 Install Location: `C:\ProgramData\chocolatey\lib\throttlestop\tools\throttlestop`
         
 Since a lot of energy is required to keep modern hardware running at full potential, managing resources can save up a lot of power. Designed especially for laptop users, ThrottleStop is an easy to use program that can adjust the performance of your Intel CPU according to the programs you use.

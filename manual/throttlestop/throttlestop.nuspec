@@ -22,7 +22,7 @@ This is a nuspec. It mostly adheres to https://docs.nuget.org/create/Nuspec-Refe
         <!-- version should MATCH as closely as possible with the underlying software -->
         <!-- Is the version a prerelease of a version? https://docs.nuget.org/create/versioning#creating-prerelease-packages -->
         <!-- Note that unstable versions like 0.0.1 can be considered a released version, but it's possible that one can release a 0.0.1-beta before you release a 0.0.1 version. If the version number is final, that is considered a released version and not a prerelease. -->
-        <version>9.3</version>
+        <version>9.4</version>
         <packageSourceUrl>https://github.com/mikeee/ChocoPackages/tree/master/manual/throttlestop</packageSourceUrl>
         <!-- owners is a poor name for maintainers of the package. It sticks around by this name for compatibility reasons. It basically means you. -->
         <owners>mikeee</owners>
@@ -44,8 +44,7 @@ This is a nuspec. It mostly adheres to https://docs.nuget.org/create/Nuspec-Refe
         <bugTrackerUrl>http://forum.notebookreview.com/threads/the-throttlestop-guide.531329/</bugTrackerUrl>
         <tags>throttlestop throttle stop overclock underclock undervolt</tags>
         <summary>ThrottleStop is an easy to use program that can adjust the performance of your Intel CPU according to the programs you use.</summary>
-        <description>This version (9.0) has a memory leak and will be fixed in the next release. Please upgrade as soon as possible.
-
+        <description>
 Default Install Location: `C:\ProgramData\chocolatey\lib\throttlestop\tools\throttlestop` (this can change depending on where your choco directory is set to).
         
 Since a lot of energy is required to keep modern hardware running at full potential, managing resources can save up a lot of power. Designed especially for laptop users, ThrottleStop is an easy to use program that can adjust the performance of your Intel CPU according to the programs you use.
