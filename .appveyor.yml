@@ -21,11 +21,11 @@ environment:
   # Github token to commit pushed packages to repository
   github_user_repo: mikeee/ChocoPackages
   github_api_key:
-    secure: YV4Ps1X/fqKYd7zt1RIdv9zhlInTzsS+DwIr6IzwV65OorhHL5LgrusP0MBykn6Q #https://ci.appveyor.com/tools/encrypt
+    secure: ueR0kkgEsR2SgcreOS0zjnR15j++dvg6Mi+JRQLnNv77XIad2bZoOTWwgI6jDSFG #https://ci.appveyor.com/tools/encrypt
 
   github_username: mikeee
   github_password:
-    secure: YV4Ps1X/fqKYd7zt1RIdv9zhlInTzsS+DwIr6IzwV65OorhHL5LgrusP0MBykn6Q
+    secure: ueR0kkgEsR2SgcreOS0zjnR15j++dvg6Mi+JRQLnNv77XIad2bZoOTWwgI6jDSFG
 
   # Mail credentials - for error notifications
   mail_destination: chocolatey@mike.ee
