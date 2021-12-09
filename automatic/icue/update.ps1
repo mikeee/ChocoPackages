@@ -24,14 +24,15 @@ function global:au_AfterUpdate {
 }
 
 function global:au_GetLatest {
+    $releases    = 'https://help.corsair.com/hc/en-us/sections/360010386591-iCUE-Patch-Notes'
     $page = Invoke-WebRequest -Uri $releases -UseBasicParsing -UserAgent "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.135 Safari/537.36 Edge/12.246"
-    $regexUrl = '(?<url>https:\/\/downloads.corsair.com\/Files\/CUE\/iCUESetup_(?<version>[\d\.]+)_release.msi)'
+    $regexVersion = 'Patch\snotes\sfor\siCUE\sversion\s(?<version>[\d\.]+)'
 
-    $url = $page.links | Where-Object href -match $regexUrl | Select-Object -First 1 -expand href
+    $matched = $page.Content -match $regexVersion
 
-    If ($null -ne $url) {
-        $url = $matches.url
-        $version = $matches.version
+    If ($False -ne $matched) {
+        $url = -join("https://downloads.corsair.com/Files/CUE/iCUESetup_",$matches["version"],"_release.msi")
+        $version = $matches["version"]
     }
 
     return @{
