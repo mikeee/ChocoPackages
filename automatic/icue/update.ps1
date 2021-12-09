@@ -24,9 +24,9 @@ function global:au_AfterUpdate {
 }
 
 function global:au_GetLatest {
-    $releases    = 'https://help.corsair.com/hc/en-us/sections/360010386591-iCUE-Patch-Notes'
+    $releases    = 'https://m.majorgeeks.com/files/details/corsair_utility_engine_(icue)_software.html'
     $page = Invoke-WebRequest -Uri $releases -UseBasicParsing -UserAgent "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.135 Safari/537.36 Edge/12.246"
-    $regexVersion = 'Patch\snotes\sfor\siCUE\sversion\s(?<version>[\d\.]+)'
+    $regexVersion = 'CORSAIR\sUtility\sEngine\s\(iCUE\)\sSoftware\s(?<version>[\d\.]+)'
 
     $matched = $page.Content -match $regexVersion
 
