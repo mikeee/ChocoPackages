@@ -2,9 +2,7 @@
 name: PSScriptAnalyzer
 on:
   push:
-    branches: [ master ]
   pull_request:
-    branches: [ master ]
 jobs:
   lint:
     name: PSScriptAnalyzer
