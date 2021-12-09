@@ -24,7 +24,7 @@ function global:au_AfterUpdate {
 }
 
 function global:au_GetLatest {
-    $page = Invoke-WebRequest -Uri $releases -UseBasicParsing
+    $page = Invoke-WebRequest -Uri $releases -UseBasicParsing -UserAgent "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.135 Safari/537.36 Edge/12.246"
     $regexUrl = '(?<url>https:\/\/downloads.corsair.com\/Files\/CUE\/iCUESetup_(?<version>[\d\.]+)_release.msi)'
 
     $url = $page.links | Where-Object href -match $regexUrl | Select-Object -First 1 -expand href
