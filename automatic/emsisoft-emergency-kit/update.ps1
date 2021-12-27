@@ -2,7 +2,7 @@
 
 . $PSScriptRoot\..\..\scripts\all.ps1
 
-$releases    = 'https://www.emsisoft.com/en/home/emergencykit/'
+$releases    = 'https://www.emsisoft.com/en/tools/emergencykit/'
 $download    = 'https://dl.emsisoft.com/EmsisoftEmergencyKit.exe'
 
 function global:au_SearchReplace {
@@ -26,7 +26,7 @@ function global:au_AfterUpdate {
 
 function global:au_GetLatest {
     $page = Invoke-WebRequest -Uri $releases -UseBasicParsing
-    $regex = 'Version (?<version>[\d.]+) &mdash; Released: '
+    $regex = 'Version (?<version>[\d.]+) &#8211; Released:'
 
     $page.Content -match $regex
     
