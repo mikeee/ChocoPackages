@@ -6,10 +6,10 @@ The installer has been downloaded from the official download link listed on <htt
 and can be verified like this:
 
 1. Download the following installers:
-  32-Bit: <https://osdn.net/frs/redir.php?m=dotsrc&f=crystaldiskmark/75540/CrystalDiskMark8_0_4.exe>
+  32-Bit: <https://osdn.net/frs/redir.php?m=dotsrc&f=crystaldiskmark/75540/CrystalDiskMark8_0_4a.exe>
 2. You can use one of the following methods to obtain the checksum
   - Use powershell function 'Get-Filehash'
   - Use chocolatey utility 'checksum.exe'
 
   checksum type: sha256
-  checksum32: 7919A81922FAC299142659729FEC341D7F4F5484FAE18DEEF99D41DC9BD36008
+  checksum32: 68BED089BAD96919921D1217B00C478586DCF9183D4706E0F4F49C29BF249C19
