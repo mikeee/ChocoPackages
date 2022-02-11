@@ -7,7 +7,7 @@ max_jobs: 1
 #clone_depth: 5
 branches:
   only:
-  - main
+  - master
 #build:
 #  verbosity: minimal
 
