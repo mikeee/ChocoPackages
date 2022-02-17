@@ -22,7 +22,7 @@ This is a nuspec. It mostly adheres to https://docs.nuget.org/create/Nuspec-Refe
 		<!-- version should MATCH as closely as possible with the underlying software -->
 		<!-- Is the version a prerelease of a version? https://docs.nuget.org/create/versioning#creating-prerelease-packages -->
 		<!-- Note that unstable versions like 0.0.1 can be considered a released version, but it's possible that one can release a 0.0.1-beta before you release a 0.0.1 version. If the version number is final, that is considered a released version and not a prerelease. -->
-		<version>0.0.0</version>
+		<version>1.0.16</version>
 		<packageSourceUrl>https://github.com/mikeee/ChocoPackages/tree/master/automatic/civo-cli</packageSourceUrl>
 		<!-- owners is a poor name for maintainers of the package. It sticks around by this name for compatibility reasons. It basically means you. -->
 		<owners>mikeee</owners>
@@ -44,7 +44,7 @@ This is a nuspec. It mostly adheres to https://docs.nuget.org/create/Nuspec-Refe
 		<bugTrackerUrl>https://github.com/civo/cli/issues</bugTrackerUrl>
 		<tags>civo cli k3s kubernetes control client cluster</tags>
 		<summary>A command-line interface for Civo.</summary>
-		<description>`civo` is a command-line interface for interfacing with the Vultr platform.
+		<description>`civo` is a command-line interface for interfacing with the Civo platform.
 
 Civo CLI is a tool to manage your Civo.com account from the terminal. The Civo web control panel has a user-friendly interface for managing your account, but in case you want to automate or run scripts on your account, or have multiple complex services, the command-line interface outlined here will be useful. This guide will cover the set-up and usage of the Civo CLI tool with examples.
 
