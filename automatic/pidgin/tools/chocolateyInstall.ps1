@@ -2,8 +2,8 @@
 
 $packageArgs = @{
     packageName   = $env:ChocolateyPackageName
-    url           = 'https://netcologne.dl.sourceforge.net/project/pidgin/Pidgin/2.14.8/pidgin-2.14.8-offline.exe'
-    checksum 		  = 'b237de10d4fe5d44eabe97a7640d2a74b4d722a7cb2376cf5df2be632eda3f51'
+    url           = 'https://netcologne.dl.sourceforge.net/project/pidgin/Pidgin/2.14.9/pidgin-2.14.9-offline.exe'
+    checksum 		  = 'a7b48fb28fa025b7526ecbc46d10be9a2390e089fb3f8cbc8bf4b821b180aeeb'
     checksumType 	= 'SHA256'
     fileType      = 'EXE'
     silentArgs    = '/S'
