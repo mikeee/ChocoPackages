@@ -7,18 +7,12 @@ $releases    = 'https://sourceforge.net/projects/pidgin/files/Pidgin/'
 function global:au_SearchReplace {
     @{
         ".\tools\chocolateyInstall.ps1" = @{
-            '(^\s*url\s*=\s*)(''.*'')'              = "`$1'$($Latest.URL)'"
-            "(?i)(^\s*checksum\s*=\s*)('.*')"       = "`$1'$($Latest.Checksum)'"
-            "(?i)(^\s*checksumType\s*=\s*)('.*')"   = "`$1'$($Latest.ChecksumType)'"
+            '(^\s*url\s*=\s*)(''.*'')'              = "`$1'$($Latest.URL32)'"
+            "(?i)(^\s*checksum\s*=\s*)('.*')"       = "`$1'$($Latest.Checksum32)'"
+            "(?i)(^\s*checksumType\s*=\s*)('.*')"   = "`$1'$($Latest.ChecksumType32)'"
         }
     }
 }
-
-function global:au_BeforeUpdate {
-    $Latest.Checksum = Get-RemoteChecksum $Latest.Url
-    $Latest.ChecksumType = 'SHA256'
-}
-
 function global:au_AfterUpdate {
     Set-DescriptionFromReadme -SkipFirst 2
 }
@@ -31,9 +25,9 @@ function global:au_GetLatest {
     $version = $matches.version
 
     return @{
-        URL        = "https://sourceforge.net/projects/pidgin/files/Pidgin/$version/pidgin-$version-offline.exe/download"
+        URL32        = "https://sourceforge.net/projects/pidgin/files/Pidgin/$version/pidgin-$version-offline.exe/download"
         Version    = $version
     }
 }
 
-update -ChecksumFor none
+Update-Package
