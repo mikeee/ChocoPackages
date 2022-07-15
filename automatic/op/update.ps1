@@ -2,7 +2,7 @@
 
 . $PSScriptRoot\..\..\scripts\all.ps1
 
-$releases    = 'https://app-updates.agilebits.com/product_history/CLI'
+$releases    = 'https://app-updates.agilebits.com/product_history/CLI2'
 
 function global:au_SearchReplace {
     @{
