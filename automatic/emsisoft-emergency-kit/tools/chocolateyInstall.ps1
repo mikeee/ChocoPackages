@@ -3,7 +3,7 @@
 $packageArgs = @{
     packageName   = $env:ChocolateyPackageName
     url           = 'https://dl.emsisoft.com/EmsisoftEmergencyKit.exe'
-    checksum      = 'bd881e963f1fc4bf20495f00d9d53d843ff5172f452791a4629c2ac8d1ab2d53'
+    checksum      = '5c38a0ef6ac4e023862483b8f6da60be03a9da624aa475b8035e879df9d481b4'
     checksumType  = 'SHA256'
     fileType      = 'EXE'
     silentArgs    = '/s'
