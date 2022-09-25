@@ -30,20 +30,20 @@ function global:au_GetLatest {
     $url32 = $page.links | Where-Object href -match $regexUrl32 | Select-Object -First 1 -expand href
     $url64 = $page.links | Where-Object href -match $regexUrl64 | Select-Object -First 1 -expand href
 
-    checksum32 = Get-RemoteChecksum $url32
-    oldChecksum32 = (Select-String -Path '.\tools\chocolateyinstall.ps1' -Pattern "(checksum\s*=\s*)('.*')").Line.Split("'")[1]
-    checksum64 = Get-RemoteChecksum $url64
-    oldChecksum64 = (Select-String -Path '.\tools\chocolateyinstall.ps1' -Pattern "(checksum64\s*=\s*)('.*')").Line.Split("'")[1]
+    $checksum32 = Get-RemoteChecksum $url32
+    $oldChecksum32 = (Select-String -Path '.\tools\chocolateyinstall.ps1' -Pattern "(checksum\s*=\s*)('.*')").Line.Split("'")[1]
+    $checksum64 = Get-RemoteChecksum $url64
+    $oldChecksum64 = (Select-String -Path '.\tools\chocolateyinstall.ps1' -Pattern "(checksum64\s*=\s*)('.*')").Line.Split("'")[1]
 
-    if ( (checksum32 -ne oldChecksum32) -or (checksum64 -ne oldChecksum64) ) {
-        versionDate = Get-Date -Format "ddMMyyyyHHmm"
-        finalVersion = $matches.version + "." + versionDate
+    if ( ($checksum32 -ne $oldChecksum32) -or ($checksum64 -ne $oldChecksum64) ) {
+        $versionDate = Get-Date -Format "ddMMyyyyHHmm"
+        $finalVersion = $matches.version + "." + $versionDate
     }
 
     return @{
         URL32        = $url32
         URL64        = $url64
-        Version      = finalVersion
+        Version      = $finalVersion
     }
 }
 
