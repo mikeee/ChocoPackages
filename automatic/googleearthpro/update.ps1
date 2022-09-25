@@ -36,8 +36,8 @@ function global:au_GetLatest {
     $oldChecksum64 = (Select-String -Path '.\tools\chocolateyinstall.ps1' -Pattern "(checksum64\s*=\s*)('.*')").Line.Split("'")[1]
 
     if ( ($checksum32 -ne $oldChecksum32) -or ($checksum64 -ne $oldChecksum64) ) {
-        $versionDate = Get-Date -Format "ddMMyyyyHHmm"
-        $finalVersion = $matches.version + "." + $versionDate
+        $versionDate = Get-Date -Format "ddMMyyyyHH"
+        $finalVersion = $matches.version + "-" + $versionDate
     }
 
     return @{
