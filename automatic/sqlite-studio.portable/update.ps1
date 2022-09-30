@@ -27,7 +27,7 @@ function global:au_GetLatest {
     $page = Invoke-WebRequest -Uri $releases -UseBasicParsing
     $regexUrl = 'pawelsalawa\/sqlitestudio\/releases\/tag\/(?<version>[\d\.]+)'
 
-    $url32 = $page.links | Where-Object href -match $regexUrl32 | Select-Object -First 1 -expand href
+    $match = $page.links | Where-Object href -match $regexUrl | Select-Object -First 1 -expand href
 
     $ver = $matches.version
 
