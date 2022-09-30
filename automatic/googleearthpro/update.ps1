@@ -38,6 +38,8 @@ function global:au_GetLatest {
     if ( ($checksum32 -ne $oldChecksum32) -or ($checksum64 -ne $oldChecksum64) ) {
         $versionDate = Get-Date -Format "ddMMyyyy"
         $finalVersion = $matches.version + "." + $versionDate
+    } else {
+        $finalVersion = (Select-String -Path '.\googleearthpro.nuspec' -Pattern "<version>([\d\.]+)<\/version>"
     }
 
     return @{
