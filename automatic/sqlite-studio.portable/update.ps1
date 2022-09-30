@@ -25,13 +25,15 @@ function global:au_AfterUpdate {
 
 function global:au_GetLatest {
     $page = Invoke-WebRequest -Uri $releases -UseBasicParsing
-    $regexUrl32 = '/SQLiteStudio-(?<version>[\d\.]+)\.zip'
+    $regexUrl = 'pawelsalawa\/sqlitestudio\/releases\/tag\/v(?<version>[\d\.]+)'
 
     $url32 = $page.links | Where-Object href -match $regexUrl32 | Select-Object -First 1 -expand href
 
+    $ver = $matches.version
+
     return @{
-        URL32        = "https://github.com/$url32"
-        Version      = $matches.version
+        URL32        = "https://github.com/pawelsalawa/sqlitestudio/releases/download/$ver/sqlitestudio-$ver.zip"
+        Version      = $ver
     }
 }
 
