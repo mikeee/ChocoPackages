@@ -25,13 +25,15 @@ function global:au_AfterUpdate {
 
 function global:au_GetLatest {
     $page = Invoke-WebRequest -Uri $releases -UseBasicParsing
-    $regexUrl64 = 'vultr-cli_(?<version>[\d\.]+)_windows_64-bit.zip'
+    $regexUrl = 'vultr\/vultr-cli\/releases\/tag\/v(?<version>[\d\.]+)'
 
-    $url64 = $page.links | Where-Object href -match $regexUrl64 | Select-Object -First 1 -expand href
+    $url64 = $page.links | Where-Object href -match $regexUrl | Select-Object -First 1 -expand href
+
+    $ver = $matches.version
 
     return @{
-        URL64        = "https://github.com/$url64"
-        Version      = $matches.version
+        URL64        = "https://github.com/vultr/vultr-cli/releases/download/v$ver/vultr-cli_"+$ver+"_windows_64-bit.zip"
+        Version      = $ver
     }
 }
 
