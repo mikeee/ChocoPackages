@@ -30,16 +30,19 @@ function global:au_AfterUpdate {
 
 function global:au_GetLatest {
     $page = Invoke-WebRequest -Uri $releases -UseBasicParsing
-    $regexUrl32 = '/download\/v(?<version>[\d\.]+)\/hcloud-windows-386.zip'
-    $regexUrl64 = '/download\/v(?<version>[\d\.]+)\/hcloud-windows-amd64.zip'
+    $regexUrl = '/download\/v(?<version>[\d\.]+)\/checksums.txt'
 
-    $url32 = $page.links | Where-Object href -match $regexUrl32 | Select-Object -First 1 -expand href
+    $match = $page.links | Where-Object href -match $regexUrl | Select-Object -First 1 -expand href
 
-    $url64 = $page.links | Where-Object href -match $regexUrl64 | Select-Object -First 1 -expand href
+    $url32 = "https://github.com/hetznercloud/cli/releases/download/v"+$matches.version+"/hcloud-windows-386.zip"
+
+    $url32 = "https://github.com/hetznercloud/cli/releases/download/v"+$matches.version+"/hcloud-windows-amd64.zip"
+
+
 
     return @{
-        URL32        = "https://github.com/$url32"
-        URL64        = "https://github.com/$url64"
+        URL32        = $url32
+        URL64        = $url64
         Version      = $matches.version
     }
 }
