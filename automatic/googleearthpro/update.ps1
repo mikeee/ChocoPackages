@@ -39,7 +39,7 @@ function global:au_GetLatest {
         $versionDate = Get-Date -Format "ddMMyyyy"
         $finalVersion = $matches.version + "." + $versionDate
     } else {
-        $finalVersion = (Select-String -Path '.\googleearthpro.nuspec' -Pattern "<version>([\d\.]+)<\/version>")[0].Matches.Value
+        $finalVersion = (Select-String -Path '.\googleearthpro.nuspec' -Pattern "<version>([\d\.]+)<\/version>").Line.Split("'")[0]
     }
 
     return @{
