@@ -25,18 +25,13 @@ function global:au_AfterUpdate {
 
 function global:au_GetLatest {
     $page = Invoke-WebRequest -Uri $releases -UseBasicParsing
-    $regexVersion = 'CORSAIR\sUtility\sEngine\s\(iCUE\)\sSoftware\s(?<version>[\d\.]+)'
+    $regexVersion = 'downloads.corsair.com\/Files\/CUE\/iCUESetup_(?<version>[\d\.]+)_release.msi'
 
-    $matched = $page.Content -match $regexVersion
-
-    If ($False -ne $matched) {
-        $url = -join("https://downloads.corsair.com/Files/CUE/iCUESetup_",$matches["version"],"_release.msi")
-        $version = $matches["version"]
-    }
+    $url = $page.links | Where-Object href -match $regexUrl32 | Select-Object -First 1 -expand href
 
     return @{
         URL        = $url
-        Version    = $version
+        Version    = $matches.version
     }
 }
 
