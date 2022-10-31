@@ -27,7 +27,7 @@ function global:au_GetLatest {
     $page = Invoke-WebRequest -Uri $releases -UseBasicParsing
     $regexVersion = 'downloads.corsair.com\/Files\/CUE\/iCUESetup_(?<version>[\d\.]+)_release.msi'
 
-    $url = $page.links | Where-Object href -match $regexUrl32 | Select-Object -First 1 -expand href
+    $url = $page.links | Where-Object href -match $regexVersion | Select-Object -First 1 -expand href
 
     return @{
         URL        = $url
