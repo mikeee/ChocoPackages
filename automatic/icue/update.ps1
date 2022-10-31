@@ -2,7 +2,7 @@
 
 . $PSScriptRoot\..\..\scripts\all.ps1
 
-$releases    = 'https://www.corsair.com/uk/en/downloads'
+$releases    = 'https://www.guru3d.com/files-details/corsair-utility-engine-download-icue-download.html'
 
 function global:au_SearchReplace {
     @{
@@ -25,13 +25,18 @@ function global:au_AfterUpdate {
 
 function global:au_GetLatest {
     $page = Invoke-WebRequest -Uri $releases -UseBasicParsing -UserAgent "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.135 Safari/537.36 Edge/12.246"
-    $regexVersion = 'downloads.corsair.com\/Files\/CUE\/iCUESetup_(?<version>[\d\.]+)_release.msi'
+    $regexVersion = 'Corsair\sUtility\sEngine\sDownload\s\(iCUE\)\sDownload\sv(?<version>[\d\.]+)'
 
-    $url = $page.links | Where-Object href -match $regexVersion | Select-Object -First 1 -expand href
+    $matched = $page.Content -match $regexVersion
+
+    If ($False -ne $matched) {
+        $url = -join("https://downloads.corsair.com/Files/CUE/iCUESetup_",$matches["version"],"_release.msi")
+        $version = $matches["version"]
+    }
 
     return @{
         URL        = $url
-        Version    = $matches.version
+        Version    = $version
     }
 }
 
