@@ -20,7 +20,7 @@ function global:au_AfterUpdate {
 
 function global:au_GetLatest {
     $page = Invoke-WebRequest -Uri $releases -UseBasicParsing
-    $regexUrl = '(?<url>\/releases\/desktop/(?<version>[\d\.]+)\/Bootstrap%20Studio.exe)'
+    $regexUrl = '(?<url>(?<version>[\d\.]+)\/Bootstrap%20Studio.exe)'
 
     $url = $page.links | Where-Object href -match $regexUrl | Select-Object -First 1 -expand href
 
@@ -30,7 +30,7 @@ function global:au_GetLatest {
     }
 
     return @{
-        URL        = "https://bootstrapstudio.io$url"
+        URL        = "https://releases.bootstrapstudio.io$url"
         Version    = $version
     }
 }
