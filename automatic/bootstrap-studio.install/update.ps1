@@ -30,7 +30,7 @@ function global:au_GetLatest {
     }
 
     return @{
-        URL        = "https://releases.bootstrapstudio.io$url"
+        URL        = "https://releases.bootstrapstudio.io/$url"
         Version    = $version
     }
 }
