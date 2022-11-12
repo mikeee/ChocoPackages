@@ -20,7 +20,7 @@ function global:au_AfterUpdate {
 
 function global:au_GetLatest {
     $page = Invoke-WebRequest -Uri $releases -UseBasicParsing
-    $regexUrl = '(?<url>(?<version>[\d\.]+)\/Bootstrap%20Studio.exe)'
+    $regexVersion = '(?<url>(?<version>[\d\.]+)\/Bootstrap%20Studio.exe)'
 
     $matched = $page.Content -match $regexVersion
 
