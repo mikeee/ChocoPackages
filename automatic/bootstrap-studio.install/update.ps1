@@ -22,15 +22,15 @@ function global:au_GetLatest {
     $page = Invoke-WebRequest -Uri $releases -UseBasicParsing
     $regexUrl = '(?<url>(?<version>[\d\.]+)\/Bootstrap%20Studio.exe)'
 
-    $url = $page.links | Where-Object href -match $regexUrl | Select-Object -First 1 -expand href
+    $matched = $page.Content -match $regexVersion
 
-    If ($null -ne $url) {
-        $url = $matches.url
-        $version = $matches.version
+    If ($False -ne $matchedurl) {
+        $url = -join("https://releases.bootstrapstudio.io/",$matches["version"],"Bootstrap%20Studio.exe")
+        $version = $matches["version"]
     }
 
     return @{
-        URL        = "https://releases.bootstrapstudio.io/$url"
+        URL        = $url
         Version    = $version
     }
 }
