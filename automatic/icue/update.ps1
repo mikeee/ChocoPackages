@@ -25,7 +25,7 @@ function global:au_AfterUpdate {
 
 function global:au_GetLatest {
     $page = Invoke-WebRequest -Uri $releases -UseBasicParsing -UserAgent "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.135 Safari/537.36 Edge/12.246"
-    $regexVersion = 'Corsair\sUtility\sEngine\sDownload\s\(iCUE\)\sDownload\sv(?<version>[\d\.]+)'
+    $regexVersion = 'Corsair[\s]+Utility[\s]+Engine[\s]+Download[\s]+\(iCUE\)[\s]+Download[\s]+v(?<version>[\d\.]+)'
 
     $matched = $page.Content -match $regexVersion
 
