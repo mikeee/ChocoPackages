@@ -2,15 +2,16 @@ $packageArgs = @{
     packageName      = $env:ChocolateyPackageName
     installerType    = 'EXE'
     silentArgs       = '/noui /clean'
-    path             = "$env:ProgramFiles\SUPERAntiSpyware"
-    path86           = "${env:ProgramFiles(x86)}\SUPERAntiSpyware"
     validExitCodes   = @(0)
+    toolsDir = Split-Path -Path $MyInvocation.MyCommand.Definition -Parent
 }
 
 if (Test-Path $path) {
-    Uninstall-ChocolateyPackage $packageName $installerType $silentArgs "$path\uninstall.exe"
+    Invoke-WebRequest -Uri "https://www.superantispyware.com/downloads/SASUNINST.EXE" -OutFile $toolsDir
+    Uninstall-ChocolateyPackage $packageName $installerType $silentArgs "$toolsDir\SASUNINST.exe"
 }
 
 if (Test-Path $path86) {
-    Uninstall-ChocolateyPackage $packageName $installerType $silentArgs "$path86\uninstall.exe"
+    Invoke-WebRequest -Uri "https://www.superantispyware.com/downloads/SASUNINST64.EXE" -OutFile $toolsDir
+    Uninstall-ChocolateyPackage $packageName $installerType $silentArgs "$toolsDir\SASUNINST64.exe"
 }
