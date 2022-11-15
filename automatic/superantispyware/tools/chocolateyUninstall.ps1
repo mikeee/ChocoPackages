@@ -15,3 +15,5 @@ if (Test-Path $path) {
 if (Test-Path $path86) {
     Uninstall-ChocolateyPackage $packageName $installerType $silentArgs "$toolsDir\SASUNINST.exe"
 }
+
+Remove-Item -Path $toolsDir -Recurse -Force
