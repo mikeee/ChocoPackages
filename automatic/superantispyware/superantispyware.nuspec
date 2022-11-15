@@ -22,7 +22,7 @@ This is a nuspec. It mostly adheres to https://docs.nuget.org/create/Nuspec-Refe
         <!-- version should MATCH as closely as possible with the underlying software -->
         <!-- Is the version a prerelease of a version? https://docs.nuget.org/create/versioning#creating-prerelease-packages -->
         <!-- Note that unstable versions like 0.0.1 can be considered a released version, but it's possible that one can release a 0.0.1-beta before you release a 0.0.1 version. If the version number is final, that is considered a released version and not a prerelease. -->
-        <version>6.0.1204</version>
+        <version>10.0.1246</version>
         <packageSourceUrl>https://github.com/mikeee/ChocoPackages/tree/master/automatic/superantispyware</packageSourceUrl>
         <!-- owners is a poor name for maintainers of the package. It sticks around by this name for compatibility reasons. It basically means you. -->
         <owners>mikeee</owners>
@@ -34,7 +34,7 @@ This is a nuspec. It mostly adheres to https://docs.nuget.org/create/Nuspec-Refe
         <!-- projectUrl is required for the community feed -->
         <projectUrl>https://www.superantispyware.com/</projectUrl>
         <iconUrl>https://cdn.jsdelivr.net/gh/mikeee/ChocoPackages/icons/superantispyware.png</iconUrl>
-        <copyright>Copyright © 2015 Support.com, Inc. All Rights Reserved.</copyright>
+        <copyright>Copyright Â© 2015 Support.com, Inc. All Rights Reserved.</copyright>
         <!-- If there is a license Url available, it is is required for the community feed -->
         <licenseUrl>https://www.superantispyware.com/eula.html</licenseUrl>
         <requireLicenseAcceptance>false</requireLicenseAcceptance>
@@ -45,9 +45,9 @@ This is a nuspec. It mostly adheres to https://docs.nuget.org/create/Nuspec-Refe
         <tags>anti-spyware anti-malware adware trojan super anti spyware sas free</tags>
         <summary>SUPERAntiSpyware removes malicious software and restores system settings.</summary>
         <description>Detects and remove spyware, adware, malware, trojans, rogue software, worms, rootkits, parasites and other potentially harmful software applications, as well as restore modified system settings.
-            
-            **NOTE**: This package is automatically updated. If it is out of date and there is no newer package submitted, please use the `Contact Maintainers` functionality to alert me.
-        </description>
+
+**NOTE**: This package is automatically updated. If it is out of date and there is no newer package submitted, please use the `Contact Maintainers` functionality to alert me.
+</description>
         <!-- <releaseNotes></releaseNotes> -->
         <!-- =============================== -->
         <!-- Specifying dependencies and version ranges? https://docs.nuget.org/create/versioning#specifying-version-ranges-in-.nuspec-files -->
