@@ -3,6 +3,8 @@ $packageArgs = @{
     installerType    = 'EXE'
     silentArgs       = '/noui /clean'
     validExitCodes   = @(0)
+    path             = "$env:ProgramFiles\SUPERAntiSpyware"
+    path86           = "${env:ProgramFiles(x86)}\SUPERAntiSpyware"
     toolsDir = Split-Path -Path $MyInvocation.MyCommand.Definition -Parent
 }
 
