@@ -9,7 +9,7 @@ $toolsDir = "C:\ProgramData\chocolatey\lib\$packageName\tools"
 
 if (Test-Path $path) {
     Invoke-WebRequest -Uri "https://www.superantispyware.com/downloads/SASUNINST64.EXE" -OutFile "$toolsDir\SASUNINST64.EXE"
-    Uninstall-ChocolateyPackage $packageName $installerType $silentArgs "$toolsDir\SASUNINST.exe"
+    Uninstall-ChocolateyPackage $packageName $installerType $silentArgs "$toolsDir\SASUNINST64.exe"
 }
 
 if (Test-Path $path86) {
