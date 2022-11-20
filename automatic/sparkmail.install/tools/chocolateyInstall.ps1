@@ -2,9 +2,9 @@
 
 $packageArgs = @{
     packageName   = $env:ChocolateyPackageName
-    url           = 'https://netcologne.dl.sourceforge.net/project/pidgin/Pidgin/2.14.9/pidgin-2.14.9-offline.exe'
-    checksum 		  = '3bb3186222a491aae4da1c87544da30dab405b0f7f974bba6fd60963ec6c73c6'
-    checksumType 	= 'sha256'
+    url           = 'https://downloads.sparkmailapp.com/Spark3/win/dist/3.1.2.39231/Spark.exe'
+    checksum 		  = ''
+    checksumType 	= ''
     fileType      = 'EXE'
     silentArgs    = '/S'
     validExitCodes = @(0)
