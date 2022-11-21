@@ -10,5 +10,5 @@ $packageArgs = @{
     validExitCodes = @(0)
 }
 
-Stop-Process -ProcessName pidgin* -ErrorAction SilentlyContinue -Force
+Stop-Process -ProcessName "Spark Desktop*" -ErrorAction SilentlyContinue -Force
 Install-ChocolateyPackage @packageArgs
