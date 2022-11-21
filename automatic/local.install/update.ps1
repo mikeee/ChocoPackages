@@ -19,7 +19,14 @@ function global:au_AfterUpdate {
 }
 
 function global:au_GetLatest {
-    $page = Invoke-WebRequest -Uri $releases -UseBasicParsing
+    $ieObject = New-Object -ComObject 'InternetExplorer.Application'
+
+    $ieObject.Visible = $true
+
+    $ieObject.Navigate($releases)
+
+    $page = $ieObject.Document
+
     $regexUrl = '(?<url>https:\/\/cdn.localwp.com\/releases-stable\/(?<version>[\d\.]+)\+[\d]+\/local-[\d\.]+-windows.exe)'
 
     $search = $page.links | Where-Object href -match $regexUrl | Select-Object -First 1 -expand href
