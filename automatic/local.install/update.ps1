@@ -7,9 +7,9 @@ $releases    = 'https://localwp.com/releases/'
 function global:au_SearchReplace {
     @{
         ".\tools\chocolateyInstall.ps1" = @{
-            '(^\s*url64\s*=\s*)(''.*'')'            = "`$1'$($Latest.URL64)'"
-            "(?i)(^\s*checksum64\s*=\s*)('.*')"       = "`$1'$($Latest.Checksum64)'"
-            "(?i)(^\s*checksumType64\s*=\s*)('.*')"   = "`$1'$($Latest.ChecksumType64)'"
+            '(^\s*url\s*=\s*)(''.*'')'            = "`$1'$($Latest.URL)'"
+            "(?i)(^\s*checksum\s*=\s*)('.*')"       = "`$1'$($Latest.Checksum)'"
+            "(?i)(^\s*checksumType\s*=\s*)('.*')"   = "`$1'$($Latest.ChecksumType)'"
         }
     }
 }
@@ -20,12 +20,12 @@ function global:au_AfterUpdate {
 
 function global:au_GetLatest {
     $page = Invoke-WebRequest -Uri $releases -UseBasicParsing
-    $regexUrl64 = '(?<url>https:\/\/cdn.localwp.com\/releases-stable\/(?<version>[\d\.]+)\+[\d]+\/local-[\d\.]+-windows.exe)'
+    $regexUrl = '(?<url>https:\/\/cdn.localwp.com\/releases-stable\/(?<version>[\d\.]+)\+[\d]+\/local-[\d\.]+-windows.exe)'
 
-    $search = $page.links | Where-Object href -match $regexUrl64 | Select-Object -First 1 -expand href
+    $search = $page.links | Where-Object href -match $regexUrl | Select-Object -First 1 -expand href
 
     return @{
-        URL64        = $matches.url
+        URL          = $matches.url
         Version      = $matches.version
     }
 }
