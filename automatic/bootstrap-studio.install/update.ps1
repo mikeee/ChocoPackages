@@ -14,6 +14,11 @@ function global:au_SearchReplace {
     }
 }
 
+function global:au_BeforeUpdate {
+    $Latest.Checksum = Get-RemoteChecksum $Latest.URL
+    $Latest.ChecksumType = 'SHA256'
+}
+
 function global:au_AfterUpdate {
     Set-DescriptionFromReadme -SkipFirst 2
 }
