@@ -1,26 +1,43 @@
 #import-module au
 
+. $PSScriptRoot\..\..\scripts\all.ps1
+
+$releases    = 'https://sparkmailapp.com/download'
+
 function global:au_SearchReplace {
     @{
-        "$($Latest.PackageName).nuspec" = @{
-            "(\<dependency .+?`"sparkmail.install`" version=)`"([^`"]+)`"" = "`$1`"$($Latest.Version)`""
+        ".\tools\chocolateyInstall.ps1" = @{
+            '(^\s*url\s*=\s*)(''.*'')'              = "`$1'$($Latest.URL)'"
+            "(?i)(^\s*checksum\s*=\s*)('.*')"       = "`$1'$($Latest.Checksum)'"
+            "(?i)(^\s*checksumType\s*=\s*)('.*')"   = "`$1'$($Latest.ChecksumType)'"
         }
     }
 }
 
-function global:au_GetLatest {
-    $page = Invoke-WebRequest -Uri "https://chocolatey.org/packages/sparkmail.install/" -UseBasicParsing
-    $regexUrl = 'packages\/sparkmail.install\/(?<version>[\d.]+)\/ContactAdmins'
-
-    $page.links | Where-Object href -match $regexUrl | Select-Object -First 1 -expand href
-
-    return @{
-        Version      = $matches.version
-    }
+function global:au_BeforeUpdate {
+    $Latest.Checksum = Get-RemoteChecksum $Latest.URL
+    $Latest.ChecksumType = 'SHA256'
 }
 
 function global:au_AfterUpdate {
     Set-DescriptionFromReadme -SkipFirst 2
 }
 
-update -ChecksumFor none
+function global:au_GetLatest {
+    $page = Invoke-WebRequest -Uri $releases -UseBasicParsing
+    $regexVersion = '(?<url>dist\/(?<version>[\d\.]+)\/Spark.exe)'
+
+    $matched = $page.Content -match $regexVersion
+
+    If ($False -ne $matchedurl) {
+        $url = -join("https://downloads.sparkmailapp.com/Spark3/win/dist/",$matches["version"],"/Spark.exe")
+        $version = $matches["version"]
+    }
+
+    return @{
+        URL        = $url
+        Version    = $version
+    }
+}
+
+Update-Package

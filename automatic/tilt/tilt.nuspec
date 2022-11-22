@@ -44,7 +44,12 @@ This is a nuspec. It mostly adheres to https://docs.nuget.org/create/Nuspec-Refe
 		<!--<bugTrackerUrl></bugTrackerUrl>-->
 		<tags>tilt dev up docker kubernetes microservice microservices deployment deploy container</tags>
 		<summary>Kubernetes for Prod, Tilt for Dev</summary>
-		<description></description>
+		<description>Tilt powers microservice development and makes sure they behave! Run `tilt up` to work in a complete dev environment configured for your team.
+
+Tilt automates all the steps from a code change to a new process: watching files, building container images, and bringing your environment up-to-date.
+
+**NOTE**: This is an automatically updated package. If you find it is out of date by more than a week, please contact the maintainer(s) and let them know the package is no longer updating correctly.
+</description>
 		<releaseNotes>https://github.com/tilt-dev/tilt/releases</releaseNotes>
 		<!-- =============================== -->
 		<!-- Specifying dependencies and version ranges? https://docs.nuget.org/create/versioning#specifying-version-ranges-in-.nuspec-files -->
@@ -52,7 +57,6 @@ This is a nuspec. It mostly adheres to https://docs.nuget.org/create/Nuspec-Refe
 		<!-- <dependency id="autohotkey" /> -->
 		<!-- <dependency id="" version="[__EXACT_VERSION__]" /> -->
 		<!-- <dependency id="chocolatey" version="0.10.8" /> -->
-		<dependency id="tilt.portable" version="0.0.0" />
 		<!-- <dependency id="" version="[_MIN_VERSION_INCLUSIVE, MAX_VERSION_EXCLUSIVE)" /> -->
 		<!-- <dependency id="" /> -->
 		<!-- <dependency id="chocolatey-uninstall.extension" /> -->
