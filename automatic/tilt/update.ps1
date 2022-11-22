@@ -8,8 +8,6 @@ function global:au_SearchReplace {
     }
 }
 
-function global:au_BeforeUpdate { }
-
 function global:au_GetLatest {
     $page = Invoke-WebRequest -Uri "https://chocolatey.org/packages/tilt.portable/" -UseBasicParsing
     $regexUrl = 'packages\/tilt.portable\/(?<version>[\d.]+)\/ContactAdmins'
@@ -19,6 +17,10 @@ function global:au_GetLatest {
     return @{
         Version      = $matches.version
     }
+}
+
+function global:au_AfterUpdate {
+    Set-DescriptionFromReadme -SkipFirst 2
 }
 
 update -ChecksumFor none
