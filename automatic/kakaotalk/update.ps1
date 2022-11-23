@@ -25,7 +25,7 @@ function global:au_AfterUpdate {
 
 function global:au_GetLatest {
     $tmpFile = "$env:TEMP\KakaoTalk_Setup.exe"
-    Get-WebFile $release $tmpFile | Out-Null
+    Invoke-WebRequest -UseBasicParsing -Uri $release -OutFile $tmpFile
     $versionInfo = Get-Item $tmpFile | % versioninfo
 
     return @{
