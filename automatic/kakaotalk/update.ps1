@@ -1,8 +1,9 @@
 #import-module au
 
 . $PSScriptRoot\..\..\scripts\all.ps1
-
+$releases   = 'http://app.pc.kakao.com/talk/win32/patch/patch.txt'
 $release    = 'https://app-pc.kakaocdn.net/talk/win32/KakaoTalk_Setup.exe'
+
 
 function global:au_SearchReplace {
     @{
@@ -24,13 +25,17 @@ function global:au_AfterUpdate {
 }
 
 function global:au_GetLatest {
-    $tmpFile = "$env:TEMP\KakaoTalk_Setup.exe"
-    Invoke-WebRequest -UseBasicParsing -Uri $release -OutFile $tmpFile
-    $versionInfo = Get-Item $tmpFile | % versioninfo
+    $page = Invoke-WebRequest -Uri $releases -UseBasicParsing
+
+    $regexPage = '(?<version>[\d]+\.[\d]+\.[\d]+\.[\d]+)'
+
+    $matched = $page.Content -match $regexPage
+
+    $version = $matches["version"]
 
     return @{
         URL        = $release
-        Version    = $versionInfo.ProductVersion
+        Version    = $version
     }
 }
 
