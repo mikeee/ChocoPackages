@@ -1,5 +1,5 @@
 $ErrorActionPreference = 'Stop';
- 
+
 $packageArgs = @{
   packageName     = 'ossec-client'
   fileType        = 'exe'

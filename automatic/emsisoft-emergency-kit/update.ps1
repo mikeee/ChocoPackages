@@ -29,7 +29,7 @@ function global:au_GetLatest {
     $regex = 'Version (?<version>[\d.]+) &#8211; Released:'
 
     $page.Content -match $regex
-    
+
     $version = $matches.version
 
     return @{

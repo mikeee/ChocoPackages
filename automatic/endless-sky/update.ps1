@@ -31,11 +31,11 @@ function global:au_AfterUpdate {
 
 function global:au_GetLatest {
     $release = Get-GitHubRelease -OwnerName $repoOwner -RepositoryName $repoName -Latest
-    
+
     $version = $release.tag_name
     # Remove the leading 'v' from the tag name if it exists
     if ($version.StartsWith('v')) {
-        $version = $version.Substring(1) 
+        $version = $version.Substring(1)
     }
 
     $asset64 = $release.assets | Where-Object name -Match 'endless-sky-win64-v([\d\.]+).zip'

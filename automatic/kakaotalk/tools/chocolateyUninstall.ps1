@@ -7,7 +7,7 @@ $file                = ""
 
 if (Test-Path "$uninstaller64") {
   $file = "$uninstaller64"
-} 
+}
 else if (Test-Path "$uninstaller32") {
   $file = "$uninstaller32"
 }

@@ -7,7 +7,7 @@ $packageArgs = @{
     url           = 'https://download.bleepingcomputer.com/sUBs/ComboFix.exe'
     checksum      = '23ea3c510c9b0d48047a4b236a82a7fdbed3bd58c1b3eecf82729ef1c849d421'
     checksumType  = 'SHA256'
-    
+
     unzipLocation  = $toolsdir
 }
 

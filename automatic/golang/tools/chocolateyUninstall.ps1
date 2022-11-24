@@ -1,19 +1,19 @@
-$ErrorActionPreference = 'Stop'; 
+$ErrorActionPreference = 'Stop';
 $packageArgs = @{
   packageName   = $env:ChocolateyPackageName
-  softwareName  = 'golang*'  
-  fileType      = 'msi' 
+  softwareName  = 'golang*'
+  fileType      = 'msi'
 
   silentArgs    = "/qn /norestart"
-  validExitCodes= @(0, 3010, 1605, 1614, 1641) 
+  validExitCodes= @(0, 3010, 1605, 1614, 1641)
 
 }
 
 [array]$key = Get-UninstallRegistryKey @packageArgs
 
 if ($key.Count -eq 1) {
-  $key | ForEach-Object { 
-    $packageArgs['file'] = "$($_.UninstallString)" 
+  $key | ForEach-Object {
+    $packageArgs['file'] = "$($_.UninstallString)"
 
     if ($packageArgs['fileType'] -eq 'MSI') {
       $packageArgs['silentArgs'] = "$($_.PSChildName) $($packageArgs['silentArgs'])"

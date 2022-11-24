@@ -10,11 +10,11 @@ $packageArgs = @{
 [array]$key = Get-UninstallRegistryKey -SoftwareName $packageArgs['softwareName']
 
 if ($key.Count -eq 1) {
-  $key | ForEach-Object { 
+  $key | ForEach-Object {
     $packageArgs['file'] = "$($_.UninstallString)"
     if ($packageArgs['fileType'] -eq 'MSI') {
       $packageArgs['silentArgs'] = "$($_.PSChildName) $($packageArgs['silentArgs'])"
-      
+
       $packageArgs['file'] = ''
     }
 
