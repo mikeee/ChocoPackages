@@ -34,7 +34,7 @@ This is a nuspec. It mostly adheres to https://docs.nuget.org/create/Nuspec-Refe
 		<!-- projectUrl is required for the community feed -->
 		<projectUrl>https://endless-sky.github.io/</projectUrl>
 		<iconUrl>https://cdn.jsdelivr.net/gh/mikeee/ChocoPackages/icons/endless-sky.png</iconUrl>
-		<copyright>Michael Zahniser and endless-sky contributors</copyright>
+		<copyright>Copyright (C) 2015-2022 - Michael Zahniser and endless-sky contributors</copyright>
 		<!-- If there is a license Url available, it is is required for the community feed -->
 		<licenseUrl>https://github.com/endless-sky/endless-sky/blob/master/license.txt</licenseUrl>
 		<requireLicenseAcceptance>false</requireLicenseAcceptance>
@@ -42,7 +42,7 @@ This is a nuspec. It mostly adheres to https://docs.nuget.org/create/Nuspec-Refe
 		<docsUrl>https://github.com/endless-sky/endless-sky/wiki/PlayersManual</docsUrl>
 		<!--<mailingListUrl></mailingListUrl>-->
 		<!--<bugTrackerUrl></bugTrackerUrl>-->
-		<tags>endless sky endlesssky space exploration trading combat game bounty explore free spaceship ship explorer</tags>
+		<tags>endless sky endlesssky space exploration trading combat game</tags>
 		<summary>Space exploration, trading, and combat game.</summary>
 		<description>Endless Sky is a sandbox-style space exploration game similar to Elite, Escape Velocity, or Star Control. You start out as the captain of a tiny spaceship and can choose what to do from there. The game includes a major plot line and many minor missions, but you can choose whether you want to play through the plot or strike out on your own as a merchant or bounty hunter or explorer.
 
