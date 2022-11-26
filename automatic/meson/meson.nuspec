@@ -50,7 +50,7 @@ The main design point of Meson is that every moment a developer spends writing o
 
 **NOTE**: This package is automatically updated. If it is out of date and there is no newer package submitted, please use the `Contact Maintainers` functionality to alert us.
 </description>
-        <!-- <releaseNotes></releaseNotes> -->
+        <releaseNotes>https://mesonbuild.com/Release-notes.html</releaseNotes>
         <!-- =============================== -->
         <!-- Specifying dependencies and version ranges? https://docs.nuget.org/create/versioning#specifying-version-ranges-in-.nuspec-files -->
         <!-- <dependencies> -->
