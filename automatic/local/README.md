@@ -1,4 +1,4 @@
-# ![Local Install Logo](https://cdn.jsdelivr.net/gh/mikeee/ChocoPackages/icons/local.png "Local Install Logo") [local](https://chocolatey.org/packages/local.install)
+# ![Local Logo](https://cdn.jsdelivr.net/gh/mikeee/ChocoPackages/icons/local.png "Local Logo") [local](https://chocolatey.org/packages/local)
 
 Local is built to accelerate local development/building of WordPress sites with a variety of developer tools.
 
