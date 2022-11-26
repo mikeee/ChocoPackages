@@ -4,14 +4,31 @@
 
 $releases    = 'https://www.superantispyware.com/downloadfile.html?productid=SUPERANTISPYWAREFREE'
 
+$uninst      = 'https://www.superantispyware.com/downloads/SASUNINST.EXE'
+$uninst64    = 'https://www.superantispyware.com/downloads/SASUNINST64.EXE'
+
 function global:au_SearchReplace {
     @{
         ".\tools\chocolateyInstall.ps1" = @{
-            '(^\s*url\s*=\s*)(''.*'')'              = "`$1'$($Latest.URL32)'"
-            "(?i)(^\s*checksum\s*=\s*)('.*')"       = "`$1'$($Latest.Checksum32)'"
-            "(?i)(^\s*checksumType\s*=\s*)('.*')"   = "`$1'$($Latest.ChecksumType32)'"
+            '(^\s*url\s*=\s*)(''.*'')'              = "`$1'$($Latest.URL)'"
+            "(?i)(^\s*checksum\s*=\s*)('.*')"       = "`$1'$($Latest.Checksum)'"
+            "(?i)(^\s*checksumType\s*=\s*)('.*')"   = "`$1'$($Latest.ChecksumType)'"
         }
     }
+    @{
+        ".\tools\chocolateyUninstall.ps1" = @{
+            "(?i)(^\s*checksum\s*=\s*)('.*')"       = "`$1'$($Latest.uCS)'"
+            "(?i)(^\s*checksum64\s*=\s*)('.*')"       = "`$1'$($Latest.uCS64)'"
+        }
+    }
+}
+
+function global:au_BeforeUpdate {
+    $Latest.Checksum = Get-RemoteChecksum $Latest.Url
+    $Latest.ChecksumType = 'SHA256'
+
+    $Latest.uCS = Get-RemoteChecksum $uninst
+    $Latest.uCS64 = Get-RemoteChecksum $uninst64
 }
 
 function global:au_AfterUpdate {
@@ -30,9 +47,9 @@ function global:au_GetLatest {
     $url = "https://securedownloads.superantispyware.com/SUPERAntiSpyware.exe"
 
     return @{
-        URL32        = $url
+        URL        = $url
         Version      = $version
     }
 }
 
-update
+update -ChecksumFor none
