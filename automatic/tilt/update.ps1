@@ -3,21 +3,21 @@
 . $PSScriptRoot\..\..\scripts\all.ps1
 
 $repoOwner = 'tilt-dev'
-$repoName = 'tilt'
+$repoName  = 'tilt'
 
 function global:au_SearchReplace {
     @{
         ".\tools\chocolateyInstall.ps1" = @{
-            '(^\s*url\s*=\s*)(''.*'')'              = "`$1'$($Latest.URL)'"
-            "(?i)(^\s*checksum\s*=\s*)('.*')"       = "`$1'$($Latest.Checksum)'"
-            "(?i)(^\s*checksumType\s*=\s*)('.*')"   = "`$1'$($Latest.ChecksumType)'"
+            '(^\s*url64\s*=\s*)(''.*'')'              = "`$1'$($Latest.URL64)'"
+            "(?i)(^\s*checksum64\s*=\s*)('.*')"       = "`$1'$($Latest.Checksum64)'"
+            "(?i)(^\s*checksumType64\s*=\s*)('.*')"   = "`$1'$($Latest.ChecksumType64)'"
         }
     }
 }
 
 function global:au_BeforeUpdate {
-    $Latest.Checksum = Get-RemoteChecksum $Latest.Url
-    $Latest.ChecksumType = 'SHA256'
+    $Latest.Checksum64 = Get-RemoteChecksum $Latest.Url64
+    $Latest.ChecksumType64 = 'SHA256'
 }
 
 function global:au_AfterUpdate {
@@ -36,7 +36,7 @@ function global:au_GetLatest {
     $asset = $release.assets | Where-Object name -Match 'tilt.([\d\.]+)windows.x86_64.zip$'
 
     return @{
-        URL             = $asset.browser_download_url
+        URL64           = $asset.browser_download_url
         Version         = $version
     }
 }
