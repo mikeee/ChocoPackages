@@ -4,6 +4,10 @@
 
 $releases    = 'https://localwp.com/releases/'
 
+go mod tidy
+
+$url = go run getversion.go
+
 function global:au_SearchReplace {
     @{
         ".\tools\chocolateyInstall.ps1" = @{
@@ -14,22 +18,19 @@ function global:au_SearchReplace {
     }
 }
 
+function global:au_BeforeUpdate {
+    $Latest.Checksum     = Get-RemoteChecksum $Latest.URL
+    $Latest.ChecksumType = 'SHA256'
+}
+
 function global:au_AfterUpdate {
     Set-DescriptionFromReadme -SkipFirst 2
 }
 
 function global:au_GetLatest {
-    $ieObject = New-Object -ComObject 'InternetExplorer.Application'
-
-    $ieObject.Visible = $true
-
-    $ieObject.Navigate($releases)
-
-    $page = $ieObject.Document
-
     $regexUrl = '(?<url>https:\/\/cdn.localwp.com\/releases-stable\/(?<version>[\d\.]+)\+[\d]+\/local-[\d\.]+-windows.exe)'
 
-    $search = $page.links | Where-Object href -match $regexUrl | Select-Object -First 1 -expand href
+    $url -match $regexUrl
 
     return @{
         URL          = $matches.url
