@@ -30,7 +30,7 @@ func main() {
 	var res string
 
 	err := chromedp.Run(ctx,
-		chromedp.Navigate(`https://localwp.com/releases/embed/#?secret=JZRkl0APrV`),
+		chromedp.Navigate(`https://localwp.com/releases`),
 		chromedp.ActionFunc(func(ctx context.Context) error {
 			node, err := dom.GetDocument().Do(ctx)
 			if err != nil {
