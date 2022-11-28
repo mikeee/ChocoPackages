@@ -1,7 +1,6 @@
 # Static script analysis
 name: PSScriptAnalyzer
 on:
-  push:
   pull_request:
 jobs:
   lint:
