@@ -48,7 +48,7 @@ This is a nuspec. It mostly adheres to https://docs.nuget.org/create/Nuspec-Refe
 
 **NOTE**: This package is automatically updated. If it is out of date and there is no newer package submitted, please use the `Contact Maintainers` functionality to alert them.
 </description>
-        <!-- <releaseNotes></releaseNotes> -->
+        <releaseNotes>https://store.steampowered.com/oldnews/?feed=steam_client</releaseNotes>
         <!-- =============================== -->
         <!-- Specifying dependencies and version ranges? https://docs.nuget.org/create/versioning#specifying-version-ranges-in-.nuspec-files -->
         <dependencies>
