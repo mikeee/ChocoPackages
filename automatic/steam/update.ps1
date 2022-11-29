@@ -2,7 +2,7 @@
 
 . $PSScriptRoot\..\..\scripts\all.ps1
 
-$releases    = 'http://media.steampowered.com/client/installer/SteamSetup.exe'
+$releases    = 'https://media.steampowered.com/client/installer/SteamSetup.exe'
 $checksumType = 'SHA256'
 
 function global:au_SearchReplace {
