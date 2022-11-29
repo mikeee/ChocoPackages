@@ -42,5 +42,5 @@ function global:au_GetLatest {
     }
 }
 
-Update-Package
+update -ChecksumFor none
 
