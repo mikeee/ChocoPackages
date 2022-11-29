@@ -27,7 +27,7 @@ function global:au_GetLatest {
     $oldChecksum = (Select-String -Path '.\tools\chocolateyinstall.ps1' -Pattern "(checksum\s*=\s*)('.*')").Line.Split("'")[1]
 
     if ( $checksum -ne $oldChecksum ) {
-        $versionDate = Get-Date -Format "ddMMyyyy"
+        $versionDate = Get-Date -Format "ddMMyy"
         $finalVersion = (Get-Item $tempfile).VersionInfo.FileVersion + $versionDate
     } else {
         [xml]$xmlPackage = Get-Content -Path '.\steam.nuspec'
