@@ -3,6 +3,7 @@
 . $PSScriptRoot\..\..\scripts\all.ps1
 
 $releases    = 'http://media.steampowered.com/client/installer/SteamSetup.exe'
+$checksumType = 'SHA256'
 
 function global:au_SearchReplace {
     @{
@@ -22,7 +23,7 @@ function global:au_GetLatest {
     $tempFile = New-TemporaryFile
     Invoke-WebRequest -Uri $releases -OutFile $tempFile -UseBasicParsing
 
-    $checksum = Get-FileHash -Algorithm SHA256 -Path $tempFile -ErrorAction SilentlyContinue | Select-Object -ExpandProperty Hash
+    $checksum = Get-FileHash -Algorithm $checksumType -Path $tempFile -ErrorAction SilentlyContinue | Select-Object -ExpandProperty Hash
     $oldChecksum = (Select-String -Path '.\tools\chocolateyinstall.ps1' -Pattern "(checksum\s*=\s*)('.*')").Line.Split("'")[1]
 
     if ( $checksum -ne $oldChecksum ) {
@@ -36,6 +37,7 @@ function global:au_GetLatest {
     return @{
         URL          = $releases
         Checksum     = $checksum
+        ChecksumType = $checksumType
         Version      = $finalVersion
     }
 }
