@@ -23,12 +23,12 @@ function global:au_GetLatest {
     $tempFile = New-TemporaryFile
     Invoke-WebRequest -Uri $releases -OutFile $tempFile -UseBasicParsing
 
-    $checksum = Get-FileHash -Algorithm $checksumType -Path $tempFile -ErrorAction SilentlyContinue | Select-Object -ExpandProperty Hash
+    $checksum = Get-FileHash -Algorithm SHA256 -Path $tempFile -ErrorAction SilentlyContinue | Select-Object -ExpandProperty Hash
     $oldChecksum = (Select-String -Path '.\tools\chocolateyinstall.ps1' -Pattern "(checksum\s*=\s*)('.*')").Line.Split("'")[1]
 
     if ( $checksum -ne $oldChecksum ) {
         $versionDate = Get-Date -Format "ddMMyyyy"
-        $finalVersion = (Get-Item $tempfile).VersionInfo.FileVersion + "-" + $versionDate
+        $finalVersion = (Get-Item $tempfile).VersionInfo.FileVersion + $versionDate
     } else {
         [xml]$xmlPackage = Get-Content -Path '.\steam.nuspec'
         $finalVersion = $xmlPackage.package.metadata.version
