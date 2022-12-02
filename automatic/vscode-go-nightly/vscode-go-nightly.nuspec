@@ -22,7 +22,7 @@ This is a nuspec. It mostly adheres to https://docs.nuget.org/create/Nuspec-Refe
         <!-- version should MATCH as closely as possible with the underlying software -->
         <!-- Is the version a prerelease of a version? https://docs.nuget.org/create/versioning#creating-prerelease-packages -->
         <!-- Note that unstable versions like 0.0.1 can be considered a released version, but it's possible that one can release a 0.0.1-beta before you release a 0.0.1 version. If the version number is final, that is considered a released version and not a prerelease. -->
-        <version>0.0.0</version>
+        <version>2022.11.3022</version>
         <packageSourceUrl>https://github.com/mikeee/ChocoPackages/tree/master/automatic/vscode-go-nightly</packageSourceUrl>
         <!-- owners is a poor name for maintainers of the package. It sticks around by this name for compatibility reasons. It basically means you. -->
         <owners>mikeee</owners>
@@ -44,13 +44,31 @@ This is a nuspec. It mostly adheres to https://docs.nuget.org/create/Nuspec-Refe
         <!--<bugTrackerUrl></bugTrackerUrl>-->
         <tags>vs code vscode go golang nightly extension</tags>
         <summary>The preview version of the VS Code Go extension</summary>
-        <description></description>
+        <description># Go Nightly for VS Code
+
+_ATTENTION_: This is the preview version of the VS Code Go extension, used for early feedback and testing.
+It is published nightly and contains previews of new features and bug fixes that are still under review or test. Therefore, this extension can be broken or unstable at times. If you are looking for the stable version, please install the default VS Code Go extension instead.
+
+NOTE: The stable Go extension (golang.go) cannot be used at the same time as the preview Go Nightly extension (golang.go-nightly). If you have installed both extensions, you must disable or uninstall one of them. For further guidance, read the documentation on how to disable an extension.
+
+# Differences between Go and Go Nightly
+
+- Go Nightly is released more frequently than the stable version (once per weekday).
+- Go Nightly includes features and bug fixes that are not yet finalized.
+- Go Nightly may use pre-release versions of tools (such as gopls) instead of released versions.
+
+For more information about Go Nightly, read the Go Nightly documentation.
+
+The VS Code Go extension provides rich language support for the Go programming language.
+
+**NOTE**: This package is automatically updated. If it is out of date and there is no newer package submitted, please use the `Contact Maintainers` functionality to alert me.
+</description>
         <releaseNotes>https://marketplace.visualstudio.com/items/golang.go-nightly/changelog</releaseNotes>
         <!-- =============================== -->
         <!-- Specifying dependencies and version ranges? https://docs.nuget.org/create/versioning#specifying-version-ranges-in-.nuspec-files -->
         <dependencies>
             <dependency id="chocolatey-vscode.extension" version="1.1.0" />
-            <dependency id="vscode" version="1.64.0" />
+            <dependency id="vscode" version="1.67.0" />
             <!-- <dependency id="autohotkey" /> -->
             <!-- <dependency id="" version="[__EXACT_VERSION__]" /> -->
             <!-- <dependency id="chocolatey" version="0.10.8" /> -->
