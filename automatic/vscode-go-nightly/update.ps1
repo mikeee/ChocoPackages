@@ -9,12 +9,10 @@ function global:au_SearchReplace {
         ".\tools\chocolateyInstall.ps1" = @{
             "(golang.go-nightly@)[^']*" = "`${1}$($Latest.Version)"
         }
+        "$($Latest.PackageName).nuspec" = @{
+            "(\<dependency .+?`"vscode`" version=)`"([^`"]+)`"" = "`$1`"$($Latest.VsCodeVersion)`""
+        }
     }
-}
-
-function global:au_BeforeUpdate {
-    $vscode = $Package.nuspecXml.package.metadata.dependencies.dependency | ? id -Match '^vscode$'
-    $vscode.version = $Latest.VsCodeVersion
 }
 
 function global:au_AfterUpdate {
