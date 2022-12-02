@@ -33,7 +33,6 @@ function global:au_GetLatest {
 
     @{
         Version       = $json.version
-        RemoteVersion = $json.version
         VsCodeVersion = $json.engines.vscode.TrimStart('^')
     }
 }
