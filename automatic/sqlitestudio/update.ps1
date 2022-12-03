@@ -21,8 +21,4 @@ function global:au_GetLatest {
 
 function global:au_BeforeUpdate { }
 
-function global:au_AfterUpdate {
-    Set-DescriptionFromReadme -SkipFirst 2
-}
-
 update -ChecksumFor none
