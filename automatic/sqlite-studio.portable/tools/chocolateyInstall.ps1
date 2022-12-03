@@ -17,7 +17,7 @@ $packageArgs = @{
 
 # Some of this was taken from https://github.com/brianmego/Chocolatey/pull/6
 Install-ChocolateyZipPackage @packageArgs
-Install-BinFile -Name 'SQLiteStudio' -Path (Join-Path -Path $toolsdir -ChildPath 'SQLiteStudio.exe')
+Install-BinFile -Name 'SQLiteStudio' -Path (Join-Path -Path $toolsdir -ChildPath './SQLiteStudio/SQLiteStudio.exe')
 
 # Start menu shortcuts
 $progsFolder = [Environment]::GetFolderPath('Programs')
