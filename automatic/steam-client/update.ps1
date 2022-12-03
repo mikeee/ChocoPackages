@@ -19,8 +19,6 @@ function global:au_GetLatest {
     }
 }
 
-function global:au_AfterUpdate {
-    Set-DescriptionFromReadme -SkipFirst 2
-}
+function global:au_BeforeUpdate { }
 
 update -ChecksumFor none

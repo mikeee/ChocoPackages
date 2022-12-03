@@ -44,7 +44,9 @@ This is a nuspec. It mostly adheres to https://docs.nuget.org/create/Nuspec-Refe
         <!--<bugTrackerUrl></bugTrackerUrl>-->
         <tags>steam client valve</tags>
         <summary>Valve's official steam client.</summary>
-        <description></description>
+        <description>This package has been deprecated and merely points to the main package. Please use the [steam](https://chocolatey.org/packages/steam) package instead.
+
+            Steam is a video game digital distribution service and storefront by Valve.</description>
         <!-- <releaseNotes></releaseNotes> -->
         <!-- =============================== -->
         <!-- Specifying dependencies and version ranges? https://docs.nuget.org/create/versioning#specifying-version-ranges-in-.nuspec-files -->
