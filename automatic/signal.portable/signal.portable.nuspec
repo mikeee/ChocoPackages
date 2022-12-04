@@ -4,7 +4,7 @@
     <metadata>
         <!-- Read this before publishing packages to chocolatey.org: https://github.com/chocolatey/chocolatey/wiki/CreatePackages -->
         <id>signal.portable</id>
-        <title>Signal™ portable app</title>
+        <title>Signal portable app</title>
         <version>0.0.0</version>
         <authors>Portapps</authors>
         <owners>Xav83, mikeee</owners>
