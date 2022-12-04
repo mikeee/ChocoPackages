@@ -33,6 +33,9 @@ function global:au_GetLatest {
         $version = $version.Substring(1)
     }
 
+    # Remove the leading internal version number
+    $version = ($version.Split("-"))[0]
+
     $asset64 = $release.assets | Where-Object name -Match 'signal-portable-win64-([\d\.]+)-[\d].7z'
 
     return @{
