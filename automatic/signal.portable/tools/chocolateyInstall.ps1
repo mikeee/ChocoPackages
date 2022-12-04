@@ -1,23 +1,15 @@
 $ErrorActionPreference = 'Stop'
 
-$toolsDir   = Join-Path -Path (Get-ToolsLocation) -ChildPath 'signal-portable'
+$toolsDir   = Split-Path $MyInvocation.MyCommand.Definition
 
 $packageArgs = @{
     packageName    = $env:ChocolateyPackageName
-    url64          = 'https://github.com/endless-sky/endless-sky/releases/download/v0.9.16.1/endless-sky-win64-v0.9.16.1.zip'
-    checksum64     = 'ec680f41cd5133e44d06127ee170378671a6387c4b180966da2126e4a3e360f6'
+    url64          = ''
+    checksum64     = ''
     checksumType64 = 'SHA256'
     unzipLocation  = $toolsDir
 }
 
 Install-ChocolateyZipPackage @packageArgs
-Install-BinFile -Name 'signal-portable' -Path (Join-Path -Path $toolsdir -ChildPath './signal-portable/signal-portable.exe')
 
-# Start menu shortcuts
-$progsFolder = [Environment]::GetFolderPath('Programs')
-If ( Test-ProcessAdminRights ) {
-    $progsFolder = [Environment]::GetFolderPath('CommonPrograms')
-}
 
-Install-ChocolateyShortcut -shortcutFilePath (Join-Path -Path $progsFolder -ChildPath 'signal-portable.lnk') `
-    -targetPath (Join-Path -Path $toolsDir -ChildPath "./signal-portable/signal-portable.exe")
