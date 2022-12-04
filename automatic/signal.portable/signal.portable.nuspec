@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+    <metadata>
+        <!-- Read this before publishing packages to chocolatey.org: https://github.com/chocolatey/chocolatey/wiki/CreatePackages -->
+        <id>signal.portable</id>
+        <title>Signal™ portable app</title>
+        <version>0.0.0</version>
+        <authors>Portapps</authors>
+        <owners>Xav83, mikeee</owners>
+        <summary>(Unofficial) Signal portable for Windows</summary>
+        <description></description>
+        <projectUrl>https://portapps.io/app/signal-portable/</projectUrl>
+        <tags>windows portable signal portapps</tags>
+        <iconUrl>https://cdn.jsdelivr.net/gh/mikeee/ChocoPackages/icons/signal.png</iconUrl>
+        <copyright>Copyright (c) 2021 CrazyMax</copyright>
+        <licenseUrl>https://github.com/portapps/signal-portable/blob/master/LICENSE</licenseUrl>
+        <requireLicenseAcceptance>false</requireLicenseAcceptance>
+        <!--<dependencies>
+      <dependency id="" version="" />
+    </dependencies>-->
+        <releaseNotes>[Changelog](https://github.com/portapps/signal-portable/blob/master/CHANGELOG.md)</releaseNotes>
+        <docsUrl>https://portapps.io/app/signal-portable/#about</docsUrl>
+        <bugTrackerUrl>https://github.com/portapps/signal-portable/issues</bugTrackerUrl>
+        <projectSourceUrl>https://github.com/portapps/signal-portable</projectSourceUrl>
+        <packageSourceUrl>https://github.com/mikeee/ChocoPackages/tree/master/automatic/signal.portable</packageSourceUrl>
+    </metadata>
+    <files>
+        <file src="tools\**" target="tools" />
+    </files>
+</package>
