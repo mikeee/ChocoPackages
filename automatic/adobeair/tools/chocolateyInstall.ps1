@@ -4,7 +4,7 @@ $params = @{
     packageName  = $package;
     fileType     = 'exe';
     silentArgs   = '-silent -eulaAccepted';
-    url          = ""
+    url          = ''
     checksum     = ''
     checksumType = 'sha256'
 }
