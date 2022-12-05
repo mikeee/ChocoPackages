@@ -22,7 +22,7 @@ This is a nuspec. It mostly adheres to https://docs.nuget.org/create/Nuspec-Refe
         <!-- version should MATCH as closely as possible with the underlying software -->
         <!-- Is the version a prerelease of a version? https://docs.nuget.org/create/versioning#creating-prerelease-packages -->
         <!-- Note that unstable versions like 0.0.1 can be considered a released version, but it's possible that one can release a 0.0.1-beta before you release a 0.0.1 version. If the version number is final, that is considered a released version and not a prerelease. -->
-        <version>0.0.0.0</version>
+        <version>33.1.1.932</version>
         <packageSourceUrl>https://github.com/mikeee/ChocoPackages/tree/master/automatic/adobeair</packageSourceUrl>
         <!-- owners is a poor name for maintainers of the package. It sticks around by this name for compatibility reasons. It basically means you. -->
         <owners>mikeee</owners>
@@ -44,7 +44,12 @@ This is a nuspec. It mostly adheres to https://docs.nuget.org/create/Nuspec-Refe
         <!--<bugTrackerUrl></bugTrackerUrl>-->
         <tags>web browser AIR harman adobe integrated runtime</tags>
         <summary>Adobe AIR runtime is necessary for AIR based applications.</summary>
-        <description></description>
+        <description>Releases now come from HARMAN International which acquired Adobe's AIR platform.
+
+Adobe AIR is a cross-platform runtime that enables you to use your existing Flash/ActionScript or HTML/JavaScript development skills and tools to build and deploy applications, games, and videos outside the browser and on mobile devices.
+
+**NOTE**: This package is automatically updated. If it is out of date and there is no newer package submitted, please use the `Contact Maintainers` functionality to alert them.
+</description>
         <releaseNotes>https://airsdk.harman.com/release_notes</releaseNotes>
         <!-- =============================== -->
         <!-- Specifying dependencies and version ranges? https://docs.nuget.org/create/versioning#specifying-version-ranges-in-.nuspec-files -->
