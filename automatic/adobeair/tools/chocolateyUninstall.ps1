@@ -8,8 +8,18 @@ $airPath = $Env:CommonProgramFiles, ${Env:CommonProgramFiles(x86)} |
 Select -First 1
 $airSetup = Join-Path $airPath 'setup.msi'
 
-# http://stackoverflow.com/questions/450027/uninstalling-an-msi-file-from-the-command-line-without-using-msiexec
-msiexec.exe /x "`"$airSetup`"" /qb-! REBOOT=ReallySuppress
-# alternate -> wmic product where name='Adobe AIR' call uninstall
 
-Remove-Item $airInstall -Recurse -ErrorAction SilentlyContinue
+try {
+    # http://stackoverflow.com/questions/450027/uninstalling-an-msi-file-from-the-command-line-without-using-msiexec
+    $msiArgs = '/x "'+$airSetup+'" /qb-! REBOOT=ReallySuppress'
+    Start-ChocolateyProcessAsAdmin "$msiArgs" 'msiexec'
+
+    $airDir = Join-Path ${Env:CommonProgramFiles(x86)} '\Adobe AIR'
+    Remove-Item $airDir -Recurse -ErrorAction SilentlyContinue
+
+    Write-ChocolateySuccess $package
+} catch {
+    Write-ChocolateyFailure $package "$($_.Exception.Message)"
+    throw
+}
+
