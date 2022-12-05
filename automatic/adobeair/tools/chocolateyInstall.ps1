@@ -1,12 +1,12 @@
 $package = 'AdobeAIR'
 
 $params = @{
-    PackageName  = $package;
-    FileType     = 'exe';
-    SilentArgs   = '-silent -eulaAccepted';
-    Url          = ""
-    Checksum     = ''
-    ChecksumType = 'sha256'
+    packageName  = $package;
+    fileType     = 'exe';
+    silentArgs   = '-silent -eulaAccepted';
+    url          = ""
+    checksum     = ''
+    checksumType = 'sha256'
 }
 
 Install-ChocolateyPackage @params
