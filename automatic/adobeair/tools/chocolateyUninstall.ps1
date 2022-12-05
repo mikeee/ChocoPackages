@@ -16,10 +16,7 @@ try {
 
     $airDir = Join-Path ${Env:CommonProgramFiles(x86)} '\Adobe AIR'
     Remove-Item $airDir -Recurse -ErrorAction SilentlyContinue
-
-    Write-ChocolateySuccess $package
 } catch {
-    Write-ChocolateyFailure $package "$($_.Exception.Message)"
-    throw
+    throw "$($_.Exception.Message)"
 }
 
