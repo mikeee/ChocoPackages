@@ -22,7 +22,7 @@ This is a nuspec. It mostly adheres to https://docs.nuget.org/create/Nuspec-Refe
         <!-- version should MATCH as closely as possible with the underlying software -->
         <!-- Is the version a prerelease of a version? https://docs.nuget.org/create/versioning#creating-prerelease-packages -->
         <!-- Note that unstable versions like 0.0.1 can be considered a released version, but it's possible that one can release a 0.0.1-beta before you release a 0.0.1 version. If the version number is final, that is considered a released version and not a prerelease. -->
-        <version>0.0.0.0</version>
+        <version>1.11.1.1200</version>
         <packageSourceUrl>https://github.com/mikeee/ChocoPackages/tree/master/automatic/clojure</packageSourceUrl>
         <!-- owners is a poor name for maintainers of the package. It sticks around by this name for compatibility reasons. It basically means you. -->
         <owners>mikeee</owners>
@@ -44,7 +44,10 @@ This is a nuspec. It mostly adheres to https://docs.nuget.org/create/Nuspec-Refe
         <!-- <bugTrackerUrl></bugTrackerUrl> -->
         <tags>clojure java development jvm language programming</tags>
         <summary>Clojure is a dynamic programming language.</summary>
-        <description></description>
+        <description>Clojure is a dynamic programming language that targets the Java Virtual Machine.
+
+**NOTE**: This package is automatically updated. If it is out of date and there is no newer package submitted, please use the `Contact Maintainers` functionality to alert them.
+</description>
         <releaseNotes>https://clojure.org/releases/downloads</releaseNotes>
         <!-- =============================== -->
         <!-- Specifying dependencies and version ranges? https://docs.nuget.org/create/versioning#specifying-version-ranges-in-.nuspec-files -->
