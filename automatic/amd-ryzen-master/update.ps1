@@ -28,7 +28,7 @@ function global:au_GetLatest {
     $checksum = Get-FileHash -Algorithm $checksumType -Path $tempFile -ErrorAction SilentlyContinue | Select-Object -ExpandProperty Hash
 
     return @{
-        URL          = $url
+        URL          = $releases
         Checksum     = $checksum
         ChecksumType = $checksumType
         Version      = $version
