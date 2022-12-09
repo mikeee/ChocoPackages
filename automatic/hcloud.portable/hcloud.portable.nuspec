@@ -38,7 +38,7 @@ This is a nuspec. It mostly adheres to https://docs.nuget.org/create/Nuspec-Refe
 		<!-- If there is a license Url available, it is is required for the community feed -->
 		<licenseUrl>https://github.com/hetznercloud/cli/blob/master/LICENSE</licenseUrl>
 		<requireLicenseAcceptance>false</requireLicenseAcceptance>
-		<projectSourceUrl>https://github.com/hetznercloud/cli/</projectSourceUrl>
+		<projectSourceUrl>https://github.com/hetznercloud/cli/tree/main</projectSourceUrl>
 		<!--<docsUrl></docsUrl>-->
 		<!--<mailingListUrl></mailingListUrl>-->
 		<!--<bugTrackerUrl></bugTrackerUrl>-->
