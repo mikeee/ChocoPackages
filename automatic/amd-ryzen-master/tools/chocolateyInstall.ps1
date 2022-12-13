@@ -3,7 +3,7 @@
 $packageArgs = @{
     packageName    = $env:ChocolateyPackageName
     url            = 'https://download.amd.com/Desktop/AMD-Ryzen-Master.exe'
-    checksum       = 'E998DDBBA7AF72D4D6AE9E673E668C0E272D5646078A8119E429EB12D7657560'
+    checksum       = '7A6E09BF9C81AE5ED26FAE6888ED0D41F9DCA20648E0B04F4D7C6BD99EB60506'
     checksumType   = 'SHA256'
     fileType       = 'EXE'
     silentArgs     = '/S /v/qn'
