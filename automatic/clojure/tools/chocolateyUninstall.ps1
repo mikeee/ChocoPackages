@@ -10,5 +10,5 @@ Uninstall-ChocolateyZipPackage @uninstallArgs
 
 if ($env:PSModulePath.Contains($installDir)) {
     $psModulePath = $env:PSModulePath.Replace($installDir, '').Replace(';;', ';')
-    [Environment]::SetEnvironmentVariable("PSModulePath",$psModulePath,[System.EnvironmentVariable]::Machine)
+    [Environment]::SetEnvironmentVariable("PSModulePath",$psModulePath,[System.EnvironmentVariableTarget]::Machine)
 }

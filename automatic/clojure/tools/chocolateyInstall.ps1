@@ -13,5 +13,5 @@ Install-ChocolateyZipPackage @packageArgs
 if (-not ($env:PSModulePath.Contains($installDir))) {
   $psModulePath = [Environment]::GetEnvironmentVariable("PSModulePath")
   $psModulePath += $installDir
-  [Environment]::SetEnvironmentVariable("PSModulePath",$psModulePath,[System.EnvironmentVariable]::Machine)
+  [Environment]::SetEnvironmentVariable("PSModulePath",$psModulePath,[System.EnvironmentVariableTarget]::Machine)
 }
