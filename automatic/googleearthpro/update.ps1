@@ -36,7 +36,7 @@ function global:au_GetLatest {
     $oldChecksum64 = (Select-String -Path '.\tools\chocolateyinstall.ps1' -Pattern "(checksum64\s*=\s*)('.*')").Line.Split("'")[1]
 
     if ( ($checksum32 -ne $oldChecksum32) -or ($checksum64 -ne $oldChecksum64) ) {
-        $versionDate = Get-Date -Format "ddMMyyyy"
+        $versionDate = Get-Date -Format "yyyyMMdd"
         $finalVersion = $matches.version + "." + $versionDate
     } else {
         [xml]$xmlPackage = Get-Content -Path '.\googleearthpro.nuspec'
