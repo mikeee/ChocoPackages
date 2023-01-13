@@ -2,8 +2,8 @@
 
 $packageArgs = @{
     packageName   = $env:ChocolateyPackageName
-    url64           = 'https://international.download.nvidia.com/Windows/broadcast/1.3.5/nvidia_broadcast_v1.3.5.4.exe'
-    checksum64      = 'c28890f184f4f249990b94f031173193d641dc4df8138e4aa7cb425459cfce71'
+    url64           = 'https://international.download.nvidia.com/Windows/broadcast/1.4.0/NVIDIA_Broadcast_v1.4.0.28.exe'
+    checksum64      = 'b6869d031b70af35eaee6ac6070cd033a64db457faa041969feee7d0b3a63ba7'
     checksumType64  = 'SHA256'
     fileType      = 'EXE'
     silentArgs    = '-s'
