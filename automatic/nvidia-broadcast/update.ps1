@@ -31,7 +31,7 @@ function global:au_GetLatest {
 
     If ($False -ne $matchedurl) {
 
-        $url = -join("https://international.download.nvidia.com/Windows/broadcast/",$matches["versionmajor"],"/nvidia_broadcast_v",$matches["version"],".exe")
+        $url = -join("https://international.download.nvidia.com/Windows/broadcast/",$matches["versionmajor"],"/NVIDIA_Broadcast_v",$matches["version"],".exe")
         $version = $matches["version"]
     }
 
