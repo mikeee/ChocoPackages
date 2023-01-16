@@ -1,22 +1,23 @@
-$package = 'AdobeAIR'
+$ErrorActionPreference = 'Stop';
 
-# http://forums.adobe.com/message/4677900
-$airInstall = 'Adobe AIR\Versions\1.0'
-$airPath = $Env:CommonProgramFiles, ${Env:CommonProgramFiles(x86)} |
-% { Join-Path $_ $airInstall } |
-? { Test-Path $_ } |
-Select -First 1
-$airSetup = Join-Path $airPath 'setup.msi'
+$packageName = 'Adobe AIR*'
+$installerType = 'MSI'
 
+[array]$key = Get-UninstallRegistryKey -SoftwareName $softwareName
 
-try {
-    # http://stackoverflow.com/questions/450027/uninstalling-an-msi-file-from-the-command-line-without-using-msiexec
-    $msiArgs = '/x "'+$airSetup+'" /qb-! REBOOT=ReallySuppress'
-    Start-ChocolateyProcessAsAdmin "$msiArgs" 'msiexec'
+if ($key.Count -eq 1) {
+  $key | ForEach-Object {
+    $silentArgs = "/x $($_.PSChildName) /qb-! REBOOT=ReallySuppress"
 
-    $airDir = Join-Path ${Env:CommonProgramFiles(x86)} '\Adobe AIR'
-    Remove-Item $airDir -Recurse -ErrorAction SilentlyContinue
-} catch {
-    throw "$($_.Exception.Message)"
+    Uninstall-ChocolateyPackage -PackageName $packageName `
+                                -FileType $installerType `
+                                -SilentArgs "$silentArgs" `
+  }
+} elseif ($key.Count -eq 0) {
+  Write-Warning "$packageName has already been uninstalled by other means."
+} elseif ($key.Count -gt 1) {
+  Write-Warning "$key.Count matches found!"
+  Write-Warning "To prevent accidental data loss, no programs will be uninstalled."
+  Write-Warning "Please alert package maintainer(s) the following keys were matched:"
+  $key | ForEach-Object {Write-Warning "- $_.DisplayName"}
 }
-
