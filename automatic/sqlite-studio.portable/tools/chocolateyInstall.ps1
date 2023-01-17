@@ -5,11 +5,11 @@ $toolsDir   = Join-Path -Path (Get-ToolsLocation) -ChildPath 'sqlite-studio.port
 
 $packageArgs = @{
     packageName    = $env:ChocolateyPackageName
-    url            = 'https://github.com/pawelsalawa/sqlitestudio/releases/download/3.4.1/sqlitestudio_i386-3.4.1.zip'
-    url64          = 'https://github.com/pawelsalawa/sqlitestudio/releases/download/3.4.1/sqlitestudio_x64-3.4.1.zip'
-    checksum       = '4dc8662bf7aadfa47181cbf633601340dff7ac261310b543f27d69b4a5841da2'
+    url            = 'https://github.com/pawelsalawa/sqlitestudio/releases/download/3.4.2/sqlitestudio_i386-3.4.2.zip'
+    url64          = 'https://github.com/pawelsalawa/sqlitestudio/releases/download/3.4.2/sqlitestudio_x64-3.4.2.zip'
+    checksum       = '0a998a2c97275588348d920e907982bb52cca2065752203e9b5b14302feba985'
     checksumType   = 'SHA256'
-    checksum64     = 'cbb7481f072afa5cfbbc2c9dcded0fef347a0c18bf6257a311f876c2fa35b006'
+    checksum64     = '647cd3d3095db72550c056158b26f9f501ce66b4fee4c4c95ade51fe8d33daf3'
     checksumType64 = 'SHA256'
 
     unzipLocation  = $toolsDir
