@@ -3,10 +3,10 @@
 $packageArgs = @{
     packageName   = $env:ChocolateyPackageName
     url           = 'https://dl.google.com/dl/earth/client/advanced/current/googleearthprowin-7.3.6.exe'
-    checksum      = '26976889a871bd9434a99cf1f1c0813ef9d9c037cc9290ec43c576ed9979dd91'
+    checksum      = 'bff197f329e46797a7e7fabda3955adffc0e7275d093a6417cc8bf0eb3c1e8ff'
     checksumType  = 'sha256'
     url64         = 'https://dl.google.com/dl/earth/client/advanced/current/googleearthprowin-7.3.6-x64.exe'
-    checksum64    = 'b0cd85e75655392e2c67ee0532f611b8d17161973f55cc7f4374c1e154697d68'
+    checksum64    = '062fd1a9b963ce0a67d1b4dcd50ca4a13af125aae05fcb55c8026834f0e64f91'
     checksumType64= 'sha256'
     fileType      = 'EXE'
     silentArgs    = 'OMAHA=1'

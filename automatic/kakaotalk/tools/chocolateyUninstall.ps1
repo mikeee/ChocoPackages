@@ -1,24 +1,37 @@
 $ErrorActionPreference = 'Stop';
 
-$silentargs          = '/S'
-$uninstaller32       = "${Env:ProgramFiles(x86)}\Kakao\KakaoTalk\uninstall.exe"
-$uninstaller64       = "${Env:ProgramFiles}\Kakao\KakaoTalk\uninstall.exe"
-$file                = ""
+$packageName = $env:ChocolateyPackageName
+$softwareName = 'KakaoTalk*'
+$installerType = 'exe'
+$silentArgs = '/S'
 
-if (Test-Path "$uninstaller64") {
-  $file = "$uninstaller64"
-}
-else if (Test-Path "$uninstaller32") {
-  $file = "$uninstaller32"
-}
+$uninstalled = $false
 
-if ($file -ne "") {
-  & $file $silentargs
+[array]$key = Get-UninstallRegistryKey -SoftwareName $softwareName
 
-  $wshell = New-Object -ComObject WScript.Shell
+if ($key.Count -eq 1) {
+  $key | ForEach-Object {
+    $file = $($_.UninstallString)
 
-  while ($wshell.AppActivate("KakaoTalk Uninstall") -eq $false) {
-    Start-Sleep -Seconds 1
+    if ($installerType -eq 'MSI') {
+      $silentArgs = "$($_.PSChildName) $silentArgs"
+      $file = ''
+    }
+
+    & $file $silentargs
+
+    $wshell = New-Object -ComObject WScript.Shell
+
+    while ($wshell.AppActivate("KakaoTalk Uninstall") -eq $false) {
+      Start-Sleep -Seconds 1
+    }
+    $wshell.SendKeys("{ENTER}")
   }
-  $wshell.SendKeys("{ENTER}")
+} elseif ($key.Count -eq 0) {
+  Write-Warning "$packageName has already been uninstalled by other means."
+} elseif ($key.Count -gt 1) {
+  Write-Warning "$key.Count matches found!"
+  Write-Warning "To prevent accidental data loss, no programs will be uninstalled."
+  Write-Warning "Please alert package maintainer(s) the following keys were matched:"
+  $key | ForEach-Object {Write-Warning "- $_.DisplayName"}
 }
