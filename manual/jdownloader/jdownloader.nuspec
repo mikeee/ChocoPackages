@@ -62,7 +62,12 @@ quotation marks, you should use an editor that supports UTF-8, not this one. -->
         <!--<bugTrackerUrl></bugTrackerUrl>-->
         <tags>jdownloader download manager java idm</tags>
         <summary>JDownloader is an internet download manager</summary>
-        <description></description>
+        <description>JDownloader simplifies and improves the process of downloading files from
+            "free" file hosting sites like Rapidshare, MEGA, Mediafire, 4Shared, uploaded.to,
+            Putlocker, Cyberlocker, etc.
+            JDownloader offers downloading in multiple parallel streams, CAPTCHA recognition, and
+            automatic file extraction.
+            JDownloader can import CCF, RSDF and the new DLC files.</description>
         <releaseNotes>https://jdownloader.org/changes/index</releaseNotes>
         <!-- =============================== -->
         <!-- Specifying dependencies and version ranges?
