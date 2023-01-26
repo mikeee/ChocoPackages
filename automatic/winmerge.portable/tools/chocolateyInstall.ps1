@@ -5,12 +5,12 @@ $toolsDir = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 $packageArgs = @{
     packageName    = $env:ChocolateyPackageName
     unzipLocation  = $toolsDir
-    url            = 'https://github.com//WinMerge/winmerge/releases/download/v2.16.24/winmerge-2.16.24-exe.zip'
-    url64          = 'https://github.com//WinMerge/winmerge/releases/download/v2.16.24/winmerge-2.16.24-x64-exe.zip'
+    url            = 'https://github.com//WinMerge/winmerge/releases/download/v2.16.26/winmerge-2.16.26-exe.zip'
+    url64          = 'https://github.com//WinMerge/winmerge/releases/download/v2.16.26/winmerge-2.16.26-x64-exe.zip'
 
-    checksum       = 'c8624f40b30b358d8cc43a0195c44a526d8c0dfba6f2fdb50c61b0cc14fc6905'
+    checksum       = '853ba61b7b47eb49ac5b8f1d7311791d803867d58e37b68fbd9d14bcffa483c0'
     checksumType   = 'SHA256'
-    checksum64     = '2de08c9d1d83049ce78b0a1ba532b22b5697bf93fd0cd23cd8d77343b2654885'
+    checksum64     = 'ff84e19d78ce09953e3bea7e380d64ae9c5c3187693ed4b84ec4755748dacf3a'
     checksumType64 = 'SHA256'
 }
 

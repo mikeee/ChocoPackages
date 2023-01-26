@@ -2,8 +2,8 @@
 
 $packageArgs = @{
     packageName    = $env:ChocolateyPackageName
-    url            = 'https://releases.bootstrapstudio.io/6.3.0/Bootstrap%20Studio.exe'
-    checksum       = '63c5562b7bf9f83684abb58a392aa9ad8d3d713d92d70334e4fb356e42b647bd'
+    url            = 'https://releases.bootstrapstudio.io/6.3.1/Bootstrap%20Studio.exe'
+    checksum       = '2d0bd0a840a932d0e308f2760c3666c0c2e08b34aa064e5081c5944e0ac6515f'
     checksumType   = 'SHA256'
     fileType       = 'EXE'
     silentArgs     = '/S'
