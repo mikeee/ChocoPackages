@@ -25,19 +25,16 @@ function global:au_AfterUpdate {
 
 function global:au_GetLatest {
     $page = Invoke-WebRequest -Uri $releases -UseBasicParsing
-    $regexVersion = 'Windows\/broadcast\/(?<versionmajor>[\d.]+)\/nvidia_broadcast_v(?<version>[\d.]+).exe'
 
-    $page.Content -match $regexVersion
+    $regexVersion = '\/Windows\/broadcast\/(?<versionmajor>[\d.]+)\/[\w.]+_v(?<version>[\d.]+).exe'
 
-    If ($False -ne $matchedurl) {
+    $url64 = $page.links | Where-Object href -match $regexUrl64 | Select-Object -First 1 -expand href
 
-        $url = -join("https://international.download.nvidia.com/Windows/broadcast/",$matches["versionmajor"],"/NVIDIA_Broadcast_v",$matches["version"],".exe")
-        $version = $matches["version"]
-    }
+    $version = $matches["version"]
 
     return @{
-        URL64        = $url
-        Version    = $version
+        URL64        = $url64
+        Version      = $version
     }
 }
 
