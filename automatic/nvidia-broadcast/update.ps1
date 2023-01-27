@@ -28,7 +28,7 @@ function global:au_GetLatest {
 
     $regexVersion = '\/Windows\/broadcast\/(?<versionmajor>[\d.]+)\/[\w.]+_v(?<version>[\d.]+).exe'
 
-    $url64 = $page.links | Where-Object href -match $regexUrl64 | Select-Object -First 1 -expand href
+    $url64 = $page.links | Where-Object href -match $regexVersion | Select-Object -First 1 -expand href
 
     $version = $matches.version
 
