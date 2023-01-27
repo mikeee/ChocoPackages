@@ -30,7 +30,7 @@ function global:au_GetLatest {
 
     $url64 = $page.links | Where-Object href -match $regexUrl64 | Select-Object -First 1 -expand href
 
-    $version = $matches["version"]
+    $version = $matches.version
 
     return @{
         URL64        = $url64
