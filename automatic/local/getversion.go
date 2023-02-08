@@ -15,6 +15,7 @@ package main
 // limitations under the License.
 
 import (
+	"fmt"
 	"log"
 
 	"github.com/mikeee/ChocoPackages/helpers/gohelpers"
@@ -31,5 +32,5 @@ func main() {
 		log.Fatalf("failed to get latest version: %v", err)
 	}
 
-	log.Print(rawString)
+	fmt.Print(rawString)
 }
