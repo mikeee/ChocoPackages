@@ -15,41 +15,21 @@ package main
 // limitations under the License.
 
 import (
-	"context"
-	"fmt"
-	"regexp"
+	"log"
 
-	"github.com/chromedp/cdproto/dom"
-	"github.com/chromedp/chromedp"
+	"github.com/mikeee/ChocoPackages/helpers/gohelpers"
 )
 
 func main() {
-	ctx, cancel := chromedp.NewContext(context.Background())
-	defer cancel()
+	url := "https://localwp.com/releases"
+	regexStr := "https://cdn.localwp.com/releases-stable/[\\d.]+\\+[\\d]+/local-[\\d.]+-windows.exe"
+	matchIndex := 0
 
-	var res string
-
-	err := chromedp.Run(ctx,
-		chromedp.Navigate(`https://localwp.com/releases`),
-		chromedp.ActionFunc(func(ctx context.Context) error {
-			node, err := dom.GetDocument().Do(ctx)
-			if err != nil {
-				return err
-			}
-			res, err = dom.GetOuterHTML().WithNodeID(node.NodeID).Do(ctx)
-			return err
-		}),
-	)
+	rawString, err := gohelpers.RegexMatch(url, regexStr, matchIndex)
 
 	if err != nil {
-		fmt.Println(err)
+		log.Fatalf("failed to get latest version: %v", err)
 	}
 
-	regexStr := "https://cdn.localwp.com/releases-stable/[\\d.]+\\+[\\d]+/local-[\\d.]+-windows.exe"
-
-	re := regexp.MustCompile(regexStr)
-
-	match := re.FindStringSubmatch(res)
-
-	fmt.Println(match)
+	log.Print(rawString)
 }
