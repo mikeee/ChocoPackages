@@ -1,6 +1,5 @@
 github.com/chromedp/cdproto v0.0.0-20230208104036-c3c870aa4771 h1:ZladAZdeSiSP39W3+usdJ49vvk550MgLBbpf9dTe+qw=
 github.com/chromedp/cdproto v0.0.0-20230208104036-c3c870aa4771/go.mod h1:GKljq0VrfU4D5yc+2qA6OVr8pmO/MBbPEWqWQ/oqGEs=
-
 github.com/chromedp/chromedp v0.8.7 h1:dYOYc5ynTBzwSLOi+1IfgHwPr8r2BqV48l/RC+3OuJ0=
 github.com/chromedp/chromedp v0.8.7/go.mod h1:iL+ywnwk3eG3EVXV1ackXBMNzdEh3Ye/KHvQkq1KRKU=
 github.com/chromedp/sysutil v1.0.0 h1:+ZxhTpfpZlmchB58ih/LBHX52ky7w2VhQVKQMucy3Ic=
@@ -19,6 +18,8 @@ github.com/mailru/easyjson v0.7.7 h1:UGYAvKxe3sBsEDzO8ZeWOSlIQfWFlxbzLZe7hwFURr0
 github.com/mailru/easyjson v0.7.7/go.mod h1:xzfreul335JAWq5oZzymOObrkdz5UnU4kGfJJLY9Nlc=
 github.com/mikeee/ChocoPackages/helpers/gohelpers v0.0.0-20230208140616-c3dc98b27d39 h1:dSff8DUXBGuw4bHxlgj6lN9mZxzKPCDBA0B1ssF629Q=
 github.com/mikeee/ChocoPackages/helpers/gohelpers v0.0.0-20230208140616-c3dc98b27d39/go.mod h1:pzZGmvCFtBiShKX317ycKW/O+OVu+K/kIsSj5pWn6eY=
+github.com/mikeee/ChocoPackages/helpers/gohelpers v0.0.0-20230208145918-3c16d3bf8dbc h1:nRD2kSmKgUU7N1w88chlpyKIuVVojkQJ1D+XxD1oSVM=
+github.com/mikeee/ChocoPackages/helpers/gohelpers v0.0.0-20230208145918-3c16d3bf8dbc/go.mod h1:pzZGmvCFtBiShKX317ycKW/O+OVu+K/kIsSj5pWn6eY=
 github.com/orisano/pixelmatch v0.0.0-20220722002657-fb0b55479cde h1:x0TT0RDC7UhAVbbWWBzr41ElhJx5tXPWkIHA2HWPRuw=
 github.com/pmezard/go-difflib v1.0.0 h1:4DBwDE0NGyQoBHbLQYPwSUPoCMWR5BEzIk/f1lZbAQM=
 github.com/stretchr/testify v1.8.1 h1:w7B6lhMri9wdJUVmEZPGGhZzrYTPvgJArz7wNPgYKsk=
