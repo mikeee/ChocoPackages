@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"log"
 
-	"github.com/mikeee/ChocoPackages/helpers/gohelpers"
+	"github.com/mikeee/chocohelpers"
 )
 
 // Copyright 2022 mikeee
@@ -26,7 +26,7 @@ func main() {
 	regexStr := "AIR\\sruntime\\s-\\sversion\\s[\\d\\.]+"
 	matchIndex := 0
 
-	rawString, err := gohelpers.RegexMatch(url, regexStr, matchIndex)
+	rawString, err := chocohelpers.RegexMatch(url, regexStr, matchIndex)
 
 	if err != nil {
 		log.Fatalf("failed to get latest version: %v", err)

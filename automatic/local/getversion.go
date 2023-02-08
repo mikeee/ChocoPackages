@@ -18,7 +18,7 @@ import (
 	"fmt"
 	"log"
 
-	"github.com/mikeee/ChocoPackages/helpers/gohelpers"
+	"github.com/mikeee/chocohelpers"
 )
 
 func main() {
@@ -26,7 +26,7 @@ func main() {
 	regexStr := "https://cdn.localwp.com/releases-stable/[\\d.]+\\+[\\d]+/local-[\\d.]+-windows.exe"
 	matchIndex := 0
 
-	rawString, err := gohelpers.RegexMatch(url, regexStr, matchIndex)
+	rawString, err := chocohelpers.RegexMatch(url, regexStr, matchIndex)
 
 	if err != nil {
 		log.Fatalf("failed to get latest version: %v", err)
