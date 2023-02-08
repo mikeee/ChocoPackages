@@ -1,5 +1,11 @@
 package main
 
+import (
+	"log"
+
+	"github.com/mikeee/ChocoPackages/helpers/gohelpers"
+)
+
 // Copyright 2022 mikeee
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -14,42 +20,16 @@ package main
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-import (
-	"context"
-	"fmt"
-	"regexp"
-
-	"github.com/chromedp/cdproto/dom"
-	"github.com/chromedp/chromedp"
-)
-
 func main() {
-	ctx, cancel := chromedp.NewContext(context.Background())
-	defer cancel()
+	url := "https://airsdk.harman.com/runtime"
+	regexStr := "AIR\\sruntime\\s-\\sversion\\s[\\d\\.]+"
+	matchIndex := 0
 
-	var res string
-
-	err := chromedp.Run(ctx,
-		chromedp.Navigate(`https://airsdk.harman.com/runtime`),
-		chromedp.ActionFunc(func(ctx context.Context) error {
-			node, err := dom.GetDocument().Do(ctx)
-			if err != nil {
-				return err
-			}
-			res, err = dom.GetOuterHTML().WithNodeID(node.NodeID).Do(ctx)
-			return err
-		}),
-	)
+	rawString, err := gohelpers.RegexMatch(url, regexStr, matchIndex)
 
 	if err != nil {
-		fmt.Println(err)
+		log.Fatalf("failed to get latest version: %v", err)
 	}
 
-	regexStr := "AIR\\sruntime\\s-\\sversion\\s[\\d\\.]+"
-
-	re := regexp.MustCompile(regexStr)
-
-	match := re.FindStringSubmatch(res)
-
-	fmt.Println(match)
+	log.Print(rawString)
 }
