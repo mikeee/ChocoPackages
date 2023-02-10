@@ -2,7 +2,7 @@ module github.com/mikeee/ChocoPackages/automatic/local
 
 go 1.19
 
-require github.com/mikeee/chocohelpers v0.0.0-20230208203807-2bdc5f3fc49e
+require github.com/mikeee/chocohelpers v0.0.0-20230210234102-fae903e01354
 
 require (
 	github.com/chromedp/cdproto v0.0.0-20230208104036-c3c870aa4771 // indirect
