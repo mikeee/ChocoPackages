@@ -26,6 +26,8 @@ github.com/mikeee/chocohelpers v0.0.0-20230210234102-fae903e01354 h1:ZL/KQlxRXUr
 github.com/mikeee/chocohelpers v0.0.0-20230210234102-fae903e01354/go.mod h1:3JP28oq8OlpMstXmTJZwdQR0VTaI8zkdrIVfHrfYfhs=
 github.com/mikeee/chocohelpers v0.0.0-20230213023513-e3c1dd859962 h1:sleIslD+S9j657AdBppoYfTbuChYg+ePEz5L/uS6LPo=
 github.com/mikeee/chocohelpers v0.0.0-20230213023513-e3c1dd859962/go.mod h1:sG2mFIFLWQFfc+H8AeV4XNkea7MxMx1aWaGcBBNngXE=
+github.com/mikeee/chocohelpers v0.0.0-20230216231121-1ab26f84569b h1:UFmAzCvLDDlHcEf1NuQmlpufbLu6tDBsvMiyoTojdG4=
+github.com/mikeee/chocohelpers v0.0.0-20230216231121-1ab26f84569b/go.mod h1:sG2mFIFLWQFfc+H8AeV4XNkea7MxMx1aWaGcBBNngXE=
 github.com/orisano/pixelmatch v0.0.0-20220722002657-fb0b55479cde h1:x0TT0RDC7UhAVbbWWBzr41ElhJx5tXPWkIHA2HWPRuw=
 github.com/pmezard/go-difflib v1.0.0 h1:4DBwDE0NGyQoBHbLQYPwSUPoCMWR5BEzIk/f1lZbAQM=
 github.com/stretchr/testify v1.8.1 h1:w7B6lhMri9wdJUVmEZPGGhZzrYTPvgJArz7wNPgYKsk=
