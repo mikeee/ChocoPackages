@@ -38,8 +38,8 @@ function global:au_GetLatest {
         $version = $version.Substring(1)
     }
 
-    $asset64 = $release.assets | Where-Object name -Match 'endless-sky-win64-v([\d\.]+).zip'
-    $asset32 = $release.assets | Where-Object name -Match 'endless-sky-win32-v([\d\.]+).zip'
+    $asset64 = $release.assets | Where-Object name -Match 'EndlessSky-win64-v([\d\.]+).zip'
+    $asset32 = $release.assets | Where-Object name -Match 'EndlessSky-win32-v([\d\.]+).zip'
 
     return @{
         URL32        = $asset32.browser_download_url
