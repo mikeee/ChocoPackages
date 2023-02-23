@@ -39,7 +39,7 @@ quotation marks, you should use an editor that supports UTF-8, not this one. -->
         <!-- Note that unstable versions like 0.0.1 can be considered a released version, but it's
         possible that one can release a 0.0.1-beta before you release a 0.0.1 version. If the
         version number is final, that is considered a released version and not a prerelease. -->
-        <version>1.3.2</version>
+        <version>1.3.3</version>
         <packageSourceUrl>https://github.com/mikeee/ChocoPackages/tree/master/automatic/nanoleaf</packageSourceUrl>
         <!-- owners is a poor name for maintainers of the package. It sticks around by this name for
         compatibility reasons. It basically means you. -->
@@ -62,14 +62,9 @@ quotation marks, you should use an editor that supports UTF-8, not this one. -->
         <!-- <bugTrackerUrl></bugTrackerUrl> -->
         <tags>nanoleaf lighting control software desktop light panels</tags>
         <summary>Control your Nanoleaf products from your desktop.</summary>
-        <description>With the Nanoleaf Desktop App, you can control your Lines, Shapes,
-            Essentials\*, Elements, Canvas or Light Panels from your computer (Windows or Mac).
-            Create and download new Scenes, set Schedules and use your other favorite features right
-            from your computer. The Desktop App was designed to simplify the management of larger
-            installations and offer control of many different layouts at once.
+        <description>With the Nanoleaf Desktop App, you can control your Lines, Shapes, Essentials\*, Elements, Canvas or Light Panels from your computer (Windows or Mac). Create and download new Scenes, set Schedules and use your other favorite features right from your computer. The Desktop App was designed to simplify the management of larger installations and offer control of many different layouts at once.
 
-            **NOTE**: This package is automatically updated. If it is out of date and there is no
-            newer package submitted, please use the `Contact Maintainers` functionality to alert us.
+**NOTE**: This package is automatically updated. If it is out of date and there is no newer package submitted, please use the `Contact Maintainers` functionality to alert us.
 </description>
         <releaseNotes>https://helpdesk.nanoleaf.me/en-US/articles/nanoleaf-desktop-app-3546</releaseNotes>
         <!-- =============================== -->
