@@ -18,6 +18,8 @@ github.com/mailru/easyjson v0.7.7 h1:UGYAvKxe3sBsEDzO8ZeWOSlIQfWFlxbzLZe7hwFURr0
 github.com/mailru/easyjson v0.7.7/go.mod h1:xzfreul335JAWq5oZzymOObrkdz5UnU4kGfJJLY9Nlc=
 github.com/mikeee/chocohelpers v0.0.0-20230221003109-257ada7b2b39 h1:AWVXk1UX+CzY841+vbMw541cJSpSB9GN8Q5KdOOoN+g=
 github.com/mikeee/chocohelpers v0.0.0-20230221003109-257ada7b2b39/go.mod h1:56GeY59ZvRz2CrdN3ii4YIIvLpMYeEgxicKz2mPE24M=
+github.com/mikeee/chocohelpers v0.0.0-20230226041649-d4b177a0da19 h1:IPPgzBTUVqz59I7deg/x5696VMd++7n6z1VuGcNchrg=
+github.com/mikeee/chocohelpers v0.0.0-20230226041649-d4b177a0da19/go.mod h1:pR3exa4YiDFxYm5M1zxC7ZYVjOQdJP2bYiskNnd+lBU=
 github.com/orisano/pixelmatch v0.0.0-20220722002657-fb0b55479cde h1:x0TT0RDC7UhAVbbWWBzr41ElhJx5tXPWkIHA2HWPRuw=
 github.com/pmezard/go-difflib v1.0.0 h1:4DBwDE0NGyQoBHbLQYPwSUPoCMWR5BEzIk/f1lZbAQM=
 github.com/stretchr/testify v1.8.1 h1:w7B6lhMri9wdJUVmEZPGGhZzrYTPvgJArz7wNPgYKsk=
