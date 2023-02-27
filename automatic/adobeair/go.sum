@@ -16,13 +16,11 @@ github.com/josharian/intern v1.0.0/go.mod h1:5DoeVV0s6jJacbCEi61lwdGj/aVlrQvzHFF
 github.com/ledongthuc/pdf v0.0.0-20220302134840-0c2507a12d80 h1:6Yzfa6GP0rIo/kULo2bwGEkFvCePZ3qHDDTC3/J9Swo=
 github.com/mailru/easyjson v0.7.7 h1:UGYAvKxe3sBsEDzO8ZeWOSlIQfWFlxbzLZe7hwFURr0=
 github.com/mailru/easyjson v0.7.7/go.mod h1:xzfreul335JAWq5oZzymOObrkdz5UnU4kGfJJLY9Nlc=
-github.com/mikeee/chocohelpers v0.0.0-20230221003109-257ada7b2b39 h1:AWVXk1UX+CzY841+vbMw541cJSpSB9GN8Q5KdOOoN+g=
-github.com/mikeee/chocohelpers v0.0.0-20230221003109-257ada7b2b39/go.mod h1:56GeY59ZvRz2CrdN3ii4YIIvLpMYeEgxicKz2mPE24M=
-github.com/mikeee/chocohelpers v0.0.0-20230226041649-d4b177a0da19 h1:IPPgzBTUVqz59I7deg/x5696VMd++7n6z1VuGcNchrg=
-github.com/mikeee/chocohelpers v0.0.0-20230226041649-d4b177a0da19/go.mod h1:pR3exa4YiDFxYm5M1zxC7ZYVjOQdJP2bYiskNnd+lBU=
+github.com/mikeee/chocohelpers v0.0.0-20230227032008-dd5550c9fdba h1:kIrYEYVJlbv9FJifttpBTvfwNchyCmiblTbAtzdbtn4=
+github.com/mikeee/chocohelpers v0.0.0-20230227032008-dd5550c9fdba/go.mod h1:pR3exa4YiDFxYm5M1zxC7ZYVjOQdJP2bYiskNnd+lBU=
 github.com/orisano/pixelmatch v0.0.0-20220722002657-fb0b55479cde h1:x0TT0RDC7UhAVbbWWBzr41ElhJx5tXPWkIHA2HWPRuw=
 github.com/pmezard/go-difflib v1.0.0 h1:4DBwDE0NGyQoBHbLQYPwSUPoCMWR5BEzIk/f1lZbAQM=
-github.com/stretchr/testify v1.8.1 h1:w7B6lhMri9wdJUVmEZPGGhZzrYTPvgJArz7wNPgYKsk=
+github.com/stretchr/testify v1.8.2 h1:+h33VjcLVPDHtOdpUCuF+7gSuG3yGIftsP1YvFihtJ8=
 golang.org/x/sys v0.0.0-20201207223542-d4d67f95c62d/go.mod h1:h1NjWce9XRLGQEsW7wpKNCjG9DtNlClVuFLEZdDNbEs=
 golang.org/x/sys v0.0.0-20220928140112-f11e5e49a4ec h1:BkDtF2Ih9xZ7le9ndzTA7KJow28VbQW3odyk/8drmuI=
 golang.org/x/sys v0.0.0-20220928140112-f11e5e49a4ec/go.mod h1:oPkhp1MJrh7nUepCBck5+mAzfO9JrbApNNgaTdGDITg=
