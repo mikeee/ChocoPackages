@@ -1,4 +1,4 @@
-$packageName      = $env:ChocolateyPackageName
+﻿$packageName      = $env:ChocolateyPackageName
 $installerType    = 'EXE'
 $silentArgs       = '/noui /clean'
 $validExitCodes   = @(0)
