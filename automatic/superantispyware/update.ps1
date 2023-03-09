@@ -10,15 +10,13 @@ $uninst64    = 'https://www.superantispyware.com/downloads/SASUNINST64.EXE'
 function global:au_SearchReplace {
     @{
         ".\tools\chocolateyInstall.ps1" = @{
-            '(^\s*url\s*=\s*)(''.*'')'              = "`$1'$($Latest.URL)'"
-            "(?i)(^\s*checksum\s*=\s*)('.*')"       = "`$1'$($Latest.Checksum)'"
+            "(?i)(^\s*url\s*=\s*)('.*')"            = "`$1'$($Latest.URL)'"
+            "(?i)(^\s*checksum64\s*=\s*)('.*')"     = "`$1'$($Latest.Checksum)'"
             "(?i)(^\s*checksumType\s*=\s*)('.*')"   = "`$1'$($Latest.ChecksumType)'"
         }
-    }
-    @{
         ".\tools\chocolateyUninstall.ps1" = @{
             "(?i)(^\s*checksum\s*=\s*)('.*')"       = "`$1'$($Latest.uCS)'"
-            "(?i)(^\s*checksum64\s*=\s*)('.*')"       = "`$1'$($Latest.uCS64)'"
+            "(?i)(^\s*checksum64\s*=\s*)('.*')"     = "`$1'$($Latest.uCS64)'"
         }
     }
 }
