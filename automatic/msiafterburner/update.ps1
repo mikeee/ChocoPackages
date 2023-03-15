@@ -13,6 +13,11 @@ function global:au_SearchReplace {
     }
 }
 
+function global:au_BeforeUpdate {
+    $Latest.Checksum = Get-RemoteChecksum $releases
+    $Latest.ChecksumType = 'SHA256'
+}
+
 function global:au_AfterUpdate {
     Set-DescriptionFromReadme -SkipFirst 2
 }
@@ -36,16 +41,13 @@ function global:au_GetLatest {
     if ($checksum -ne $oldChecksum) {
         $versionDate = Get-Date -Format "yyMMdd"
         $finalVersion = $matches['version'] + "." + $versionDate
-        $finalChecksum = $checksum
     } else {
         [xml]$xmlPackage = Get-Content -Path '.\msiafterburner.nuspec'
         $finalVersion = $xmlPackage.package.metadata.version
-        $finalChecksum =  $oldChecksum
     }
 
     return @{
         Version     = $finalVersion
-        Checksum    = $finalChecksum
     }
 }
 
