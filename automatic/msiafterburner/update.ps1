@@ -7,8 +7,8 @@ $releases = 'http://download.msi.com/uti_exe/vga/MSIAfterburnerSetup.zip?__token
 function global:au_SearchReplace {
     @{
         ".\tools\chocolateyInstall.ps1" = @{
-            "(?i)(^\s*checksum\s*=\s*)('.*')"       = "`$1'$($Latest.Checksum)'"
-            "(?i)(^\s*checksumType\s*=\s*)('.*')"   = "`$1'$($Latest.ChecksumType)'"
+            '(?i)(^\s*\$checksum\s*=\s*)(''.*'')'           = "`$1'$($Latest.Checksum)'"
+            '(?i)(^\s*\$checksumType\s*=\s*)(''.*'')'       = "`$1'$($Latest.ChecksumType)'"
         }
     }
 }
