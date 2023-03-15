@@ -22,7 +22,7 @@ function global:au_GetLatest {
 
     $page = Invoke-WebRequest -Uri $releaseUrl -UseBasicParsing
 
-    $regexVersion = '(?<version>MSI[\s]+Afterburner[\s]+[\d.]+)'
+    $regexVersion = 'MSI[\s]+Afterburner[\s]+(?<version>[\d.]+)'
 
     $matched = $page.Content -match $regexVersion
 
