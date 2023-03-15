@@ -18,7 +18,7 @@ function global:au_AfterUpdate {
 }
 
 function global:au_GetLatest {
-    $releaseUrl = "https://www.guru3d.com/files-details/msi-afterburner-beta-download.html"
+    $releaseUrl = "https://www.guru3d.com/files-tags/download-afterburner-beta.html"
 
     $page = Invoke-WebRequest -Uri $releaseUrl -UseBasicParsing
 
