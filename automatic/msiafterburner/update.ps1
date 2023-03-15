@@ -36,14 +36,16 @@ function global:au_GetLatest {
     if ($checksum -ne $oldChecksum) {
         $versionDate = Get-Date -Format "yyMMdd"
         $finalVersion = $matches['version'] + "." + $versionDate
+        $finalChecksum = $checksum
     } else {
         [xml]$xmlPackage = Get-Content -Path '.\msiafterburner.nuspec'
         $finalVersion = $xmlPackage.package.metadata.version
+        $finalChecksum =  $oldChecksum
     }
 
     return @{
         Version     = $finalVersion
-        Checksum    = $checksum
+        Checksum    = $finalChecksum
     }
 }
 
