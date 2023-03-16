@@ -2,7 +2,7 @@
 
 . $PSScriptRoot\..\..\scripts\all.ps1
 
-$releases = 'http://download.msi.com/uti_exe/vga/MSIAfterburnerSetup.zip?__token__=' + $(Invoke-RestMethod https://www.msi.com/api/v1/get_token?date=$(Get-Date -format "yyyyMMddHH"))
+$releases = 'https://download.msi.com/uti_exe/vga/MSIAfterburnerSetup.zip?__token__=' + $(Invoke-RestMethod https://www.msi.com/api/v1/get_token?date=$(Get-Date -format "yyyyMMddHH"))
 
 function global:au_SearchReplace {
     @{
@@ -51,4 +51,4 @@ function global:au_GetLatest {
     }
 }
 
-Update-Package
+update -ChecksumFor none
