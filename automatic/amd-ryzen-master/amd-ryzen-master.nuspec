@@ -43,18 +43,18 @@ This is a nuspec. It mostly adheres to https://docs.nuget.org/create/Nuspec-Refe
 		<!--<mailingListUrl></mailingListUrl>-->
 		<!--<bugTrackerUrl></bugTrackerUrl>-->
 		<tags>amd ryzen master monitoring overclocking performance</tags>
-		<summary>Your tool to unlock AMD RyzenÃƒÂ¢Ã¢â‚¬Å¾Ã‚Â¢ Processors.</summary>
+		<summary>Your tool to unlock AMD Ryzen Processors.</summary>
 		<description>AMD Ryzen Master is a tool for enthusiast users who:
 
-‒ Use the controls to experiment with processor and system configurations
+			‒ Use the controls to experiment with processor and system configurations
 
-‒ May with to use their system outside of the normal warrantied range of operation
+			‒ May with to use their system outside of the normal warrantied range of operation
 
-‒ Attempt to further optimize general performance or performance of a specific application or set of tasks
+			‒ Attempt to further optimize general performance or performance of a specific application or set of tasks
 
-‒ Accept the risk that some control settings may result in lower performance or system instability
+			‒ Accept the risk that some control settings may result in lower performance or system instability
 
-**NOTE**: This package is automatically updated. If it is out of date and there is no newer package submitted, please use the `Contact Maintainers` functionality to alert them.
+			**NOTE**: This package is automatically updated. If it is out of date and there is no newer package submitted, please use the `Contact Maintainers` functionality to alert them.
 </description>
 		<releaseNotes>https://www.amd.com/en/search/site-search.html#q=ryzen%20master%20release%20notes&amp;aq=NOT(%40sourcetype%3D%3D(%22Lithium%22)%20AND%20%40liboardinteractionstyle%3D%3D(%22forum%22%2C%20%22tkb%22))&amp;f[amd_result_type]=Knowledge%20Base</releaseNotes>
 		<!-- =============================== -->
