@@ -38,8 +38,7 @@ enclosed in quotation marks, you should use an editor that supports UTF-8, not t
         possible that one can release a 0.0.1-beta before you release a 0.0.1 version. If the
         version number is final, that is considered a released version and not a prerelease. -->
         <version>4.6.5.230315</version>
-        <packageSourceUrl>
-            https://github.com/mikeee/ChocoPackages/tree/master/automatic/msiafterburner</packageSourceUrl>
+        <packageSourceUrl>https://github.com/mikeee/ChocoPackages/tree/master/automatic/msiafterburner</packageSourceUrl>
         <!-- owners is a poor name for maintainers of the package. It sticks around by this name for
         compatibility reasons. It basically means you. -->
         <owners>mikeee</owners>
@@ -63,9 +62,12 @@ enclosed in quotation marks, you should use an editor that supports UTF-8, not t
             voltage</tags>
         <summary>MSI Afterburner is the ultimate graphics card utility, co-developed by MSI and
             RivaTuner teams.</summary>
-        <description>MSI Afterburner is the ultimate graphics card utility, co-developed by MSI and RivaTuner teams.
+        <description>MSI Afterburner is the ultimate graphics card utility, co-developed by MSI and
+            RivaTuner teams.
 
-**NOTE**: This package is automatically updated. If it is out of date and there is no newer package submitted, please use the `Contact Maintainers` functionality to alert them.
+            **NOTE**: This package is automatically updated. If it is out of date and there is no
+            newer package submitted, please use the `Contact Maintainers` functionality to alert
+            them.
 </description>
         <!-- <releaseNotes></releaseNotes> -->
         <!-- =============================== -->
