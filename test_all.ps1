@@ -1,6 +1,6 @@
 #Name can be 'random N' to randomly force the Nth group of packages.
 
-param( [string[]] $Name, [string] $Root = "$PSScriptRoot" )
+param( [string[]] $Name, [string] $Root = "$PSScriptRoot\automatic" )
 
 if (Test-Path $PSScriptRoot/update_vars.ps1) { . $PSScriptRoot/update_vars.ps1 }
 $global:au_root = Resolve-Path $Root
@@ -20,8 +20,38 @@ if (($Name.Length -gt 0) -and ($Name[0] -match '^random (.+)')) {
 }
 
 $options = [ordered]@{
-    Force  = $true
-    Push   = $false
+    Force           = $true
+    Push            = $false
+    Timeout         = 100                                     #Connection timeout in seconds
+    UpdateTimeout   = 1200                                    #Update timeout in seconds
+    Threads         = 10                                      #Number of background jobs to use
+    IgnoreOn      = @(                                      #Error message parts to set the package ignore status
+      'Origin Time-out'
+      'Could not create SSL/TLS secure channel'
+      'Could not establish trust relationship'
+      'The operation has timed out'
+      'Internal Server Error'
+      'Service Temporarily Unavailable'
+      'the package version already exists on the repository'
+      'already exists on a Simple OData Server'             # https://github.com/chocolatey/chocolatey.org/issues/613
+      'Conflict'
+      'OutOfMemoryException'
+    )
+    RepeatOn      = @(                                      #Error message parts on which to repeat package updater
+      'Could not create SSL/TLS secure channel'             # https://github.com/chocolatey/chocolatey-coreteampackages/issues/718
+      'Could not establish trust relationship'              # -||-
+      'Unable to connect'
+      'The remote name could not be resolved'
+      'Choco pack failed with exit code 1'                  # https://github.com/chocolatey/chocolatey-coreteampackages/issues/721
+      'The operation has timed out'
+      'Internal Server Error'
+      'An exception occurred during a WebClient request'
+      'remote session failed with an unexpected state'
+      'the package version already exists on the repository'
+      'already exists on a Simple OData Server'             # https://github.com/chocolatey/chocolatey.org/issues/613
+      'Conflict'
+      'Job returned no object'
+    )
 
     Report = @{
         Type   = 'markdown'                                   #Report type: markdown or text
