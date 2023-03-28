@@ -1,0 +1,15 @@
+VERIFICATION
+Verification is intended to assist the Chocolatey moderators and community
+in verifying that the contents of this package is trustworthy.
+
+The installer has been downloaded from the official download link listed on <https://osdn.net/projects/crystaldiskmark/releases/>
+and can be verified like this:
+
+1. Download the following package:
+  URL: <https://osdn.net/frs/redir.php?m=dotsrc&f=crystaldiskmark/77936/CrystalDiskMark8_0_4c.exe>
+2. You can use one of the following methods to obtain the checksum
+  - Use powershell function 'Get-Filehash'
+  - Use chocolatey utility 'checksum.exe'
+
+  checksum_type: sha256
+  file_checksum: C50D45A19224DAFAF924BCD0380204904D7DF08706A978821FFDC0AB1A4FF840
