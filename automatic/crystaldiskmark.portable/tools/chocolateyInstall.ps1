@@ -27,3 +27,12 @@ else { #32bit
 }
 
 Install-BinFile -Name 'CrystalDiskMark' -Path (Join-Path -Path $installDir -ChildPath $exePath)
+
+# Start menu shortcuts
+$progsFolder = [Environment]::GetFolderPath('Programs')
+If ( Test-ProcessAdminRights ) {
+    $progsFolder = [Environment]::GetFolderPath('CommonPrograms')
+}
+
+Install-ChocolateyShortcut -shortcutFilePath (Join-Path -Path $progsFolder -ChildPath 'CrystalDiskMark.lnk') `
+    -targetPath (Join-Path -Path $toolsDir -ChildPath "./$exePath.exe")
