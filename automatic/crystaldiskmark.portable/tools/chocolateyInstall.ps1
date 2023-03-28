@@ -35,4 +35,4 @@ If ( Test-ProcessAdminRights ) {
 }
 
 Install-ChocolateyShortcut -shortcutFilePath (Join-Path -Path $progsFolder -ChildPath 'CrystalDiskMark.lnk') `
-    -targetPath (Join-Path -Path $toolsDir -ChildPath "./$exePath.exe")
+    -targetPath (Join-Path -Path $toolsDir -ChildPath "./$exePath")
