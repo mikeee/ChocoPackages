@@ -16,8 +16,8 @@ function global:au_SearchReplace {
 }
 
 function global:au_BeforeUpdate {
-    $fileName   = "crystaldiskmark.zip"
-    Get-RemoteFiles -Purge -FileNameBase $fileName -NoSuffix
+    Invoke-WebRequest -Uri $Latest.URL -UserAgent [Microsoft.PowerShell.Commands.PSUserAgent]::FireFox `
+        -UseBasicParsing -OutFile 'tools\crystaldiskmark.zip'
 }
 
 function global:au_AfterUpdate {

@@ -16,10 +16,10 @@ $osArch = (Get-WmiObject win32_operatingsystem | select osarchitecture).osarchit
 if ($osArch -eq "*ARM 64-bit*"){ #ARM 64bit
     $exePath = 'DiskMarkA64.exe'
 }
-else if ($osArch -eq "*64-bit*") { #64bit
+elseif ($osArch -eq "*64-bit*") { #64bit
     $exePath = 'DiskMark64.exe'
 }
-else if ($osArch -eq "*ARM*") { #ARM 32bit
+elseif ($osArch -eq "*ARM*") { #ARM 32bit
     $exePath = 'DiskMarkA32.exe'
 }
 else { #32bit
