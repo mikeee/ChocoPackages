@@ -1,4 +1,4 @@
-# ![CrystalDiskMark Logo](https://cdn.jsdelivr.net/gh/mikeee/ChocoPackages/icons/crystaldiskmark.png "crystaldiskmark Logo") [crystaldiskmark](https://chocolatey.org/packages/crystaldiskmark)
+# ![CrystalDiskMark Logo](https://cdn.jsdelivr.net/gh/mikeee/ChocoPackages/icons/crystaldiskmark.png "crystaldiskmark Logo") [crystaldiskmark.install](https://chocolatey.org/packages/crystaldiskmark.install)
 
 CrystalDiskMark is a small benchmark utility for your Hard Disk Drives (HDDs) and Solid State Disks (SSDs).
 
