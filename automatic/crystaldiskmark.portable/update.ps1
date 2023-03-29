@@ -9,7 +9,6 @@ function global:au_SearchReplace {
         ".\legal\VERIFICATION.txt" = @{
             "(?i)(listed on\s*)\<.*\>" = "`${1}<$releases>"
             "(?i)(URL.+)\<.*\>"     = "`${1}<$($Latest.URL)>"
-            "(?i)(checksum_type:).*"   = "`${1} $($Latest.ChecksumType)"
             "(?i)(file_checksum:).*"      = "`${1} $($Latest.Checksum)"
         }
     }
@@ -40,9 +39,14 @@ function global:au_GetLatest {
     }
     $revision   = $matches.revision
 
+    $url        = "https://osdn.net/frs/redir.php?m=dotsrc&f=crystaldiskmark/$revision/CrystalDiskMark$versionDL.zip"
+
+    $checksum   = Get-RemoteChecksum $url
+
     return @{
-        URL        = "https://osdn.net/frs/redir.php?m=dotsrc&f=crystaldiskmark/$revision/CrystalDiskMark$versionDL.zip"
+        URL        = $url
         Version    = $versionChoco
+        Checksum   = $checksum
     }
 }
 

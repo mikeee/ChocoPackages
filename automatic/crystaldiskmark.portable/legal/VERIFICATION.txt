@@ -11,5 +11,5 @@ and can be verified like this:
   - Use powershell function 'Get-Filehash'
   - Use chocolatey utility 'checksum.exe'
 
-  checksum_type: 
-  file_checksum: 
+  checksum_type: sha256
+  file_checksum: 0513B11ACDE65E3C26CEFAA90EDEA4896B4FCE1D67478AF16B23F5A8CF9C7512
