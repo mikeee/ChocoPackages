@@ -4,6 +4,8 @@ $checksum = 'd1c09f505d9483e93df5126241c209e8c871656493ce511b3238df73b3eee71f'
 $checksumType = 'SHA256'
 $unpackDir = $(Split-Path -parent $MyInvocation.MyCommand.Definition)
 $unpackFile = Join-Path $unpackDir 'afterburner.zip'
+$pp = Get-PackageParameters
+$RTSSdesktopShortcutPath = "$env:PUBLIC\Desktop\RTSS.lnk"
 
 Get-Process -Name 'msi afterburner' -ErrorAction SilentlyContinue | Stop-Process
 
@@ -23,3 +25,23 @@ Install-ChocolateyInstallPackage @packageArgs
 
 Remove-Item $unpackFile -Recurse -Force
 Remove-Item $file -Recurse -Force
+
+function InstallShortcut {
+  param (
+    $ShortcutPath
+  )
+
+  $installLocation = "${env:ProgramFiles(x86)}\RivaTuner Statistics Server"
+
+  $shortcutArgs = @{
+    shortcutFilePath = $ShortcutPath
+    workingDirectory = "$installLocation"
+    targetPath       = "$installLocation\RTSS.exe"
+  }
+
+  Install-ChocolateyShortcut @shortcutArgs
+}
+
+if ($pp['RTSSDesktopShortcut']) {
+    InstallShortcut $RTSSdesktopShortcutPath
+}
