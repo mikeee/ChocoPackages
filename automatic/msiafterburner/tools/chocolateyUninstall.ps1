@@ -1,10 +1,15 @@
 $ErrorActionPreference = 'Stop';
 
 $packageName = $env:ChocolateyPackageName
-$software = @('MSI Afterburner', 'RivaTuner Statistics Server')
-$installerType = 'exe'
+$software = @('MSI Afterburner*', 'RivaTuner Statistics Server*')
 $silentArgs = '/S'
-$validExitCodes = @(0)
+
+$ahkFile = Join-Path $scriptPath 'chocolateyUninstall.ahk'
+$ahkExe = 'AutoHotKey'
+$ahkRun = "$Env:Temp\$(Get-Random).ahk"
+
+Copy-Item $ahkFile "$ahkRun" -Force
+Start-Process $ahkExe $ahkRun
 
 For($i=0; $i -lt $software.Length; $i++) {
   [array]$key = Get-UninstallRegistryKey -SoftwareName $software[$i]
@@ -12,24 +17,7 @@ For($i=0; $i -lt $software.Length; $i++) {
   if ($key.Count -eq 1) {
     $key | ForEach-Object {
       $file = $($_.UninstallString)
-
-      if ($installerType -eq 'MSI') {
-        $silentArgs = "$($_.PSChildName) $silentArgs"
-        $file = ''
-      }
-
-      Uninstall-ChocolateyPackage -PackageName $packageName `
-                                  -FileType $installerType `
-                                  -SilentArgs "$silentArgs" `
-                                  -ValidExitCodes $validExitCodes `
-                                  -File "$file"
-
-      $wshell = New-Object -ComObject WScript.Shell
-
-      while ($wshell.AppActivate("$software[$i] Uninstall") -eq $false) {
-        Start-Sleep -Seconds 1
-      }
-      $wshell.SendKeys("N")
+      Start-Process $file -ArgumentList $silentArgs -Verb RunAs
     }
   } elseif ($key.Count -eq 0) {
     Write-Warning "$packageName has already been uninstalled by other means."
@@ -40,3 +28,5 @@ For($i=0; $i -lt $software.Length; $i++) {
     $key | ForEach-Object {Write-Warning "- $_.DisplayName"}
   }
 }
+
+Remove-Item "$ahkRun" -Force
