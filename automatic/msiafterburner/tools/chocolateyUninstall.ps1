@@ -3,7 +3,7 @@ $ErrorActionPreference = 'Stop';
 $packageName = $env:ChocolateyPackageName
 $software = @('MSI Afterburner*', 'RivaTuner Statistics Server*')
 $silentArgs = '/S'
-
+$scriptPath = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 $ahkFile = Join-Path $scriptPath 'chocolateyUninstall.ahk'
 $ahkExe = 'AutoHotKey'
 $ahkRun = "$Env:Temp\$(Get-Random).ahk"
