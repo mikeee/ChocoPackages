@@ -5,14 +5,11 @@ $checksumType = 'SHA256'
 $unpackDir = $(Split-Path -parent $MyInvocation.MyCommand.Definition)
 $unpackFile = Join-Path $unpackDir 'afterburner.zip'
 
-$toolsPath = Split-Path $MyInvocation.MyCommand.Definition
-. $toolsPath\helpers.ps1
+Get-Process -Name 'msi afterburner' -ErrorAction SilentlyContinue | Stop-Process
 
 Get-ChocolateyWebFile $packageName $unpackFile $url -Checksum $checksum -ChecksumType $checksumType
 Get-ChocolateyUnzip -fileFullPath $unpackFile -destination $unpackDir
 $file = (Get-ChildItem -Path $unpackDir -Recurse | Where-Object { $_.Name -match "^MSIAfterburnerSetup.*\.exe$" }).fullname
-
-Stop-Afterburner
 
 $packageArgs = @{
   PackageName    = $packageName
