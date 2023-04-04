@@ -1,7 +1,7 @@
 $ErrorActionPreference = 'Stop';
 
 $packageName = $env:ChocolateyPackageName
-$software = @{'MSI Afterburner', 'RivaTuner Statistics Server'}
+$software = @('MSI Afterburner', 'RivaTuner Statistics Server')
 $installerType = 'exe'
 $silentArgs = '/S'
 $validExitCodes = @(0)
