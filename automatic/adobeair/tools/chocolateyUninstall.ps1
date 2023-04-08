@@ -1,6 +1,7 @@
 $ErrorActionPreference = 'Stop';
 
-$packageName = 'Adobe AIR*'
+$packageName = $env:ChocolateyPackageName
+$softwareName = 'Adobe AIR*'
 $installerType = 'MSI'
 
 [array]$key = Get-UninstallRegistryKey -SoftwareName $softwareName
