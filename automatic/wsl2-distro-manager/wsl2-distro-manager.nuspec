@@ -22,7 +22,7 @@ This is a nuspec. It mostly adheres to https://docs.nuget.org/create/Nuspec-Refe
 		<!-- version should MATCH as closely as possible with the underlying software -->
 		<!-- Is the version a prerelease of a version? https://docs.nuget.org/create/versioning#creating-prerelease-packages -->
 		<!-- Note that unstable versions like 0.0.1 can be considered a released version, but it's possible that one can release a 0.0.1-beta before you release a 0.0.1 version. If the version number is final, that is considered a released version and not a prerelease. -->
-		<version>1.6.2</version>
+		<version>1.7.0</version>
 		<packageSourceUrl>https://github.com/mikeee/ChocoPackages/tree/master/automatic/wsl2-distro-manager</packageSourceUrl>
 		<!-- owners is a poor name for maintainers of the package. It sticks around by this name for compatibility reasons. It basically means you. -->
 		<owners>mikeee</owners>
@@ -46,7 +46,7 @@ This is a nuspec. It mostly adheres to https://docs.nuget.org/create/Nuspec-Refe
 		<summary>A quick way to manage your WSL instances with a GUI.</summary>
 		<description>A quick way to manage your WSL instances with a GUI (flutter + fluent_ui).
 
-			**NOTE**: This is an automatically updated package. If you find it is out of date by more than a week, please contact the maintainer(s) and let them know the package is no longer updating correctly.
+**NOTE**: This is an automatically updated package. If you find it is out of date by more than a week, please contact the maintainer(s) and let them know the package is no longer updating correctly.
 </description>
 		<releaseNotes>https://github.com/bostrot/wsl2-distro-manager/releases</releaseNotes>
 		<!-- =============================== -->
