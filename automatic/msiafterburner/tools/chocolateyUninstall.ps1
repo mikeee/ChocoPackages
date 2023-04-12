@@ -30,3 +30,5 @@ For($i=0; $i -lt $software.Length; $i++) {
 }
 
 Remove-Item "$ahkRun" -Force
+
+Remove-Item "$env:PUBLIC\Desktop\RTSS.lnk" -Force
