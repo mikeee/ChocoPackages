@@ -18,7 +18,7 @@ tools or commands will error on those elements
 distribution rights. -->
 <!-- * If you are an organization making private packages, you probably have no issues here -->
 <!-- * If you are releasing to the community feed, you need to consider distribution rights. -->
-<!-- Do not remove this test for UTF-8: if Ã¢â‚¬Å“ÃŽÂ©Ã¢â‚¬Â doesnÃ¢â‚¬â„¢t appear as greek uppercase omega letter
+<!-- Do not remove this test for UTF-8: if ÃƒÂ¢Ã¢â€šÂ¬Ã…â€œÃƒÅ½Ã‚Â©ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â doesnÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢t appear as greek uppercase omega letter
 enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
     <metadata>
@@ -37,7 +37,7 @@ enclosed in quotation marks, you should use an editor that supports UTF-8, not t
         <!-- Note that unstable versions like 0.0.1 can be considered a released version, but it's
         possible that one can release a 0.0.1-beta before you release a 0.0.1 version. If the
         version number is final, that is considered a released version and not a prerelease. -->
-        <version>4.6.5.230415</version>
+        <version>4.6.5.230416</version>
         <packageSourceUrl>https://github.com/mikeee/ChocoPackages/tree/master/automatic/msiafterburner</packageSourceUrl>
         <!-- owners is a poor name for maintainers of the package. It sticks around by this name for
         compatibility reasons. It basically means you. -->
