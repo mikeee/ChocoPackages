@@ -3,6 +3,12 @@
   "extends": [
     "config:base"
   ],
+  "assignees": [
+    "mikeee"
+  ],
+  "reviewers": [
+    "mikeee"
+  ],
   "postUpdateOptions": [
     "gomodTidy"
   ]
