@@ -18,8 +18,8 @@ github.com/ledongthuc/pdf v0.0.0-20220302134840-0c2507a12d80 h1:6Yzfa6GP0rIo/kUL
 github.com/ledongthuc/pdf v0.0.0-20220302134840-0c2507a12d80/go.mod h1:imJHygn/1yfhB7XSJJKlFZKl/J+dCPAknuiaGOshXAs=
 github.com/mailru/easyjson v0.7.7 h1:UGYAvKxe3sBsEDzO8ZeWOSlIQfWFlxbzLZe7hwFURr0=
 github.com/mailru/easyjson v0.7.7/go.mod h1:xzfreul335JAWq5oZzymOObrkdz5UnU4kGfJJLY9Nlc=
-github.com/mikeee/chocohelpers v0.0.0-20230420081432-471134296e85 h1:zw0TWhtVMsJgkhK7vz66S0m3eHmVgcZYUz7yfFUpnu8=
-github.com/mikeee/chocohelpers v0.0.0-20230420081432-471134296e85/go.mod h1:CwO/92Lvk3LgPi96xcl2dFBOUIyHjeJyS0sHb3OZstA=
+github.com/mikeee/chocohelpers v0.0.0-20230421141416-43ab5493a3d8 h1:57uGEJ+u9w31sxCxshoeOWGNbhto6R0/6/TwkmZU1tc=
+github.com/mikeee/chocohelpers v0.0.0-20230421141416-43ab5493a3d8/go.mod h1:CwO/92Lvk3LgPi96xcl2dFBOUIyHjeJyS0sHb3OZstA=
 github.com/orisano/pixelmatch v0.0.0-20220722002657-fb0b55479cde h1:x0TT0RDC7UhAVbbWWBzr41ElhJx5tXPWkIHA2HWPRuw=
 github.com/orisano/pixelmatch v0.0.0-20220722002657-fb0b55479cde/go.mod h1:nZgzbfBr3hhjoZnS66nKrHmduYNpc34ny7RK4z5/HM0=
 github.com/pmezard/go-difflib v1.0.0 h1:4DBwDE0NGyQoBHbLQYPwSUPoCMWR5BEzIk/f1lZbAQM=
