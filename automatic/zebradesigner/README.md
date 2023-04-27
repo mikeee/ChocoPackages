@@ -1,4 +1,4 @@
-# ![ZebraDesigner Logo](https://cdn.jsdelivr.net/gh/mikeee/ChocoPackages/icons/zebradesigner.png "zebradesigner Logo") [sparkmail](https://chocolatey.org/packages/zebradesigner)
+# ![ZebraDesigner Logo](https://cdn.jsdelivr.net/gh/mikeee/ChocoPackages/icons/zebradesigner.png "zebradesigner Logo") [zebradesigner](https://chocolatey.org/packages/zebradesigner)
 
 ZebraDesigner is barcode label software
 
