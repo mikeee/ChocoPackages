@@ -33,7 +33,7 @@ function global:au_GetLatest {
 
     If ($False -ne $matchedurl) {
         $url = -join("https://www.zebra.com/content/dam/zebra_new_ia/en-us/software-printer/productivity-apps/zebra-designer-3/zebradesigner", $matches["versionmajor"], "-", $matches["versionminor"], ".exe")
-        $version = $matches["versionmajor"], ".", $matches["versionminor"]
+        $version = -join($matches["versionmajor"], ".", $matches["versionminor"])
     }
 
     return @{
