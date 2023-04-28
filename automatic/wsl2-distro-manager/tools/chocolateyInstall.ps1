@@ -12,3 +12,11 @@ $packageArgs = @{
 }
 
 Install-ChocolateyZipPackage @packageArgs
+
+$progsFolder = [Environment]::GetFolderPath('Programs')
+If ( Test-ProcessAdminRights ) {
+    $progsFolder = [Environment]::GetFolderPath('CommonPrograms')
+}
+
+Install-ChocolateyShortcut -shortcutFilePath (Join-Path -Path $progsFolder -ChildPath 'wsl2 distro manager.lnk') `
+    -targetPath (Join-Path -Path $toolsDir -ChildPath "wsl2distromanager.exe")
