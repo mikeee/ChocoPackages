@@ -20,7 +20,7 @@ function global:au_AfterUpdate {
 }
 
 function global:au_GetLatest {
-    $page = Invoke-WebRequest -Uri $releases -UseBasicParsing
+    $page = Invoke-WebRequest -Uri $releases -UseBasicParsing -UserAgent [Microsoft.PowerShell.Commands.PSUserAgent]::FireFox
 
     $regexUrl32 = 'BlueStacksFullInstaller_(?<version>[\d.]+)_x86_native.exe'
     $regexUrl64 = 'BlueStacksFullInstaller_(?<version>[\d.]+)_amd64_native.exe'
