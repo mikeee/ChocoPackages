@@ -22,7 +22,7 @@ This is a nuspec. It mostly adheres to https://docs.nuget.org/create/Nuspec-Refe
         <!-- version should MATCH as closely as possible with the underlying software -->
         <!-- Is the version a prerelease of a version? https://docs.nuget.org/create/versioning#creating-prerelease-packages -->
         <!-- Note that unstable versions like 0.0.1 can be considered a released version, but it's possible that one can release a 0.0.1-beta before you release a 0.0.1 version. If the version number is final, that is considered a released version and not a prerelease. -->
-        <version>0.0</version>
+        <version>5.11.1.1002</version>
         <packageSourceUrl>https://github.com/mikeee/ChocoPackages/tree/master/automatic/bluestacks</packageSourceUrl>
         <!-- owners is a poor name for maintainers of the package. It sticks around by this name for compatibility reasons. It basically means you. -->
         <owners>mikeee</owners>
@@ -44,7 +44,12 @@ This is a nuspec. It mostly adheres to https://docs.nuget.org/create/Nuspec-Refe
         <!-- <bugTrackerUrl></bugTrackerUrl> -->
         <tags>android emulator pie</tags>
         <summary>BlueStacks is an android emulator</summary>
-        <description></description>
+        <description>Play Android Games on PC.
+
+Experience the best of Android Gaming with BlueStacks, the world’s leading ‘Android for PC’ gaming platform.
+
+**NOTE**: This package is automatically updated. If it is out of date and there is no newer package submitted, please use the `Contact Maintainers` functionality to alert me.
+</description>
         <releaseNotes>https://support.bluestacks.com/hc/en-us/articles/360056960211-Release-Notes-BlueStacks-5</releaseNotes>
         <!-- =============================== -->
         <!-- Specifying dependencies and version ranges? https://docs.nuget.org/create/versioning#specifying-version-ranges-in-.nuspec-files -->
