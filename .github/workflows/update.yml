@@ -26,6 +26,7 @@ jobs:
           $PSVersionTable
           git --version
           choco --version
+          go --version
 
       - name: Initialize Git config
         run: |
