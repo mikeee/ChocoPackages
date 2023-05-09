@@ -1,30 +1,26 @@
 # ChocoPackages
 
-[![AppVeyor Badge](https://ci.appveyor.com/api/projects/status/github/mikeee/ChocoPackages?svg=true)](https://ci.appveyor.com/project/mikeee/ChocoPackages)
+[![AU-Updater](https://github.com/mikeee/ChocoPackages/actions/workflows/update.yaml/badge.svg?branch=master)](https://github.com/mikeee/ChocoPackages/actions)
 [Update status](https://gist.github.com/mikeee/17b5a042cba1bd9da2bf21615aab4f0f)
 
-This repo houses all the packages I maintain on [Chocolatey](https://chocolatey.org). Automatic package updates with [AppVeyor](https://www.appveyor.com/) (exploring migration to GitHub actions).
+This repo houses all the packages I maintain on [Chocolatey](https://chocolatey.org). Automatic package updates via GitHub Actions.
 
 ## Folder Structure
 
-* automatic - packages that are automatically maintained using CI.
-* icons - central image store for all the packages.
-* manual - packages that are not automatically maintained/updated.
-* _scripts - miscellaneous scripts for helping with (automatic) packaging.
-* setup - scripts for the packaging process.
-
-For setting up your own automatic package repository, please see [Automatic Packaging](https://chocolatey.org/docs/automatic-packages)
+- automatic - packages that are automatically maintained using CI.
+- icons - central image store for all the packages.
+- manual - packages that are not automatically maintained/updated.
+- \_scripts - miscellaneous scripts for helping with (automatic) packaging.
+- setup - scripts for the packaging process.
 
 ## Requirements
 
-* Chocolatey (choco.exe)
+- Chocolatey (choco.exe)
 
 ### AU
 
-* PowerShell v5+.
-* The [AU module](https://chocolatey.org/packages/au).
-
-For daily operations check out the AU packages [template README](https://github.com/majkinetor/au-packages-template/blob/master/README.md).
+- PowerShell v5+.
+- The [AU module](https://chocolatey.org/packages/au).
 
 ## Contributions / Suggestions
 
