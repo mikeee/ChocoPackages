@@ -50,7 +50,7 @@ quotation marks, you should use an editor that supports UTF-8, not this one. -->
         <title>Nanoleaf</title>
         <authors>Nanoleaf Canada Ltd.</authors>
         <!-- projectUrl is required for the community feed -->
-        <projectUrl>https://nanoleaf.me/en-US/integration-hub/desktop-app/</projectUrl>
+        <projectUrl>https://nanoleaf.me/en-US/integration/desktop-app/</projectUrl>
         <iconUrl>https://cdn.jsdelivr.net/gh/mikeee/ChocoPackages/icons/nanoleaf.png</iconUrl>
         <copyright>(C) 2022 Nanoleaf</copyright>
         <!-- If there is a license Url available, it is is required for the community feed -->
@@ -64,7 +64,7 @@ quotation marks, you should use an editor that supports UTF-8, not this one. -->
         <summary>Control your Nanoleaf products from your desktop.</summary>
         <description>With the Nanoleaf Desktop App, you can control your Lines, Shapes, Essentials\*, Elements, Canvas or Light Panels from your computer (Windows or Mac). Create and download new Scenes, set Schedules and use your other favorite features right from your computer. The Desktop App was designed to simplify the management of larger installations and offer control of many different layouts at once.
 
-**NOTE**: This package is automatically updated. If it is out of date and there is no newer package submitted, please use the `Contact Maintainers` functionality to alert us.
+            **NOTE**: This package is automatically updated. If it is out of date and there is no newer package submitted, please use the `Contact Maintainers` functionality to alert us.
 </description>
         <releaseNotes>https://helpdesk.nanoleaf.me/en-US/articles/nanoleaf-desktop-app-3546</releaseNotes>
         <!-- =============================== -->
