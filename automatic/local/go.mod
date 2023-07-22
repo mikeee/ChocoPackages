@@ -2,10 +2,10 @@ module github.com/mikeee/ChocoPackages/automatic/local
 
 go 1.19
 
-require github.com/mikeee/chocohelpers v0.0.0-20230713130450-075ae7fe0500
+require github.com/mikeee/chocohelpers v0.0.0-20230721085453-cb27a2d5e331
 
 require (
-	github.com/chromedp/cdproto v0.0.0-20230713004731-6192861feb61 // indirect
+	github.com/chromedp/cdproto v0.0.0-20230716001748-3ed7c525ec8b // indirect
 	github.com/chromedp/chromedp v0.9.1 // indirect
 	github.com/chromedp/sysutil v1.0.0 // indirect
 	github.com/gobwas/httphead v0.1.0 // indirect
