@@ -2,7 +2,7 @@
 
 . $PSScriptRoot\..\..\scripts\all.ps1
 
-$releases    = 'https://www.clojure.org/guides/install_clojure'
+$releases    = 'https://www.clojure.org/releases/tools'
 
 function global:au_SearchReplace {
     @{
@@ -28,7 +28,7 @@ function global:au_AfterUpdate {
 
 function global:au_GetLatest {
     $page = Invoke-WebRequest -Uri $releases -UseBasicParsing
-    $regexVersion = 'https:\/\/download.clojure.org\/install\/linux-install-(?<version>[\d.]+).sh'
+    $regexVersion = '(?<version>[\d].[\d]{1,}.[\d].[\d]{4})'
 
     $matched = $page.Content -match $regexVersion
 
