@@ -32,7 +32,7 @@ function global:au_GetLatest {
     $ver = $matches.version
 
     return @{
-        URL64        = "https://github.com/vultr/vultr-cli/releases/download/v$ver/vultr-cli_"+$ver+"_windows_64-bit.zip"
+        URL64        = "https://github.com/vultr/vultr-cli/releases/download/v$ver/vultr-cli_v"+$ver+"_windows_amd64.zip"
         Version      = $ver
     }
 }
