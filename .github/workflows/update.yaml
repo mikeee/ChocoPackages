@@ -43,7 +43,20 @@ jobs:
           git clone -q https://github.com/majkinetor/au.git $Env:TEMP/au
           . "$Env:TEMP/au/scripts/Install-AU.ps1" $Env:au_version
 
+      - name: Test all packages
+        if: github.event_name == 'pull_request'
+        run: |
+          $ErrorActionPreference = 'Continue'
+          ./update_all.ps1
+          7z a au_temp.zip $Env:TEMP\chocolatey\au\*
+
+        env:
+          au_version: # omitting to use latest
+          au_push: false
+          au_test_groups: 1
+
       - name: Update all packages
+        if: github.event_name != 'pull_request'
         run: |
           $ErrorActionPreference = 'Continue'
           ./update_all.ps1
