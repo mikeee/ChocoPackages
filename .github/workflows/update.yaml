@@ -86,6 +86,7 @@ jobs:
           # mail_enablessl: true
 
       - name: Upload artifacts
+        if: github.event_name != 'pull_request'
         uses: actions/upload-artifact@v4
         with:
           name: update_results
