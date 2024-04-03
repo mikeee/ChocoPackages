@@ -2,7 +2,7 @@
 
 . $PSScriptRoot\..\..\scripts\all.ps1
 
-$releases    = 'https://osdn.net/projects/crystaldiskmark/releases/'
+$releases    = 'https://sourceforge.net/p/crystaldiskmark/activity'
 
 function global:au_SearchReplace {
     @{
@@ -25,7 +25,7 @@ function global:au_AfterUpdate {
 
 function global:au_GetLatest {
     $page = Invoke-WebRequest -Uri $releases -UseBasicParsing
-    $regexUrl = '\/crystaldiskmark\/downloads\/(?<revision>[\d.]+)\/CrystalDiskMark(?<version>(?<major>\d_\d_\d)(?<minor>\S?)).zip\/'
+    $regexUrl = '\/CrystalDiskMark(?<version>(?<major>\d_\d_\d)(?<minor>\S?)).zip'
 
     $page.links | Where-Object href -match $regexUrl | Select-Object -First 1 -expand href
 
@@ -37,9 +37,8 @@ function global:au_GetLatest {
     } else {
         $versionChoco = $versionMajor
     }
-    $revision   = $matches.revision
 
-    $url        = "https://osdn.net/frs/redir.php?m=dotsrc&f=crystaldiskmark/$revision/CrystalDiskMark$versionDL.zip"
+    $url        = "https://sourceforge.net/projects/crystaldiskmark/files/$versionMajor$versionMinor/CrystalDiskMark$versionDL.zip/download"
 
     $checksum   = Get-RemoteChecksum $url
 
