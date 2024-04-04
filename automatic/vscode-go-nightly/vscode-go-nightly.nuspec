@@ -22,7 +22,7 @@ This is a nuspec. It mostly adheres to https://docs.nuget.org/create/Nuspec-Refe
         <!-- version should MATCH as closely as possible with the underlying software -->
         <!-- Is the version a prerelease of a version? https://docs.nuget.org/create/versioning#creating-prerelease-packages -->
         <!-- Note that unstable versions like 0.0.1 can be considered a released version, but it's possible that one can release a 0.0.1-beta before you release a 0.0.1 version. If the version number is final, that is considered a released version and not a prerelease. -->
-        <version>2023.3.219</version>
+        <version>2024.4.322</version>
         <packageSourceUrl>https://github.com/mikeee/ChocoPackages/tree/master/automatic/vscode-go-nightly</packageSourceUrl>
         <!-- owners is a poor name for maintainers of the package. It sticks around by this name for compatibility reasons. It basically means you. -->
         <owners>mikeee</owners>
@@ -68,7 +68,7 @@ The VS Code Go extension provides rich language support for the Go programming l
         <!-- Specifying dependencies and version ranges? https://docs.nuget.org/create/versioning#specifying-version-ranges-in-.nuspec-files -->
         <dependencies>
             <dependency id="chocolatey-vscode.extension" version="1.1.0" />
-            <dependency id="vscode" version="1.67.0" />
+            <dependency id="vscode" version="1.75.0" />
             <!-- <dependency id="autohotkey" /> -->
             <!-- <dependency id="" version="[__EXACT_VERSION__]" /> -->
             <!-- <dependency id="chocolatey" version="0.10.8" /> -->
