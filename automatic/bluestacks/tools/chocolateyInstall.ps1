@@ -2,11 +2,11 @@
 
 $packageArgs = @{
     packageName   = $env:ChocolateyPackageName
-    url           = 'https://cdn3.bluestacks.com/downloads/windows/nxt/5.11.1.1002/a7fc42682e92780335ddcabe6fd9b6e8/FullInstaller/x86/BlueStacksFullInstaller_5.11.1.1002_x86_native.exe'
-    checksum      = '7d8889d3312f3624e2ad40cb7b1c4f0144205927eeea28c65c2aba7211a2ce4f'
+    url           = 'https://ak-build.bluestacks.com/public/app-player/windows/nxt/5.14.21.1004/26a5440b147b9f4dd572002e7cb38f05/FullInstaller/x86/BlueStacksFullInstaller_5.14.21.1004_x86_native.exe'
+    checksum      = '4dc31833443d161a1b6266b4a85ebc816653c1b697613207d925ea383106873f'
     checksumType  = 'sha256'
-    url64         = 'https://cdn3.bluestacks.com/downloads/windows/nxt/5.11.1.1002/a7fc42682e92780335ddcabe6fd9b6e8/FullInstaller/x64/BlueStacksFullInstaller_5.11.1.1002_amd64_native.exe'
-    checksum64    = 'e0a0d1f346d4c75def508bdb2cda1904f7e489c90cae88142284e9a4cc5e7d4f'
+    url64         = 'https://ak-build.bluestacks.com/public/app-player/windows/nxt/5.21.120.1025/429486c7a53fb77612aae8146812aac3/FullInstaller/x64/BlueStacksFullInstaller_5.21.120.1025_amd64_native.exe'
+    checksum64    = '68742c12d86fda227d6bdb69f25851afa30febc64f6c5eab73cc0b912bc33eff'
     checksumType64= 'sha256'
     fileType      = 'EXE'
     silentArgs    = '-s'
