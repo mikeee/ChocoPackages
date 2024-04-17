@@ -3,10 +3,10 @@
 $packageArgs = @{
     packageName     = $env:ChocolateyPackageName
     url             = 'https://desktop-downloads.asana.com/win32_ia32/prod/latest/AsanaSetup.exe'
-    checksum        = 'e06ffd08f16dba2c938135e5228d85da9a6149fe30962f0361cbba6f00f871dc'
+    checksum        = 'ed4bb9a5460d1e6c4455886331d49340e55f557c8272c8d9bb077e57920cfabb'
     checksumType    = 'SHA256'
     url64           = 'https://desktop-downloads.asana.com/win32_x64/prod/latest/AsanaSetup.exe'
-    checksum64      = 'e9eaf38b43a0060a71fc5025780d3817c0f6905b7233a6dd2216e79889bca1e4'
+    checksum64      = '55faeb56671ab09365414ffe2678d3cb2a46319ab2e98af61ade5060fd229035'
     checksumType64  = 'SHA256'
     fileType        = 'EXE'
     silentArgs      = '--silent'
