@@ -2,10 +2,10 @@ module github.com/mikeee/ChocoPackages/automatic/adobeair
 
 go 1.19
 
-require github.com/mikeee/chocohelpers v0.0.0-20240513173535-41a230265a4d
+require github.com/mikeee/chocohelpers v0.0.0-20240614172911-6de025b05564
 
 require (
-	github.com/chromedp/cdproto v0.0.0-20240512230644-b3296df1660c // indirect
+	github.com/chromedp/cdproto v0.0.0-20240602235142-49d0e97b7881 // indirect
 	github.com/chromedp/chromedp v0.9.5 // indirect
 	github.com/chromedp/sysutil v1.0.0 // indirect
 	github.com/gobwas/httphead v0.1.0 // indirect
