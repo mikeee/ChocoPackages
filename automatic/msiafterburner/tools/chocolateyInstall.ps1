@@ -1,5 +1,12 @@
 ﻿$packageName = 'msiafterburner'
-$url = 'http://download.msi.com/uti_exe/vga/MSIAfterburnerSetup.zip?__token__=' + $(Invoke-RestMethod https://www.msi.com/api/v1/get_token?date=$(Get-Date -format "yyyyMMddHH"))
+$Date = Get-Date -format "yyyyMMddHHmmss"
+# Define headers to prevent ERROR: Access Denied
+$Headers = @{
+    "accept"          ='text/html,application/xhtml+xml,application/xml'
+    "accept-language" ='en'
+}
+$Token = Invoke-RestMethod -Uri "https://www.msi.com/api/v1/get_token?date=$Date" -Headers $Headers
+$url = "https://download.msi.com/uti_exe/vga/MSIAfterburnerSetup.zip?__token__=$Token"
 $checksum = '407cf0f38b4b6b3dc030e70329d35be5eabfef45829240cc6df0442768189cec'
 $checksumType = 'SHA256'
 $unpackDir = $(Split-Path -parent $MyInvocation.MyCommand.Definition)
