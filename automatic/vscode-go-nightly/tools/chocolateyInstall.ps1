@@ -1,3 +1,3 @@
 ﻿$ErrorActionPreference = 'Stop'
 
-Install-VsCodeExtension -extensionId 'golang.go-nightly@2024.7.2502'
+Install-VsCodeExtension -extensionId 'golang.go-nightly@2024.8.603'
