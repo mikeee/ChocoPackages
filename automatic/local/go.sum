@@ -1,5 +1,6 @@
-github.com/chromedp/cdproto v0.0.0-20240801214329-3f85d328b335 h1:bATMoZLH2QGct1kzDxfmeBUQI/QhQvB0mBrOTct+YlQ=
 github.com/chromedp/cdproto v0.0.0-20240801214329-3f85d328b335/go.mod h1:GKljq0VrfU4D5yc+2qA6OVr8pmO/MBbPEWqWQ/oqGEs=
+github.com/chromedp/cdproto v0.0.0-20240810084448-b931b754e476 h1:VnjHsRXCRti7Av7E+j4DCha3kf68echfDzQ+wD11SBU=
+github.com/chromedp/cdproto v0.0.0-20240810084448-b931b754e476/go.mod h1:GKljq0VrfU4D5yc+2qA6OVr8pmO/MBbPEWqWQ/oqGEs=
 github.com/chromedp/chromedp v0.10.0 h1:bRclRYVpMm/UVD76+1HcRW9eV3l58rFfy7AdBvKab1E=
 github.com/chromedp/chromedp v0.10.0/go.mod h1:ei/1ncZIqXX1YnAYDkxhD4gzBgavMEUu7JCKvztdomE=
 github.com/chromedp/sysutil v1.0.0 h1:+ZxhTpfpZlmchB58ih/LBHX52ky7w2VhQVKQMucy3Ic=
@@ -17,8 +18,8 @@ github.com/ledongthuc/pdf v0.0.0-20220302134840-0c2507a12d80 h1:6Yzfa6GP0rIo/kUL
 github.com/ledongthuc/pdf v0.0.0-20220302134840-0c2507a12d80/go.mod h1:imJHygn/1yfhB7XSJJKlFZKl/J+dCPAknuiaGOshXAs=
 github.com/mailru/easyjson v0.7.7 h1:UGYAvKxe3sBsEDzO8ZeWOSlIQfWFlxbzLZe7hwFURr0=
 github.com/mailru/easyjson v0.7.7/go.mod h1:xzfreul335JAWq5oZzymOObrkdz5UnU4kGfJJLY9Nlc=
-github.com/mikeee/chocohelpers v0.0.0-20240815100824-10c3b0973fd2 h1:d0GFQfs7LGuGkzkb28bzEYKA7qdJJpgtAxxEAsfzxSw=
-github.com/mikeee/chocohelpers v0.0.0-20240815100824-10c3b0973fd2/go.mod h1:c54jdk8xJaSbexo4TO/8X9NzJ/3ojBhbXGsmBPgZgfM=
+github.com/mikeee/chocohelpers v0.0.0-20240816070935-0608cbdc5fd2 h1:9U1PvwPJa9m/0fXQeCA/5734211wuz3kTUs87mNWxDE=
+github.com/mikeee/chocohelpers v0.0.0-20240816070935-0608cbdc5fd2/go.mod h1:0S5+CLGulcMwJWflZw96GsNcW/PSzpY3aFVEUmw0i14=
 github.com/orisano/pixelmatch v0.0.0-20220722002657-fb0b55479cde h1:x0TT0RDC7UhAVbbWWBzr41ElhJx5tXPWkIHA2HWPRuw=
 github.com/orisano/pixelmatch v0.0.0-20220722002657-fb0b55479cde/go.mod h1:nZgzbfBr3hhjoZnS66nKrHmduYNpc34ny7RK4z5/HM0=
 github.com/pmezard/go-difflib v1.0.0 h1:4DBwDE0NGyQoBHbLQYPwSUPoCMWR5BEzIk/f1lZbAQM=
