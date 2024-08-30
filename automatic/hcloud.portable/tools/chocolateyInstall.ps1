@@ -5,12 +5,12 @@ $toolsDir = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 $packageArgs = @{
     packageName    = $env:ChocolateyPackageName
     unzipLocation  = $toolsDir
-    url            = 'https://github.com/hetznercloud/cli/releases/download/v1.46.0/hcloud-windows-386.zip'
-    url64          = 'https://github.com/hetznercloud/cli/releases/download/v1.46.0/hcloud-windows-amd64.zip'
+    url            = 'https://github.com/hetznercloud/cli/releases/download/v1.47.0/hcloud-windows-386.zip'
+    url64          = 'https://github.com/hetznercloud/cli/releases/download/v1.47.0/hcloud-windows-amd64.zip'
 
-    checksum       = '37b8a8f8173106797beb34f639f9f008cac4ef6afea144febc744a130da47f6a'
+    checksum       = '3bbb7e1cc7b0a44821066c6abc2dd1bdf96c84132f078ccde57dbd26cb7501ac'
     checksumType   = 'SHA256'
-    checksum64     = '0345cb0ed2ff69b9ed337d6e54a36cd157fc3699b383c34d2d19add1359cedc6'
+    checksum64     = 'c7a61478e645f6f0ff5ce3d0944fc6735a2d25dcc6ef74abf16785df475b35b6'
     checksumType64 = 'SHA256'
 }
 
