@@ -3,7 +3,7 @@
 . $PSScriptRoot\..\..\scripts\all.ps1
 
 $releases = "https://airsdk.harman.com/runtime"
-$releaseUrl = "https://airsdk.harman.com/assets/downloads/AdobeAIR.exe"
+$releaseBaseUrl = "https://airsdk.harman.com/assets/downloads/"
 
 function global:au_SearchReplace {
     @{
@@ -33,6 +33,8 @@ function global:au_GetLatest {
     $regexUrl = 'AIR\sruntime\s-\sversion\s(?<version>[\d\.]+)'
 
     $url -match $regexUrl
+
+    $releaseUrl = $releaseBaseUrl + $matches.version + '/AdobeAIR.exe'
 
     return @{
         URL          = $releaseUrl
