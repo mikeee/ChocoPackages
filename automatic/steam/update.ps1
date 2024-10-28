@@ -28,11 +28,17 @@ function global:au_GetLatest {
 
     if ( $checksum -ne $oldChecksum ) {
         $versionDate = Get-Date -Format "yyMMdd"
-        $finalVersion = (Get-Item $tempfile).VersionInfo.FileVersion + $versionDate
+        $version = (Get-Item $tempfile).VersionInfo.FileVersion + $versionDate
     } else {
         [xml]$xmlPackage = Get-Content -Path '.\steam.nuspec'
-        $finalVersion = $xmlPackage.package.metadata.version
+        $version = $xmlPackage.package.metadata.version
     }
+    
+    $versionParts = $version.ToString().Split('.')
+
+    $versionMajor = [int]$versionParts[0] + 1 
+
+    $finalVersion = "{0}.{1}.{2}.{3}" -f $versionMajor, $versionParts[1], $versionParts[2], $versionParts[3]
 
     return @{
         URL          = $releases
