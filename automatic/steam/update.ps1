@@ -36,7 +36,7 @@ function global:au_GetLatest {
     
     $versionParts = $version.ToString().Split('.')
 
-    $versionMajor = [int]$versionParts[0] + 1 
+    $versionMajor = 3 
 
     $finalVersion = "{0}.{1}.{2}.{3}" -f $versionMajor, $versionParts[1], $versionParts[2], $versionParts[3]
 
