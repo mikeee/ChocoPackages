@@ -38,7 +38,7 @@ function global:au_GetLatest {
 
     $versionMajor = [int]$versionParts[0] + 1 
 
-    $finalVersion = "{0}.{1}.{2}.{3}" -f $versionMajor, $version.Minor, $version.Build, $version.Revision
+    $finalVersion = "{0}.{1}.{2}.{3}" -f $versionMajor, $versionParts[1], $versionParts[2], $versionParts[3]
 
     return @{
         URL          = $releases
