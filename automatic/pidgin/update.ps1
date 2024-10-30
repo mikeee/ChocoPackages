@@ -25,7 +25,7 @@ function global:au_GetLatest {
     $version = $matches.version
 
     return @{
-        URL32        = "https://sourceforge.net/projects/pidgin/files/Pidgin/$version/pidgin-$version-offline.exe/download"
+        URL32        = "https://netcologne.dl.sourceforge.net/project/pidgin/Pidgin/$version/pidgin-$version-offline.exe"
         Version    = $version
     }
 }
