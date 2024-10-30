@@ -2,7 +2,7 @@
 
 . $PSScriptRoot\..\..\scripts\all.ps1
 
-$releases    = 'https://sourceforge.net/projects/pidgin/files/Pidgin/'
+$releases    = 'https://www.pidgin.im/install/'
 
 function global:au_SearchReplace {
     @{
@@ -19,13 +19,13 @@ function global:au_AfterUpdate {
 
 function global:au_GetLatest {
     $page = Invoke-WebRequest -Uri $releases -UseBasicParsing
-    $regexVersion = '\/pidgin\/files\/Pidgin\/(?<version>[\d\.]+)\/'
+    $regexVersion = 'pidgin-(?<version>[\d\.]+).exe'
 
     $page.links | Where-Object href -match $regexVersion | Select-Object -First 1 -expand href
     $version = $matches.version
 
     return @{
-        URL32        = "https://sourceforge.net/projects/pidgin/files/Pidgin/$version/pidgin-$version-offline.exe/download"
+        URL32        = "https://netcologne.dl.sourceforge.net/project/pidgin/Pidgin/$version/pidgin-$version-offline.exe"
         Version    = $version
     }
 }
