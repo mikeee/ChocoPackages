@@ -2,8 +2,7 @@
 
 . $PSScriptRoot\..\..\scripts\all.ps1
 
-$releases    = 'https://download.amd.com/Desktop/AMD-Ryzen-Master.exe'
-$checksumType = 'SHA256'
+$releases    = 'https://www.amd.com/en/products/software/ryzen-master.html'
 
 function global:au_SearchReplace {
     @{
@@ -20,18 +19,15 @@ function global:au_AfterUpdate {
 }
 
 function global:au_GetLatest {
-    $tempFile = New-TemporaryFile
-    Invoke-WebRequest -Uri $releases -OutFile $tempFile -UseBasicParsing
+    $page = Invoke-WebRequest -Uri $releases -UseBasicParsing -UserAgent [Microsoft.PowerShell.Commands.PSUserAgent]::FireFox
 
-    $version = (Get-Item $tempfile).VersionInfo.FileVersion
+    $regexUrl = 'https:\/\/download.amd.com\/Desktop\/amd-ryzen-master-(?<version>[\d\-]+)\.exe'
 
-    $checksum = Get-FileHash -Algorithm $checksumType -Path $tempFile -ErrorAction SilentlyContinue | Select-Object -ExpandProperty Hash
+    $url = $page.links | Where-Object href -match $regexUrl | Select-Object -First 1 -expand href
 
     return @{
-        URL          = $releases
-        Checksum     = $checksum
-        ChecksumType = $checksumType
-        Version      = $version
+        URL          = $url
+        Version      = $matches.version
     }
 }
 
