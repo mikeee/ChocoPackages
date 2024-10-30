@@ -25,9 +25,15 @@ function global:au_GetLatest {
 
     $url = $page.links | Where-Object href -match $regexUrl | Select-Object -First 1 -expand href
 
+    $rawVersion = $matches.version
+
+    $versionParts = $rawVersion.ToString().Split('-')
+
+    $finalVersion = "{0}.{1}.{2}.{3}" -f $versionParts[0], $versionParts[1], $versionParts[2], $versionParts[3]
+
     return @{
         URL          = $url
-        Version      = $matches.version
+        Version      = $finalVersion
     }
 }
 
