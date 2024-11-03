@@ -22,7 +22,7 @@ This is a nuspec. It mostly adheres to https://docs.nuget.org/create/Nuspec-Refe
         <!-- version should MATCH as closely as possible with the underlying software -->
         <!-- Is the version a prerelease of a version? https://docs.nuget.org/create/versioning#creating-prerelease-packages -->
         <!-- Note that unstable versions like 0.0.1 can be considered a released version, but it's possible that one can release a 0.0.1-beta before you release a 0.0.1 version. If the version number is final, that is considered a released version and not a prerelease. -->
-        <version>2.10.91.91221129</version>
+        <version>3.10.91.91241028</version>
         <packageSourceUrl>https://github.com/mikeee/ChocoPackages/tree/master/automatic/steam-client</packageSourceUrl>
         <!-- owners is a poor name for maintainers of the package. It sticks around by this name for compatibility reasons. It basically means you. -->
         <owners>mikeee, cole.mike</owners>
@@ -54,7 +54,7 @@ Steam is a video game digital distribution service and storefront by Valve.
         <!-- =============================== -->
         <!-- Specifying dependencies and version ranges? https://docs.nuget.org/create/versioning#specifying-version-ranges-in-.nuspec-files -->
         <dependencies>
-            <dependency id="steam" version="2.10.91.91221129" />
+            <dependency id="steam" version="3.10.91.91241028" />
             <!-- <dependency id="autohotkey" /> -->
             <!-- <dependency id="" version="[__EXACT_VERSION__]" /> -->
             <!-- <dependency id="" version="[_MIN_VERSION_INCLUSIVE, MAX_VERSION_EXCLUSIVE)" /> -->
