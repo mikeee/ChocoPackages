@@ -6,8 +6,8 @@ $toolsDir = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 $packageArgs = @{
     packageName      = $env:ChocolateyPackageName
     unzipLocation    = $toolsDir
-    url64            = 'https://github.com/bostrot/wsl2-distro-manager/releases/download/v1.8.14/wsl2-distro-manager-v1.8.14.zip'
-    checksum64       = 'f458aa2a0f1c25a54022ac590413acc39b6b9666b9392eb69653a0a05ff9985d'
+    url64            = 'https://github.com/bostrot/wsl2-distro-manager/releases/download/v1.8.15/wsl2-distro-manager-v1.8.15.zip'
+    checksum64       = 'f7e6e96a9a06f9f4f7300f13cb0594acb3b2f073e51925ce0cbe5d12624c459a'
     checksumType64   = 'SHA256'
 }
 
