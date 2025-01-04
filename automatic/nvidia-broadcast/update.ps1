@@ -26,9 +26,9 @@ function global:au_AfterUpdate {
 function global:au_GetLatest {
     $page = Invoke-WebRequest -Uri $releases -UseBasicParsing
 
-    $regexVersion = '\/Windows\/broadcast\/(?<versionmajor>[\d.]+)\/[\w.]+_v(?<version>[\d.]+).exe'
+    $regexVersion = '\/Windows\/broadcast\/(?<versionmajor>[\d.]+)\/NVIDIA_Broadcast+_v(?<version>[\d.]+).exe'
 
-    $url64 = $page.links | Where-Object href -match $regexVersion | Select-Object -First 1 -expand href
+    $url64 = $page.links | Where-Object href -match $regexVersion | Select-Object -Skip 2 -First 1 -expand href
 
     $version = $matches.version
 
