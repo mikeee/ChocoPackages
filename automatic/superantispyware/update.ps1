@@ -40,8 +40,10 @@ function global:au_GetLatest {
 
     $matched = $page.Content -match $regexPage
 
-    $version = $matches["version"]
-
+    If ($False -ne $matched) {
+        $version = $matches["version"]
+    }
+   
     $url = "https://securedownloads.superantispyware.com/SUPERAntiSpyware.exe"
 
     return @{

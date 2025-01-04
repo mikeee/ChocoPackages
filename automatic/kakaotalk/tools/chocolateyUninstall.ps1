@@ -5,8 +5,6 @@ $softwareName = 'KakaoTalk*'
 $installerType = 'exe'
 $silentArgs = '/S'
 
-$uninstalled = $false
-
 [array]$key = Get-UninstallRegistryKey -SoftwareName $softwareName
 
 if ($key.Count -eq 1) {

@@ -32,7 +32,7 @@ function global:au_GetLatest {
 
     $matched = $page.Content -match $regexVersion
 
-    If ($False -ne $matchedurl) {
+    If ($False -ne $matched) {
         $url = -join("https://download.clojure.org/install/clojure-tools-",$matches["version"],".zip")
         $version = $matches["version"]
     }

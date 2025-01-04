@@ -4,7 +4,6 @@
 
 $release32    = 'https://desktop-downloads.asana.com/win32_ia32/prod/latest/AsanaSetup.exe'
 $release64    = 'https://desktop-downloads.asana.com/win32_x64/prod/latest/AsanaSetup.exe'
-$checksumType = 'SHA256'
 
 function global:au_SearchReplace {
     @{
