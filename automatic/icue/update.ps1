@@ -38,7 +38,7 @@ function global:au_GetLatest {
 
     return @{
         URL          = $releaseUrl
-	Checksum     = $checksum
+	    Checksum     = $checksum
         ChecksumType = $checksumType
         Version      = $ver
     }
