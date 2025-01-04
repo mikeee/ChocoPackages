@@ -29,7 +29,7 @@ function global:au_GetLatest {
 
     $matched = $page.Content -match $regexVersion
 
-    If ($False -ne $matchedurl) {
+    If ($False -ne $matched) {
         $url = -join("https://downloads.sparkmailapp.com/Spark3/win/dist/",$matches["version"],"/Spark.exe")
         $version = $matches["version"]
     }

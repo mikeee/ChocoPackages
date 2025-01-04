@@ -32,12 +32,15 @@ function global:au_GetLatest {
 
     $matched = $page.Content -match $regexVersion
 
+    If ($False -ne $matched) {
+        $ver = $matches.version
+    }
 
     return @{
         URL          = $releaseUrl
-	Checksum     = $checksum
+	    Checksum     = $checksum
         ChecksumType = $checksumType
-        Version      = $matches.version
+        Version      = $ver
     }
 }
 

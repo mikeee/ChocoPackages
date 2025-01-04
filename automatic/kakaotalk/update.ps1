@@ -30,8 +30,10 @@ function global:au_GetLatest {
     $regexPage = '(?<version>[\d]+\.[\d]+\.[\d]+\.[\d]+)'
 
     $matched = $page.Content -match $regexPage
-
-    $version = $matches["version"]
+    
+    If ($False -ne $matched) {
+        $version = $matches["version"]
+    }
 
     return @{
         URL        = $release

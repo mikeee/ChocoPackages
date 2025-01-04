@@ -29,7 +29,7 @@ function global:au_GetLatest {
 
     $matched = $page.Content -match $regexVersion
 
-    If ($False -ne $matchedurl) {
+    If ($False -ne $matched) {
         $url = -join("https://releases.bootstrapstudio.io/",$matches["version"],"/Bootstrap%20Studio%20-%20Setup.exe")
         $version = $matches["version"]
     }

@@ -1,9 +1,6 @@
 ﻿$packageName      = $env:ChocolateyPackageName
 $installerType    = 'EXE'
 $silentArgs       = '/noui /clean'
-$validExitCodes   = @(0)
-$path             = "$env:ProgramFiles\SUPERAntiSpyware"
-$path86           = "${env:ProgramFiles(x86)}\SUPERAntiSpyware"
 $toolsDir         = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 $url              = 'https://www.superantispyware.com/downloads/SASUNINST.EXE'
 $checksum         = '0bc49dea91079a174f674e7ea9a2e5c953ee78498421d9d2f8ecc7f5d986545d'

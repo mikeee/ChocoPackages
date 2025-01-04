@@ -2,7 +2,7 @@
 
 . $PSScriptRoot\..\..\scripts\all.ps1
 
-$releases    = 'https://localwp.com/releases/'
+#$releases    = 'https://localwp.com/releases/'
 
 go mod tidy
 
