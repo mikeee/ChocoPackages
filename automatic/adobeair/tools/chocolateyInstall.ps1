@@ -4,8 +4,8 @@ $params = @{
     packageName  = $package;
     fileType     = 'exe';
     silentArgs   = '-silent -eulaAccepted';
-    url          = 'https://airsdk.harman.com/assets/downloads/51.1.2.2/AdobeAIR.exe'
-    checksum     = '896c9c71c355fbccf976119dccfd1d070b7a514c84a184e1ac1ad0b5ac4e2dfa'
+    url          = 'https://airsdk.harman.com/assets/downloads/51.1.3.4/AdobeAIR.exe'
+    checksum     = 'c1c96b238fcced07aa0381d781ad5d09279b8fd9a636fd5160cf59bc33d6653b'
     checksumType = 'SHA256'
 }
 
