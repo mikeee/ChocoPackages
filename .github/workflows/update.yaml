@@ -2,7 +2,7 @@ name: au-updater
 
 on:
   schedule:
-    - cron: "7 0/4 * * *" # runs at 7 minutes past the hour every 4 hours
+    - cron: "7 * * * *" # runs at 7 minutes past the hour every 4 hours
   push:
     branches: [master]
   pull_request:
