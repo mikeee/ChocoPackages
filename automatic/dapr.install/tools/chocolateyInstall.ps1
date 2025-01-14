@@ -1,10 +1,10 @@
-$root = Join-Path "$(Split-Path -Parent $MyInvocation.MyCommand.Definition)" "install"
+﻿$root = Join-Path "$(Split-Path -Parent $MyInvocation.MyCommand.Definition)" "install"
 $packageArgs = @{
 	packageName   = $env:ChocolateyPackageName
 	unzipLocation = $root
 	fileType      = 'msi'
-	url64         = 'dapr_cli_url'
-	checksum64    = 'dapr_cli_checksum'
+	url64         = 'https://github.com/dapr/cli/releases/download/v1.14.1/dapr.msi'
+	checksum64    = '2254e443092e669f7fd3b7052bd2161f8871d443d9c830de75e54265ee3aeda6'
 	checksumType64= 'SHA256'
 
 	silentArgs    = '/qn /norestart'

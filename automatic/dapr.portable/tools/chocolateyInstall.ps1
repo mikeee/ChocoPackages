@@ -1,13 +1,13 @@
-$ErrorActionPreference = 'Stop'
+﻿$ErrorActionPreference = 'Stop'
 
 $toolsDir = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 
 $packageArgs = @{
     packageName    = $env:ChocolateyPackageName
     unzipLocation  = $toolsDir
-    url64          = 'https://github.com/vultr/vultr-cli/releases/download/v3.4.0/vultr-cli_v3.4.0_windows_amd64.zip'
+    url64          = 'https://github.com/dapr/cli/releases/download/v1.14.1/dapr_windows_amd64.zip'
 
-    checksum64     = 'abc50c7912e5e331fd2cfb356994c4c697e16a4519629a659610c3a694f36eb8'
+    checksum64     = '235307ef6094b4eba57e03f86fff0759d86049282b26152c390c9b82e74f12c0'
     checksumType64 = 'SHA256'
 }
 
