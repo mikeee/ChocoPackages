@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>dapr</id>
-    <version>0.0.0</version>
+    <version>1.14.1</version>
     <packageSourceUrl>https://github.com/mikeee/ChocoPackages/tree/master/automatic/dapr</packageSourceUrl>
     <owners>mikeee</owners>
     <title>Dapr CLI</title>
@@ -17,17 +17,20 @@
     <bugTrackerUrl>https://github.com/dapr/cli/issues</bugTrackerUrl>
     <tags>dapr distributed application runtime cli kubernetes</tags>
     <summary>The Dapr CLI is the main tool for running Dapr-related tasks</summary>
-    <description>
-        The Dapr CLI allows you to setup Dapr on your local dev machine or on a Kubernetes cluster, provides debugging support, and launches and manages Dapr instances.
+    <description><![CDATA[`dapr` is a command-line interface for running Dapr-related tasks.
 
-        Dapr is a set of integrated APIs with built-in best practices and patterns to build distributed applications. Dapr increases your developer productivity by 20-40% with out-of-the-box features such as workflow, pub/sub, state management, secret stores, external configuration, bindings, actors, distributed lock, and cryptography. You benefit from the built-in security, reliability, and observability capabilities, so you don't need to write boilerplate code to achieve production-ready applications.
-        </description>
+The Dapr CLI allows you to setup Dapr on your local dev machine or on a Kubernetes cluster, provides debugging support, and launches and manages Dapr instances.
+
+Dapr is a set of integrated APIs with built-in best practices and patterns to build distributed applications. Dapr increases your developer productivity by 20-40% with out-of-the-box features such as workflow, pub/sub, state management, secret stores, external configuration, bindings, actors, distributed lock, and cryptography. You benefit from the built-in security, reliability, and observability capabilities, so you don't need to write boilerplate code to achieve production-ready applications.
+
+**NOTE**: This package is automatically updated. If it is out of date and there is no newer package submitted, please use the `Contact Maintainers` functionality to alert me.
+]]></description>
     <releaseNotes>https://github.com/dapr/cli/releases</releaseNotes>
     <dependencies>
-      <dependency id="dapr.install" version="0.0.0"/>
+      <dependency id="dapr.install" version="1.14.1" />
     </dependencies>
   </metadata>
   <files>
-    <file src="tools\**" target="tools"/>
+    <file src="tools\**" target="tools" />
   </files>
 </package>
