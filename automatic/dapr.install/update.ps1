@@ -24,6 +24,7 @@ function global:au_AfterUpdate {
 }
 
 function global:au_GetLatest {
+    $page = Invoke-WebRequest -Uri $releases -UseBasicParsing
     $regexUrl64 = '\/dapr\/cli\/releases\/download\/v(?<version>[\d\.]+)\/dapr\.msi'
 
     $matched = $page.links | Where-Object href -match $regexUrl64 | Select-Object -First 1 -expand href
