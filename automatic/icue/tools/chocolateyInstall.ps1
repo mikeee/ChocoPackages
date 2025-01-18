@@ -9,7 +9,7 @@ $packageArgs = @{
 
   softwareName  = 'icue*'
 
-  silentArgs    = "--quiet"
+  silentArgs    = "/quiet"
   validExitCodes= @(0)
 }
 
