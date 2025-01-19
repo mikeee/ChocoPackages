@@ -2,7 +2,7 @@ module github.com/mikeee/ChocoPackages/automatic/adobeair
 
 go 1.23
 
-toolchain go1.23.4
+toolchain go1.23.5
 
 require github.com/mikeee/chocohelpers v0.0.0-20250104151502-78cf6fd99e11
 
