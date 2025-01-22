@@ -3,8 +3,8 @@
 $packageArgs = @{
   packageName    = $env:ChocolateyPackageName
   installerType  = 'exe'
-  url            = 'https://updates.atomicorp.com/channels/atomic/windows/ossec-agent-win32-3.7.0-24343.exe'
-  checksum       = '862b31fd64c70c760278a0d5408032e26dc6814a1ae24d64b5f3ae0ee2b343a4'
+  url            = 'https://updates.atomicorp.com/channels/atomic/windows/ossec-agent-win32-3.8.0-35114.exe'
+  checksum       = 'f8108a8f655c962d462acf31997868bb4d95c9f022309eb27c4df5abbf75597a'
   checksumType   = 'SHA256'
   silentArgs     = '/S'
   validExitCodes = @(0)
