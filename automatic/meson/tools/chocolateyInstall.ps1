@@ -3,8 +3,8 @@ $ErrorActionPreference = 'Stop'
 
 $packageArgs = @{
     packageName      = $env:ChocolateyPackageName
-    url64            = 'https://github.com/mesonbuild/meson/releases/download/1.6.1/meson-1.6.1-64.msi'
-    checksum64       = '01ad25c1282e168611d92bffd1eca585a5b27b8792e61342882bd62b28f8ad4e'
+    url64            = 'https://github.com/mesonbuild/meson/releases/download/1.7.0/meson-1.7.0-64.msi'
+    checksum64       = 'e5c54bb6948d85c1cb4099b5928a87f43d6bd6eddfb4d548a7abcaf255e5b6ea'
     checksumType64   = 'SHA256'
     fileType         = 'MSI'
     silentArgs       = "/qn /norestart /l*v `"$($env:TEMP)\$($env:chocolateyPackageName).$($env:chocolateyPackageVersion).MsiInstall.log`""
