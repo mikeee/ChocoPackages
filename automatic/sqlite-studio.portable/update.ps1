@@ -39,8 +39,8 @@ function global:au_GetLatest {
     }
 
     return @{
-        URL32        = "https://github.com/pawelsalawa/sqlitestudio/releases/download/$ver/sqlitestudio_i386-$ver.zip"
-        URL64        = "https://github.com/pawelsalawa/sqlitestudio/releases/download/$ver/sqlitestudio_x64-$ver.zip"
+        URL32        = "https://github.com/pawelsalawa/sqlitestudio/releases/download/$ver/sqlitestudio-$ver-windows-x86.zip"
+        URL64        = "https://github.com/pawelsalawa/sqlitestudio/releases/download/$ver/sqlitestudio-$ver-windows-x64.zip"
         Version      = $ver
     }
 }
