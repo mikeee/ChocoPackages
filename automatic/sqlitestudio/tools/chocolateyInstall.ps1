@@ -1,1 +1,1 @@
-#Install-VirtualPackage 'sqlite-studio.portable'
+#Install-VirtualPackage 'sqlite-studio.portable' 'sqlite-studio.install'
