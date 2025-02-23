@@ -39,7 +39,7 @@ function global:au_GetLatest {
     }
 
     return @{
-        URL32        = "https://sourceforge.net/projects/crystaldiskmark/files/$versionMajor$versionMinor/CrystalDiskMark$versionDL.exe/download"
+        URL32        = "https://netcologne.dl.sourceforge.net/project/crystaldiskmark/files/$versionMajor$versionMinor/CrystalDiskMark$versionDL.exe/download"
         Version    = $versionChoco
         FileType   = 'exe'
     }
