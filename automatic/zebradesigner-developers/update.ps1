@@ -25,7 +25,7 @@ function global:au_AfterUpdate {
 
 function global:au_GetLatest {
     $page = Invoke-WebRequest -Uri $releases -UseBasicParsing
-    $regexVersion = 'zebradesigner(?<versionmajor>[\d])-developers-(?<versionminor>[\d]+).exe'
+    $regexVersion = 'zebradesigner(?<versionmajor>[\d])-(?<versionminor>[\d]+).exe'
 
     $matched = $page.Content -match $regexVersion
 
