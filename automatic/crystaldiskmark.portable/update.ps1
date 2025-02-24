@@ -38,7 +38,7 @@ function global:au_GetLatest {
         $versionChoco = $versionMajor
     }
 
-    $url        = "https://netcologne.dl.sourceforge.net/project/crystaldiskmark/files/$versionMajor$versionMinor/CrystalDiskMark$versionDL.zip"
+    $url        = "https://netcologne.dl.sourceforge.net/project/crystaldiskmark/$versionMajor$versionMinor/CrystalDiskMark$versionDL.zip"
 
     $checksum   = Get-RemoteChecksum $url
 
