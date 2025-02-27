@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>dapr.portable</id>
-    <version>1.14.1</version>
+    <version>1.15.0</version>
     <packageSourceUrl>https://github.com/mikeee/ChocoPackages/tree/master/automatic/dapr.portable</packageSourceUrl>
     <owners>mikeee</owners>
     <title>Dapr CLI (Portable)</title>
