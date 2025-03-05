@@ -2,8 +2,8 @@
 
 $packageArgs = @{
     packageName   = $env:ChocolateyPackageName
-    url           = 'https://desktop-app-prod-1.s3.us-west-2.amazonaws.com/Nanoleaf+Desktop+Setup+2.1.4.exe'
-    checksum 	  = 'ACFA022BD1F8C722C8813F20D0C5C8C2557686FCA5E1852F70741FB8036AE878'
+    url           = 'https://desktop-app-prod-1.s3.us-west-2.amazonaws.com/Nanoleaf+Desktop+Setup+2.1.5.exe'
+    checksum 	  = '9E75D5F37DFAE74EE51B982606E22EC38697AB4B27B49391EA4F226BABBA3064'
     checksumType  = 'SHA256'
     fileType      = 'EXE'
     silentArgs    = '/S'
