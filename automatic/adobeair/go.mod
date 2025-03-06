@@ -4,7 +4,7 @@ go 1.23
 
 toolchain go1.24.0
 
-require github.com/mikeee/chocohelpers v0.0.0-20250224223117-6549cbf70f7e
+require github.com/mikeee/chocohelpers v0.0.0-20250306115527-b5683fc6b798
 
 require (
 	github.com/chromedp/cdproto v0.0.0-20250224005500-01948a15fe7c // indirect
