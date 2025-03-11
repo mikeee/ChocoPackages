@@ -4,10 +4,10 @@ go 1.23
 
 toolchain go1.24.1
 
-require github.com/mikeee/chocohelpers v0.0.0-20250306115527-b5683fc6b798
+require github.com/mikeee/chocohelpers v0.0.0-20250310180515-590003b91a25
 
 require (
-	github.com/chromedp/cdproto v0.0.0-20250224005500-01948a15fe7c // indirect
+	github.com/chromedp/cdproto v0.0.0-20250307225615-b9fffb6d31ad // indirect
 	github.com/chromedp/chromedp v0.13.0 // indirect
 	github.com/chromedp/sysutil v1.1.0 // indirect
 	github.com/go-json-experiment/json v0.0.0-20250211171154-1ae217ad3535 // indirect
