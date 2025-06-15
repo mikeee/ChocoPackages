@@ -6,10 +6,10 @@ The installer has been downloaded from the official download link listed on <htt
 and can be verified like this:
 
 1. Download the following package:
-  URL: <https://netcologne.dl.sourceforge.net/project/crystaldiskmark/8.0.6/CrystalDiskMark8_0_6.zip>
+  URL: <https://netcologne.dl.sourceforge.net/project/crystaldiskmark/9.0.0/CrystalDiskMark9_0_0.zip>
 2. You can use one of the following methods to obtain the checksum
   - Use powershell function 'Get-Filehash'
   - Use chocolatey utility 'checksum.exe'
 
   checksum_type: sha256
-  file_checksum: 42d4ca081aa9c90ca96f8cf76a493bde2afe6d197df671760713d3c4191d0c6d
+  file_checksum: 75779c2ac41b27ffd703c6eeb698e5f7f6d315dc15e53ff1b2ce082a9ebe25f1
