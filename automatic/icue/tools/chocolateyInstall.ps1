@@ -4,7 +4,7 @@ $packageArgs = @{
   packageName   = $env:ChocolateyPackageName
   fileType      = 'EXE'
   url           = 'https://www3.corsair.com/software/CUE_V5/public/modules/windows/installer/Install%20iCUE.exe'
-  checksum      = '49C46E96404894B382E2856938E3A733CB23C71957AF6341334B1A0FB995C72F'
+  checksum      = '3130E8CDC65AADFC6CD965D9E5F208C7D3A773D27A3EAD6962A63351966C2ADA'
   checksumType  = 'SHA256'
 
   softwareName  = 'icue*'
