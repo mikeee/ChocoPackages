@@ -6,8 +6,8 @@ $packageArgs = @{
     packageName    = $env:ChocolateyPackageName
     unzipLocation  = $toolsDir
 
-    url64          = 'https://github.com//civo/cli/releases/download/v1.4.2/civo-1.4.2-windows-amd64.zip'
-    checksum64     = '54ce9576e1d2d9fb13db7b77f37218ca66ad5628fab30af8e8df54755a3cacda'
+    url64          = 'https://github.com//civo/cli/releases/download/v1.4.3/civo-1.4.3-windows-amd64.zip'
+    checksum64     = '1755ea9c2b3cd800eb7b4cf0295e947a43166155858b92e9c48c3fde033f2a8a'
     checksumType64 = 'SHA256'
 }
 
