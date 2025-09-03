@@ -2,8 +2,8 @@
 
 $packageArgs = @{
     packageName    = $env:ChocolateyPackageName
-    url            = 'https://cdn.localwp.com/releases-stable/9.2.7+6877/local-9.2.7-windows.exe'
-    checksum       = '2cd1440b72ddd5baf8c469c088fe5d89646a0d2d73a37c195ef0e9f4f2e01ecc'
+    url            = 'https://cdn.localwp.com/releases-stable/9.2.8+6882/local-9.2.8-windows.exe'
+    checksum       = '1844bf9698a66e78533da8c4bb60d8a760b402c75c22eb0a6489e44b435f91f3'
     checksumType   = 'SHA256'
     fileType       = 'EXE'
     silentArgs     = '/S'
