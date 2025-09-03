@@ -5,9 +5,9 @@ $toolsDir = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 $packageArgs = @{
     packageName    = $env:ChocolateyPackageName
     unzipLocation  = $toolsDir
-    url64          = 'https://github.com/vultr/vultr-cli/releases/download/v3.6.0/vultr-cli_v3.6.0_windows_amd64.zip'
+    url64          = 'https://github.com/vultr/vultr-cli/releases/download/v3.7.0/vultr-cli_v3.7.0_windows_amd64.zip'
 
-    checksum64     = '050febea29a6404c8139ebcfd17cb91f230bb42c1bff5d26b607cee7a1ec3c6c'
+    checksum64     = '7a77918911c4e4fb02b6d43f3ebfbaea70984c8d3f1dbb61f47bf6fc6467f651'
     checksumType64 = 'SHA256'
 }
 
