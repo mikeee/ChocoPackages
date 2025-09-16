@@ -3,8 +3,8 @@ $packageArgs = @{
 	packageName   = $env:ChocolateyPackageName
 	unzipLocation = $root
 	fileType      = 'msi'
-	url64         = 'https://github.com/dapr/cli/releases/download/v1.15.2/dapr.msi'
-	checksum64    = '74a12abd6f731a82af1bc0af750f8860ed140daac25acfd5ad3b22614f6f128e'
+	url64         = 'https://github.com/dapr/cli/releases/download/v1.16.0/dapr.msi'
+	checksum64    = 'f8d48027bab35b6b9b2caddd1cedb5006bee29d75a732a8d97a3b3adcbc2563e'
 	checksumType64= 'SHA256'
 
 	silentArgs    = '/qn /norestart'
