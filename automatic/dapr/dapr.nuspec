@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>dapr</id>
-    <version>1.16.0</version>
+    <version>1.16.1</version>
     <packageSourceUrl>https://github.com/mikeee/ChocoPackages/tree/master/automatic/dapr</packageSourceUrl>
     <owners>mikeee</owners>
     <title>Dapr CLI</title>
@@ -27,7 +27,7 @@ Dapr is a set of integrated APIs with built-in best practices and patterns to bu
 ]]></description>
     <releaseNotes>https://github.com/dapr/cli/releases</releaseNotes>
     <dependencies>
-      <dependency id="dapr.install" version="1.16.0" />
+      <dependency id="dapr.install" version="1.16.1" />
     </dependencies>
   </metadata>
   <files>
