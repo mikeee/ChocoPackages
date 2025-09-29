@@ -1,21 +1,23 @@
-ThrottleStop 
-Version 9.5
-2022 June 15
+ThrottleStop 9.7
+2024 Dec 24
 
-New Features
-- Alder Lake desktop and mobile support added.
-- improved performance when using Windows Defender Real-time Protection. 
-- replaced the Disable and Lock Turbo Power Limits box with the MMIO Lock box.
-- added the ability to sync the MSR and MMIO power limits.
-- improved SpeedStep and Speed Shift compatibility with Windows.
-- updated FIVR and TPL window themes and added support for bigger logos up to 240x138 recommended.
-- combined Turbo Limits and Turbo Groups into the FIVR window.
-- added feature for K series CPUs to increase voltage at 800 MHz for improved stability when undervolting.
-- reduced the chance of a BSOD loop if voltage is set too low. 
-- added automatic enabling of the PowerCut feature when resuming from sleep. 
-- disabled Run Program After Profile Change feature for improved security. 
-- retired Core 2 Duo automatic Dual IDA mode.
+- added per profile adjustment of the turbo power limits, Speed Shift Min Max and PROCHOT offset values.
+- added core and cache V/F tuning to the FIVR window for unlocked 10th Gen and newer HX and K series CPUs. 
+- fixed the Notification Area icons for improved Windows 11 compatibility. 
+- fixed the power plan selector and increased the number of selections from 8 to 12.
+- BD PROCHOT is now automatically locked when it is disabled.
+- changed the DDR memory speed monitoring method. 
+- added an option so the Safe Start feature can be toggled on or off.  
 
+
+ThrottleStop Windows 11 Compatibility
+-------------------------------------
+Use the Windows High Performace power plan when using the ThrottleStop Speed Shift settings.
+
+Windows 11 Virtualization Based Security (core isolation memory integrity) needs to be disabled to provide ThrottleStop with direct access to the FIVR voltage control register.
+
+https://beebom.com/how-disable-virtualization-based-security-vbs-windows-11/
+https://www.makeuseof.com/windows-11-disable-vbs/
 
 Kevin Glynn
 throttlestop@shaw.ca
