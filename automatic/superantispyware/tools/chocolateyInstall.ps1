@@ -3,7 +3,7 @@
 $packageArgs = @{
     packageName   = $env:ChocolateyPackageName
     url           = 'https://securedownloads.superantispyware.com/SUPERAntiSpyware.exe'
-    checksum      = '41cf5b5104d20d19e446201696e1045eb751618dacd77a5d69faae20ef1af151'
+    checksum      = '9fd28261df28ef243aa5d936c0731523c5f85465c40195893cf56660d5b1116f'
     checksumType  = 'SHA256'
     fileType      = 'EXE'
     silentArgs    = '/SILENT /ALLUSERS'
