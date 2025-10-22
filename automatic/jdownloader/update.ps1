@@ -3,7 +3,7 @@ Import-Module -Name 'au'
 
 function global:au_SearchReplace {
     @{
-        '.\tools\VERIFICATION.txt' = @{
+        '.\legal\VERIFICATION.txt' = @{
             '(?i)(\s+url:).*'        = "`${1} $($Latest.URL)"
             '(?i)(\s+checksum64:).*' = "`${1} $($Latest.Checksum64)"
         }
@@ -23,7 +23,7 @@ function global:au_GetLatest {
     $TempPath = $InstallerPath + '.tmp'
     megatools dl --no-progress --path="$TempPath" $MegaLink.href
     Move-Item -Path $TempPath -Destination $InstallerPath -Force
-    $latestVersion = (Get-Item $InstallerPath).VersionInfo.ProductVersion
+    $latestVersion = (Get-Item $InstallerPath).VersionInfo.FileVersion
     $latestChecksum64 = (Get-FileHash -Path $InstallerPath -Algorithm 'SHA256').Hash
 
     return @{
