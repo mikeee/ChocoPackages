@@ -4,8 +4,8 @@ $toolsDir   = Join-Path -Path (Get-ToolsLocation) -ChildPath 'endless-sky'
 
 $packageArgs = @{
     packageName    = $env:ChocolateyPackageName
-    url64          = 'https://github.com/endless-sky/endless-sky/releases/download/v0.10.14/EndlessSky-win64-v0.10.14.zip'
-    checksum64     = '20a976903da687865d2fb91a00c9f6a7e47faea8d49a04d1687e875092fa6e41'
+    url64          = 'https://github.com/endless-sky/endless-sky/releases/download/v0.10.16/EndlessSky-win64-v0.10.16.zip'
+    checksum64     = '9743dddf348aaa8718fc2d9e4ab059286aa795ad4aaf61c2b9768693a785e877'
     checksumType64 = 'SHA256'
 
     unzipLocation  = $toolsDir
