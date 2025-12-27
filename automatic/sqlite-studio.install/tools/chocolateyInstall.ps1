@@ -2,11 +2,11 @@
 
 $packageArgs = @{
     packageName    = $env:ChocolateyPackageName
-    url            = 'https://github.com/pawelsalawa/sqlitestudio/releases/download/3.4.18/sqlitestudio-3.4.18-windows-x86-installer.exe'
-    url64          = 'https://github.com/pawelsalawa/sqlitestudio/releases/download/3.4.18/sqlitestudio-3.4.18-windows-x64-installer.exe'
-    checksum 	   = '83ea20b41487ad9a15eab052a5fb7fe32e874292f251dd3e02281c4a74d6178f'
+    url            = 'https://github.com/pawelsalawa/sqlitestudio/releases/download/3.4.19/sqlitestudio-3.4.19-windows-x86-installer.exe'
+    url64          = 'https://github.com/pawelsalawa/sqlitestudio/releases/download/3.4.19/sqlitestudio-3.4.19-windows-x64-installer.exe'
+    checksum 	   = '1977672c943182101553fc9ee7dfe07e9f26196ffd0cb8e11c610406cdbc4b1c'
     checksumType   = 'SHA256'
-    checksum64 	   = '413b2e063959b4be4f1fd5f23d490b7966385810a9405d9b165ba1e4dd822a0a'
+    checksum64 	   = '55e390949884c52a51b32f474632393bbd115856be03bade3cf2c6057a2267a5'
     checksumType64 = 'SHA256'
     fileType       = 'EXE'
     silentArgs     = '--mode unattended --install_for all'
