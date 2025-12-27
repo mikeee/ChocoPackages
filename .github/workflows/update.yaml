@@ -36,7 +36,11 @@ jobs:
 
       - name: Install Chocolatey Core Extensions
         run: |
-          choco install chocolatey-core.extension
+          choco install -y chocolatey-core.extension
+
+      - name: Install Megatools
+        run: |
+          choco install -y megatools
 
       - name: Install AU
         run: |
