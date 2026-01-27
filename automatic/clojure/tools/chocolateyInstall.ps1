@@ -2,8 +2,8 @@
 
 $packageArgs = @{
   packageName    = $env:ChocolateyPackageName
-  url            = 'https://download.clojure.org/install/clojure-tools-1.12.4.1597.zip'
-  checksum       = '571727947cb7ddb20c42c81a75bb72c68030bd415a1a1ebc4ed862b1a2bae4d9'
+  url            = 'https://download.clojure.org/install/clojure-tools-1.12.4.1602.zip'
+  checksum       = '51c1b7a6eba805ce306341929c1eb49259f17b3511d74eb68261bc2f5237f66b'
   checksumType   = 'SHA256'
   unzipLocation  = $installDir
 }
