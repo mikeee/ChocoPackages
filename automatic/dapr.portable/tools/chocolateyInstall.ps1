@@ -5,9 +5,9 @@ $toolsDir = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 $packageArgs = @{
     packageName    = $env:ChocolateyPackageName
     unzipLocation  = $toolsDir
-    url64          = 'https://github.com/dapr/cli/releases/download/v1.16.5/dapr_windows_amd64.zip'
+    url64          = 'https://github.com/dapr/cli/releases/download/v1.17.0/dapr_windows_amd64.zip'
 
-    checksum64     = '245ff84aa88d560317fad5910cafcbf96d5c90a3c22d530651432197c6608694'
+    checksum64     = '821b4f984c541d44d164b07d6371dac8a49a2f4dc4adb1ad9ffc63974d6349e9'
     checksumType64 = 'SHA256'
 }
 
