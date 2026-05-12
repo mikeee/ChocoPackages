@@ -1,5 +1,5 @@
 ﻿$installDir = Split-Path $MyInvocation.MyCommand.Definition
-$packageVersion = '1.12.4.1618'
+$packageVersion = '1.12.5.1638'
 
 $uninstallArgs = @{
   packageName    = $env:ChocolateyPackageName
