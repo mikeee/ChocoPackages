@@ -2,7 +2,7 @@ module github.com/mikeee/ChocoPackages/automatic/local
 
 go 1.24
 
-toolchain go1.26.1
+toolchain go1.26.3
 
 require github.com/mikeee/chocohelpers v0.0.0-20250908204742-cf9d72c9cdcb
 
