@@ -6,10 +6,10 @@ The installer has been downloaded from the official download link listed on <htt
 and can be verified like this:
 
 1. Download the following installers:
-  32-Bit: <https://downloads.sourceforge.net/project/crystaldiskmark/9.0.1/CrystalDiskMark9_0_1.exe>
+  32-Bit: <https://downloads.sourceforge.net/project/crystaldiskmark/9.0.3/CrystalDiskMark9_0_3.exe>
 2. You can use one of the following methods to obtain the checksum
   - Use powershell function 'Get-Filehash'
   - Use chocolatey utility 'checksum.exe'
 
   checksum type: sha256
-  checksum32: 3DAA0D701EF2FDA3F8E123E518BA3208DBE84C346445749CFEE0906C4AF06761
+  checksum32: 1A255154E116A533F86535BC362F101E32D6171604CDE9B6B554335856917E5E
