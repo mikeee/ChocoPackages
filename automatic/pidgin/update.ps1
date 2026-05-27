@@ -23,9 +23,9 @@ function global:au_GetLatest {
 
     $page.links | Where-Object href -match $regexVersion | Select-Object -First 1 -expand href
     $version = $matches.version
-
+    
     return @{
-        URL32        = "https://netcologne.dl.sourceforge.net/project/pidgin/Pidgin/$version/pidgin-$version-offline.exe"
+        URL32        = "https://downloads.sourceforge.net/project/pidgin/Pidgin/$version/pidgin-$version-offline.exe"
         Version    = $version
     }
 }
