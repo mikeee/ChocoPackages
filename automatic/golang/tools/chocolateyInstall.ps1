@@ -3,11 +3,11 @@ $packageArgs = @{
 	packageName   = $env:ChocolateyPackageName
 	unzipLocation = $root
 	fileType      = 'msi'
-	url           = 'https://golang.org/dl/go1.26.3.windows-386.msi'
-	checksum      = '762fb2194579bee625c22e7d1b56e9b8e78413368a924f04bea1e0d860e01264'
+	url           = 'https://golang.org/dl/go1.26.4.windows-386.msi'
+	checksum      = 'c61c38054413ccbef9acddc0caa0acaaad49a9858f119a269265a5a18e894e8f'
 	checksumType  = 'SHA256'
-	url64         = 'https://golang.org/dl/go1.26.3.windows-amd64.msi'
-	checksum64    = '3b7c9c236086ac512cf09cb80c4437e18e585145297eaba713a3daca54709fc6'
+	url64         = 'https://golang.org/dl/go1.26.4.windows-amd64.msi'
+	checksum64    = '55902c036634c7ab3159cf259af692abc86989aaefcc7f75bef888f3263031c4'
 	checksumType64= 'SHA256'
 
 	silentArgs    = '/qn /norestart'
