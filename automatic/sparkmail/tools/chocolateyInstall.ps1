@@ -2,8 +2,8 @@
 
 $packageArgs = @{
     packageName   = $env:ChocolateyPackageName
-    url           = 'https://downloads.sparkmailapp.com/Spark3/win/dist/3.29.2.139046/Spark.exe'
-    checksum 	  = '16f32aabbc86fb833d24dd058b6dca06540a6bbb5bd192c9d6f4736733808771'
+    url           = 'https://downloads.sparkmailapp.com/Spark3/win/dist/3.29.4.139427/Spark.exe'
+    checksum 	  = '85c652bc92fa5a7cce3dcf97c31c2edb97d0319fd258eeded1d49b84349e223e'
     checksumType  = 'SHA256'
     fileType      = 'EXE'
     silentArgs    = '/S'
