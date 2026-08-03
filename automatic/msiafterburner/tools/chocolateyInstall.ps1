@@ -1,13 +1,10 @@
-﻿$packageName = 'msiafterburner'
-$Date = Get-Date -format "yyyyMMddHHmmss"
-# Define headers to prevent ERROR: Access Denied
-$Headers = @{
-    "accept"          ='text/html,application/xhtml+xml,application/xml'
-    "accept-language" ='en'
-}
-$Token = Invoke-RestMethod -Uri "https://www.msi.com/api/v1/get_token?date=$Date" -Headers $Headers
-$url = "https://download.msi.com/uti_exe/vga/MSIAfterburnerSetup.zip?__token__=$Token"
-$checksum = '407cf0f38b4b6b3dc030e70329d35be5eabfef45829240cc6df0442768189cec'
+$ErrorActionPreference = 'Stop'
+
+. (Join-Path $PSScriptRoot 'Get-MsiAfterburnerDownloadUrl.ps1')
+
+$packageName = 'msiafterburner'
+$url = Get-MsiAfterburnerDownloadUrl
+$checksum = '4478E031D9954E5EB830CB0F3486AF2949C411DEE84EB134E31E363FB48FE439'
 $checksumType = 'SHA256'
 $unpackDir = $(Split-Path -parent $MyInvocation.MyCommand.Definition)
 $unpackFile = Join-Path $unpackDir 'afterburner.zip'
@@ -18,7 +15,12 @@ Get-Process -Name 'msi afterburner' -ErrorAction SilentlyContinue | Stop-Process
 
 Get-ChocolateyWebFile $packageName $unpackFile $url -Checksum $checksum -ChecksumType $checksumType
 Get-ChocolateyUnzip -fileFullPath $unpackFile -destination $unpackDir
-$file = (Get-ChildItem -Path $unpackDir -Recurse | Where-Object { $_.Name -match "^MSIAfterburnerSetup.*\.exe$" }).fullname
+$installerFiles = @(Get-ChildItem -Path $unpackDir -Recurse |
+  Where-Object { $_.Name -match '^MSIAfterburner(?:Setup|Installer).+\.exe$' })
+if ($installerFiles.Count -ne 1) {
+  throw "Archive contained $($installerFiles.Count) matching installers; expected exactly one"
+}
+$file = $installerFiles[0].FullName
 
 $packageArgs = @{
   PackageName    = $packageName
@@ -31,7 +33,7 @@ $packageArgs = @{
 Install-ChocolateyInstallPackage @packageArgs
 
 Remove-Item $unpackFile -Recurse -Force
-Remove-Item $file -Recurse -Force
+Remove-Item $file -Force
 
 function InstallShortcut {
   param (

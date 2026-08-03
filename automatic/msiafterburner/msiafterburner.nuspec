@@ -35,7 +35,7 @@ distribution rights. -->
         <!-- Note that unstable versions like 0.0.1 can be considered a released version, but it's
         possible that one can release a 0.0.1-beta before you release a 0.0.1 version. If the
         version number is final, that is considered a released version and not a prerelease. -->
-        <version>4.6.6.240702</version>
+        <version>4.6.6.251114</version>
         <packageSourceUrl>https://github.com/mikeee/ChocoPackages/tree/master/automatic/msiafterburner</packageSourceUrl>
         <!-- owners is a poor name for maintainers of the package. It sticks around by this name for
         compatibility reasons. It basically means you. -->
@@ -46,7 +46,7 @@ distribution rights. -->
         <title>MSI Afterburner</title>
         <authors>Micro-Star INT'L CO., LTD</authors>
         <!-- projectUrl is required for the community feed -->
-        <projectUrl>https://www.msi.com/Landing/afterburner/graphics-cards</projectUrl>
+        <projectUrl>https://www.msi.com/Landing/afterburner</projectUrl>
         <iconUrl>https://cdn.jsdelivr.net/gh/mikeee/ChocoPackages/icons/msiafterburner.png</iconUrl>
         <copyright>2023 Micro-Star INT'L CO., LTD</copyright>
         <!-- If there is a license Url available, it is is required for the community feed -->
