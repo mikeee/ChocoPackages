@@ -36,7 +36,7 @@ function global:au_GetLatest {
     }
 
     return @{
-        URL        = $release
+        URL        = '{0}?version={1}' -f $release, $version
         Version    = $version
     }
 }
