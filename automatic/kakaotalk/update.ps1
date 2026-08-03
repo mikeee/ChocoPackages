@@ -1,9 +1,9 @@
 #import-module au
 
 . $PSScriptRoot\..\..\scripts\all.ps1
-$releases   = 'http://app.pc.kakao.com/talk/win32/patch/patch.txt'
-$release    = 'https://app-pc.kakaocdn.net/talk/win32/KakaoTalk_Setup.exe'
-
+$releaseBase = 'https://lk.kakaocdn.net/talkpc/talk/win32'
+$releases    = "$releaseBase/patch/patch.txt"
+$release     = "$releaseBase/KakaoTalk_Setup.exe"
 
 function global:au_SearchReplace {
     @{
@@ -27,17 +27,20 @@ function global:au_AfterUpdate {
 function global:au_GetLatest {
     $page = Invoke-WebRequest -Uri $releases -UseBasicParsing
 
-    $regexPage = '(?<version>[\d]+\.[\d]+\.[\d]+\.[\d]+)'
-
-    $matched = $page.Content -match $regexPage
-    
-    If ($False -ne $matched) {
-        $version = $matches["version"]
+    $fullPackage = [regex]::Match(
+        $page.Content,
+        '(?m)^kakaotalk_\d+(?:\.\d+){3}_full\.pak'
+    ).Value
+    if (-not $fullPackage) {
+        throw "Unable to find the current full package in '$releases'."
     }
 
+    $versionedRelease = "$releaseBase/patch/$fullPackage"
+    $url = '{0}?version={1}' -f $release, (Get-Version $versionedRelease)
+
     return @{
-        URL        = '{0}?version={1}' -f $release, $version
-        Version    = $version
+        URL        = $url
+        Version    = Get-Version $url
     }
 }
 
