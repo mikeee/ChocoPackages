@@ -2,8 +2,8 @@
 
 $packageArgs = @{
     packageName   = $env:ChocolateyPackageName
-    url           = 'https://lk.kakaocdn.net/talkpc/talk/win32/KakaoTalk_Setup.exe?version=26.8.2.5324'
-    checksum 	  = 'f3b21b92dbe17f13e8606a91df2e2e32ef4ffd4054b007242e6be32e45bf7e2c'
+    url           = 'https://lk.kakaocdn.net/talkpc/talk/win32/KakaoTalk_Setup.exe?version=26.9.0.5337'
+    checksum 	  = '5ed38b39bbca521ba66fd9f961347aeac5cba80dc96f9657e7baf99b0aec022a'
     checksumType  = 'SHA256'
     fileType      = 'EXE'
     silentArgs    = '/S'
