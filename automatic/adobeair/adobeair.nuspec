@@ -31,11 +31,11 @@ This is a nuspec. It mostly adheres to https://docs.nuget.org/create/Nuspec-Refe
         <title>Adobe AIR Runtime</title>
         <authors>HARMAN International</authors>
         <!-- projectUrl is required for the community feed -->
-        <projectUrl>https://airsdk.harman.com/runtime</projectUrl>
+        <projectUrl>https://airsdk.wxlift.com/runtime</projectUrl>
         <iconUrl>https://cdn.jsdelivr.net/gh/mikeee/ChocoPackages/icons/adobeair.png</iconUrl>
         <copyright>Copyright 2022 HARMAN International</copyright>
         <!-- If there is a license Url available, it is is required for the community feed -->
-        <licenseUrl>https://airsdk.harman.com/assets/pdfs/HARMAN%20AIR%20SDK%20License%20Agreement.pdf</licenseUrl>
+        <licenseUrl>https://airsdk.wxlift.com/assets/pdfs/Wipro%20AIR%20SDK%20License%20Agreement.pdf</licenseUrl>
         <requireLicenseAcceptance>false</requireLicenseAcceptance>
         <!--<projectSourceUrl></projectSourceUrl>-->
         <!--<docsUrl></docsUrl>-->
