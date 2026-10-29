@@ -2,7 +2,7 @@
 
 . $PSScriptRoot\..\..\scripts\all.ps1
 
-$releases    = 'https://bootstrapstudio.io/download/'
+$releases    = 'https://bootstrapstudio.io/pages/releases'
 
 function global:au_SearchReplace {
     @{
@@ -24,14 +24,26 @@ function global:au_AfterUpdate {
 }
 
 function global:au_GetLatest {
+    # The /download/ page is behind a Cloudflare challenge, so read the releases page instead
     $page = Invoke-WebRequest -Uri $releases -UseBasicParsing
-    $regexVersion = '(?<url>(?<version>[\d\.]+)\/Bootstrap%20Studio%20-%20Setup.exe)'
 
-    $matched = $page.Content -match $regexVersion
+    $versions = [regex]::Matches($page.Content, '\b\d+\.\d+\.\d+\b') |
+        ForEach-Object { [version]$_.Value } |
+        Sort-Object -Descending -Unique
 
-    If ($False -ne $matched) {
-        $url = -join("https://releases.bootstrapstudio.io/",$matches["version"],"/Bootstrap%20Studio%20-%20Setup.exe")
-        $version = $matches["version"]
+    if (-not $versions) {
+        throw "No versions found on $releases"
+    }
+
+    $version = $versions[0].ToString()
+    $url = "https://releases.bootstrapstudio.io/$version/Bootstrap%20Studio%20-%20Setup.exe"
+
+    # Make sure the installer actually exists before handing it to AU
+    try {
+        Invoke-WebRequest -Uri $url -Method Head -UseBasicParsing | Out-Null
+    }
+    catch {
+        throw "Installer for $version not reachable at $url : $($_.Exception.Message)"
     }
 
     return @{
