@@ -22,7 +22,7 @@ import (
 // limitations under the License.
 
 func main() {
-	url := "https://airsdk.harman.com/runtime"
+	url := "https://airsdk.wxlift.com/runtime"
 	regexStr := "AIR\\sruntime\\s-\\sversion\\s[\\d\\.]+"
 	matchIndex := 0
 

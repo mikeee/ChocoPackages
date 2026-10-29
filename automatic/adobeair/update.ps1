@@ -2,7 +2,7 @@
 
 . $PSScriptRoot\..\..\scripts\all.ps1
 
-$releaseBaseUrl = "https://airsdk.harman.com/assets/downloads/"
+$releaseBaseUrl = "https://airsdk.wxlift.com/assets/downloads/"
 
 function global:au_SearchReplace {
     @{
