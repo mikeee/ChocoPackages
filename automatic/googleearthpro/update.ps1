@@ -44,10 +44,16 @@ function global:au_GetLatest {
     }
 
     return @{
-        URL32        = $url32
-        URL64        = $url64
-        Version      = $finalVersion
+        URL32         = $url32
+        URL64         = $url64
+        Checksum32    = $checksum32
+        ChecksumType32 = 'sha256'
+        Checksum64    = $checksum64
+        ChecksumType64 = 'sha256'
+        Version       = $finalVersion
     }
 }
 
-update
+# Checksums are calculated above; skip AU's automatic checksum step because it
+# downloads through Chocolatey, which fails the length check on the gzipped Content-Length.
+update -ChecksumFor none
