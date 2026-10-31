@@ -4,7 +4,7 @@
         <!-- Read this before publishing packages to chocolatey.org: https://github.com/chocolatey/chocolatey/wiki/CreatePackages -->
         <id>signal.portable</id>
         <title>Signal portable app</title>
-        <version>7.36.1</version>
+        <version>7.60.0</version>
         <authors>Portapps</authors>
         <owners>Xav83, mikeee</owners>
         <summary>(Unofficial) Signal portable for Windows</summary>

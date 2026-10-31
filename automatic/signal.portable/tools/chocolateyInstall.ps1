@@ -4,8 +4,8 @@ $toolsDir   = Split-Path $MyInvocation.MyCommand.Definition
 
 $packageArgs = @{
     packageName    = $env:ChocolateyPackageName
-    url64          = 'https://github.com/portapps/signal-portable/releases/download/7.36.1-9/signal-portable-win64-7.36.1-9.7z'
-    checksum64     = 'e8bf81ec89fedcd3b75ed68034b7097b4e29aae77536d14c2d11bf098f85970d'
+    url64          = 'https://github.com/portapps/signal-portable/releases/download/7.60.0-11/signal-portable-win64-7.60.0-11.7z'
+    checksum64     = 'ac1f9efdc45d4fa09aec3047085b81d662297a4588d4e14241c50935ad7d41b1'
     checksumType64 = 'SHA256'
     unzipLocation  = $toolsDir
 }
