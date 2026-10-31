@@ -36,7 +36,8 @@ function global:au_AfterUpdate {
 function global:au_GetLatest {
     $page = Invoke-WebRequest -Uri $releases -UseBasicParsing
 
-    $regexPage = 'Version:[\s]+(?<version>[\d.]+)'
+    # The version is wrapped in a <span> on the page
+    $regexPage = 'Version:\s*(?:<[^>]+>\s*)*(?<version>[\d.]+)'
 
     $matched = $page.Content -match $regexPage
 

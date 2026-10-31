@@ -26,11 +26,12 @@ function global:au_AfterUpdate {
 function global:au_GetLatest {
     $page = Invoke-WebRequest -Uri $releases -UseBasicParsing
 
-    $regexVersion = '\/Windows\/broadcast\/(?<versionmajor>[\d.]+)\/NVIDIA_Broadcast+_v(?<version>[\d.]+).exe'
+    # Match the x64 installer directly; the ARM64 build has its own link with a different name
+    $regexVersion = 'https://[^"''\s]+/Windows/broadcast/[\d.]+/NVIDIA_Broadcast_v(?<version>[\d.]+)\.exe'
 
-    $url64 = $page.links | Where-Object href -match $regexVersion | Select-Object -Skip 2 -First 1 -expand href
-
-    $version = $matches.version
+    $match = [regex]::Match($page.Content, $regexVersion)
+    $url64 = $match.Value
+    $version = $match.Groups['version'].Value
 
     return @{
         URL64        = $url64

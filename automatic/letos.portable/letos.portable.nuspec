@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Read this before creating packages: https://chocolatey.org/docs/create-packages -->
+<!-- It is especially important to read the above link to understand additional requirements when
+publishing packages to the community feed aka dot org (https://chocolatey.org/packages). -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+	<metadata>
+		<id>letos.portable</id>
+		<version>4.0.4</version>
+		<packageSourceUrl>https://github.com/mikeee/ChocoPackages/tree/master/automatic/letos.portable</packageSourceUrl>
+		<owners>mikeee</owners>
+		<title>Letos (Portable)</title>
+		<authors>pawelsalawa</authors>
+		<projectUrl>https://letos.org</projectUrl>
+		<iconUrl>https://cdn.jsdelivr.net/gh/mikeee/ChocoPackages/icons/letos.portable.png</iconUrl>
+		<requireLicenseAcceptance>false</requireLicenseAcceptance>
+		<projectSourceUrl>https://github.com/pawelsalawa/letos</projectSourceUrl>
+		<tags>letos sqlite sqlitestudio portable database manager</tags>
+		<summary>Create, edit, browse SQLite databases.</summary>
+		<description>Create, edit, browse SQLite databases.
+
+**NOTE**: This is an automatically updated package. If you find it is out of date by more than a week, please contact the maintainer(s) and let them know the package is no longer updating correctly.
+</description>
+	</metadata>
+	<files>
+		<file src="tools\**" target="tools" />
+	</files>
+</package>
