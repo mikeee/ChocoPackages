@@ -36,7 +36,8 @@ function global:au_GetLatest {
     # Remove the leading internal version number
     $version = ($version.Split("-"))[0]
 
-    $asset64 = $release.assets | Where-Object name -Match 'signal-portable-win64-([\d\.]+)-[\d].7z'
+    # Build numbers can have more than one digit (e.g. 7.60.0-11)
+    $asset64 = $release.assets | Where-Object name -Match 'signal-portable-win64-[\d\.]+-\d+\.7z$'
 
     return @{
         URL64        = $asset64.browser_download_url

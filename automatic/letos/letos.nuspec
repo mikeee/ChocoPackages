@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Read this before creating packages: https://chocolatey.org/docs/create-packages -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+	<metadata>
+		<id>letos</id>
+		<version>4.0.4</version>
+		<packageSourceUrl>https://github.com/mikeee/ChocoPackages/tree/master/automatic/letos</packageSourceUrl>
+		<owners>mikeee</owners>
+		<title>Letos</title>
+		<authors>pawelsalawa</authors>
+		<projectUrl>https://letos.org</projectUrl>
+		<iconUrl>https://cdn.jsdelivr.net/gh/mikeee/ChocoPackages/icons/letos.png</iconUrl>
+		<requireLicenseAcceptance>false</requireLicenseAcceptance>
+		<projectSourceUrl>https://github.com/pawelsalawa/letos</projectSourceUrl>
+		<tags>letos sqlite sqlitestudio database manager</tags>
+		<summary>Create, edit, browse SQLite databases.</summary>
+		<description><![CDATA[Create, edit, browse SQLite databases.
+**NOTE**: This is an automatically updated package. If you find it is out of date by more than a week, please contact the maintainer(s) and let them know the package is no longer updating correctly.
+]]></description>
+		<dependencies>
+			<dependency id="letos.install" version="4.0.4" />
+		</dependencies>
+	</metadata>
+	<files>
+		<file src="tools\**" target="tools" />
+	</files>
+</package>

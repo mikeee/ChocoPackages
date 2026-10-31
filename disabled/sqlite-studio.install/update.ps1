@@ -29,18 +29,15 @@ function global:au_AfterUpdate {
 }
 
 function global:au_GetLatest {
-    $page = Invoke-WebRequest -Uri $releases -UseBasicParsing
-    $regexUrl = 'pawelsalawa\/sqlitestudio\/releases\/tag\/(?<version>[\d\.]+)'
-
-    $matched = $page.links | Where-Object href -match $regexUrl | Select-Object -First 1 -expand href
-
-    If ($False -ne $matched) {
-        $ver = $matches.version
-    }
+    # The repo now also ships Letos 4.x releases, so only follow the SQLiteStudio 3.x line.
+    # The API lists newest first; the releases HTML page lists tags oldest first.
+    $releasesApi = Invoke-RestMethod -Uri 'https://api.github.com/repos/pawelsalawa/sqlitestudio/releases?per_page=30'
+    $ver = ($releasesApi | Where-Object { $_.tag_name -like '3.*' -and -not $_.prerelease } | Select-Object -First 1).tag_name
+    if (-not $ver) { throw 'No SQLiteStudio 3.x release found' }
 
     return @{
-        URL32        = "https://github.com/pawelsalawa/sqlitestudio/releases/download/$ver/sqlitestudio-$ver-windows-x86.zip"
-        URL64        = "https://github.com/pawelsalawa/sqlitestudio/releases/download/$ver/sqlitestudio-$ver-windows-x64.zip"
+        URL32        = "https://github.com/pawelsalawa/sqlitestudio/releases/download/$ver/sqlitestudio-$ver-windows-x86-installer.exe"
+        URL64        = "https://github.com/pawelsalawa/sqlitestudio/releases/download/$ver/sqlitestudio-$ver-windows-x64-installer.exe"
         Version      = $ver
     }
 }

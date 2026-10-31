@@ -21,13 +21,14 @@ function global:au_AfterUpdate {
 
 function global:au_GetLatest {
     $tempFile = New-TemporaryFile
-    Invoke-WebRequest -Uri $releases -OutFile $tempFile -UseBasicParsing
+    $response = Invoke-WebRequest -Uri $releases -OutFile $tempFile -UseBasicParsing -PassThru
 
     $version = (Get-Item $tempfile).VersionInfo.FileVersion
 
     $checksum = Get-FileHash -Algorithm SHA256 -Path $tempFile -ErrorAction SilentlyContinue | Select-Object -ExpandProperty Hash
 
-    $url = "https://desktop-app-prod-1.s3.us-west-2.amazonaws.com/Nanoleaf+Desktop+Setup+$version.exe"
+    # The API redirects to the current S3 bucket (prod-3 at the moment), so take the final URL rather than building one
+    $url = $response.BaseResponse.ResponseUri.AbsoluteUri
 
     return @{
         URL          = $url
