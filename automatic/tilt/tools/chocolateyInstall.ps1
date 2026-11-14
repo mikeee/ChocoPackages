@@ -6,8 +6,8 @@ $toolsDir = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 $packageArgs = @{
     packageName      = $env:ChocolateyPackageName
     unzipLocation    = $toolsDir
-    url64            = 'https://github.com/tilt-dev/tilt/releases/download/v0.37.8/tilt.0.37.8.windows.x86_64.zip'
-    checksum64       = 'b8abb4b50e98d45300bd953a717a684f3555b158ee1238c9c938d72d2bea8cbe'
+    url64            = 'https://github.com/tilt-dev/tilt/releases/download/v0.37.9/tilt.0.37.9.windows.x86_64.zip'
+    checksum64       = 'ca0f6531ad5930da8a12214de22b83e1757d412ed78c86950c0e8ee9d946cca9'
     checksumType64   = 'SHA256'
 }
 
