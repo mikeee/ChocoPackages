@@ -25,16 +25,14 @@ function global:au_AfterUpdate {
 
 function global:au_GetLatest {
     $page = Invoke-WebRequest -Uri $releases -UseBasicParsing
-    $regexVersion = 'zebradesigner(?<versionmajor>[\d])-(?<versionminor>[\d]+).exe'
+    $regexVersion = 'zebradesigner(?<versionmajor>\d)-(?<versionminor>\d+)\.exe'
 
-    $matched = $page.Content -match $regexVersion
-
-    $versionMajor =
-
-    If ($False -ne $matchedurl) {
-        $url = -join("https://www.zebra.com/content/dam/support-dam/en/application/unrestricted/0001/zebradesigner", $matches["versionmajor"], "-", $matches["versionminor"], ".exe")
-        $version = -join($matches["versionmajor"], ".", $matches["versionminor"])
+    if ($page.Content -notmatch $regexVersion) {
+        throw "No ZebraDesigner download link found on $releases"
     }
+
+    $url = -join("https://www.zebra.com/content/dam/support-dam/en/application/unrestricted/0001/zebradesigner", $matches["versionmajor"], "-", $matches["versionminor"], ".exe")
+    $version = -join($matches["versionmajor"], ".", $matches["versionminor"])
 
     return @{
         URL        = $url
